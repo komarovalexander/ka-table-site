@@ -1,0 +1,13 @@
+## Topnav single links
+## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+topnav:
+- title: Topnav
+  items:
+    - title: Docs
+      url: /mydoc_introduction.html
+    - title: Demos
+      external_url: https://github.com/komarovalexander/ka-table
+    - title: GitHub
+      external_url: https://github.com/komarovalexander/ka-table
+    - title: npm
+      external_url: https://www.npmjs.com/package/ka-table
