@@ -19,8 +19,9 @@
 
 <!-- Anchor.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
-<script src="{{ "js/toc.js" }}"></script>
-<script src="{{ "js/customscripts.js" }}"></script>
+<script>
+  window.onload = () => { anchors.add('h2,h3,h4,h5'); };
+</script>
 
 <link rel="shortcut icon" href="{{ "images/favicon.ico"  }}">
 
