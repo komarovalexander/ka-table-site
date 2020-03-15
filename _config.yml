@@ -61,7 +61,7 @@ kramdown:
 defaults:
   -
     scope:
-      path: "*.html"
+      path: ""
       type: "pages"
     values:
       layout: "page"
