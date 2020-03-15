@@ -2,7 +2,8 @@
 title: "ka-table - Flux react table component"
 keywords: ka-table table react grid component flux redux
 toc: false
-style:  main-page
+search: include
+style: main-page
 hide_sidebar: true
 permalink: index.html
 ---
@@ -10,11 +11,11 @@ permalink: index.html
 [demos](#) [docs](#)
 ![ka-table](./images/main.png)
 
-## Like a Redux it implements "view - state - action - reducer" pattern
+## Like a Redux it implements "state - view - action - reducer" pattern
 
 ![Pattern](./images/pattern.png)
 
-All changes of grid performs by dispatching action, it means you have full control of Table and can control every change. It has default Reducer but another one can be added. Further more it easily integrates to Redux but also can be used without it.
+All changes of grid performs by dispatching action, it means you have full control of Table and can control every change. It has default Reducer for state changing but another one can be added. Further more it easily integrates to Redux but also can be used without it.
 
 ## High view customisation
 

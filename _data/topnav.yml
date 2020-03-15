@@ -4,9 +4,10 @@ topnav:
 - title: Topnav
   items:
     - title: Docs
-      url: /mydoc_introduction.html
+      url: docs_get_started.html
+      folder: docs
     - title: Demos
-      external_url: https://github.com/komarovalexander/ka-table
+      external_url: https://komarovalexander.github.io/ka-table/#/overview
     - title: GitHub
       external_url: https://github.com/komarovalexander/ka-table
     - title: npm
