@@ -1,11 +1,11 @@
 ---
 title: "API"
-keywords: ka-table, react table, flux, redux, api
+keywords: ka-table, react table, flux, redux, actions
 sidebar: mydoc_sidebar
 search: include
-permalink: docs_api.html
-url: docs_api.html
-toc: true
+permalink: docs_actions.html
+url: docs_actions.html
+toc: false
 ---
 
 ### Table

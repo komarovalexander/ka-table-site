@@ -19,8 +19,8 @@ yarn add ka-table
 
 ## Usage
 
-### ka-table implements "state - view - action - reducer" pattern
-*Thanks to Redux for the inspiration*
+#### Main idea
+ka-table implements "state - view - action - reducer" pattern. *Thanks to Redux for the inspiration*
 
 ![Pattern](./images/pattern.png)
 

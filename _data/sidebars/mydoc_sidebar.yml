@@ -18,4 +18,9 @@ entries:
       output: web
       type: homepage
 
+    - title: Actions
+      url: /docs_actions.html
+      output: web
+      type: homepage
+
 
