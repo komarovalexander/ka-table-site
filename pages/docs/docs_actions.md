@@ -1,5 +1,5 @@
 ---
-title: "API"
+title: "Actions"
 keywords: ka-table, react table, flux, redux, actions
 sidebar: mydoc_sidebar
 search: include
