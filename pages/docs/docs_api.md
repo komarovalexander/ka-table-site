@@ -8,7 +8,7 @@ url: docs_api.html
 toc: true
 ---
 
-### Table
+## Table
 **Properties**
 
 | Name | Type | Description |
@@ -31,7 +31,7 @@ toc: true
 | sortingMode | 'single' <br/> 'none' | Sorting mode (Demo: [Sorting Example](https://komarovalexander.github.io/ka-table/#/sorting)) |
 | virtualScrolling | [<code>VirtualScrolling</code>](#VirtualScrolling) | Virtual scrolling options (Demo: [Many Rows Example](https://komarovalexander.github.io/ka-table/#/many-rows)) |
 
-### Column
+## Column
 Describes column of table its look and behaviour
 **Properties**
 
@@ -58,7 +58,7 @@ Describes column of table its look and behaviour
 
 
 
-### Cell
+## Cell
 Describes the position of a cell in  the table
 
 **Properties**
@@ -69,7 +69,7 @@ Describes the position of a cell in  the table
 | rowKeyValue | <code>any</code> | Data's key value of every specific row |
 
 
-### ChildAttributes
+## ChildAttributes
 Describes the attributes for a specific child component
 It is possible to override default behaviour just specify particular handler [Events Demo](https://komarovalexander.github.io/ka-table/#/events)
 
@@ -80,11 +80,11 @@ It is possible to override default behaviour just specify particular handler [Ev
 | table | [<code>ChildAttributesItem</code>](#ChildAttributesItem)<[Table](#ITableAllProps)> | Sets custom attributes for table element |
 
 
-#### ChildAttributesItem&lt;T&gt;
+### ChildAttributesItem&lt;T&gt;
 This object is an extension for React HTMLAttributes. It contains all attributes and all [react Synthetic Events](https://reactjs.org/docs/events.html), but in each event it adds a second parameter which contains additional data with [<code>AttributeTableData type</code>](#AttributeTableData).
 
 
-#### AttributeTableData&lt;T&gt;
+### AttributeTableData&lt;T&gt;
 A second parameter in each [react Synthetic Event](https://reactjs.org/docs/events.html). Contains component-related information.
 
 | Name | Type | Description |
@@ -95,7 +95,7 @@ A second parameter in each [react Synthetic Event](https://reactjs.org/docs/even
 | dispatch | <code>(type: string, data: any) => void</code> | Executes specific action with specific data |
 
 
-### Group
+## Group
 
 **Properties**
 
@@ -105,7 +105,7 @@ A second parameter in each [react Synthetic Event](https://reactjs.org/docs/even
 
 
 
-### VirtualScrolling
+## VirtualScrolling
 
 **Properties**
 
@@ -119,7 +119,7 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 
 
 
-### ICellEditorProps
+## ICellEditorProps
 **Properties**
 
 | Name | Type | Description |
@@ -133,7 +133,7 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 | rowKeyValue | <code>any</code> | value of the field which is used to identify row |
 
 <a name="IFilterRowEditorProps"></a>
-### IFilterRowEditorProps
+## IFilterRowEditorProps
 **Properties**
 
 | Name | Type | Description |
@@ -143,7 +143,7 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 
 
 
-### ICellContentProps
+## ICellContentProps
 **Properties**
 
 | Name | Type | Description |
@@ -161,7 +161,7 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 
 
 
-### IDataRowProps
+## IDataRowProps
 **Properties**
 
 | Name | Type | Description |
@@ -177,7 +177,7 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 
 
 
-### IGroupRowProps
+## IGroupRowProps
 **Properties**
 
 | Name | Type | Description |
@@ -191,7 +191,7 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 | text | <code>string</code> | Formatted text of group row |
 
 
-### IHeadCellProps
+## IHeadCellProps
 **Properties**
 
 | Name | Type | Description |
