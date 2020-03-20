@@ -21,7 +21,7 @@ All changes of grid performs by dispatching action, it means you have full contr
 
 Every part can be customised, additional events can be added and components be overrode
 
-![Pattern](./images/customization.png)
+![Pattern](./images/customization.PNG)
 
 
 ## Open source MIT component
