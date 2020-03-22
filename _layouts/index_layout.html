@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include head.html %}
+    {% if page.datatable == true %}
+    <!-- Include the standard DataTables bits -->
+    <!-- First, this walks through the tables that occur between ...-begin
+         and ...-end and add the "datatable" class to them.
+         Then it invokes DataTable's standard initializer
+         Credit here: http://www.beardedhacker.com/blog/2015/08/28/add-class-attribute-to-markdown-table/
+      -->
+    {% endif %}
+
+</head>
+<body>
+{% include topnav.html %}
+{{content}}
+</body>
+{% if site.google_analytics %}
+{% include google_analytics.html %}
+{% endif %}
+</html>

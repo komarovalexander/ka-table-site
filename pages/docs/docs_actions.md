@@ -11,10 +11,6 @@ toc: false
 
 | Type | Action | ActionCreator | Notes |
 | --- | --- | --- | --- |
-| 'ChangeCellValue' | {<br/>type:'ChangeCellValue',<br/>rowKeyValue: any,<br/>columnKey: string,<br/>value: any,<br/>} | changeCellValue(<br/> rowKeyValue,<br/> columnKey,<br/> value<br/>) | update value for cell |
-| 'ChangeFilterRowOperator' | {<br/>type:'ChangeFilterRowOperator',<br/>columnKey: string,<br/>filterRowOperator: string<br/>} | changeFilterRowOperator(<br/> columnKey,<br/> filterRowOperator<br/>) | update filterRowOperator for column |
-| 'ChangeFilterRowValue' | {<br/>type:'ChangeFilterRowValue',<br/>columnKey: string,<br/>filterRowValue: any<br/>} | changeFilterRowValue(<br/> columnKey,<br/> filterRowValue<br/>) | update filterRowValue for column |
-| 'ChangeSortingDirection' | {<br/>type:'ChangeSortingDirection',<br/>columnKey: string<br/>} | changeSortingDirection(<br/> columnKey<br/>) | change sortingDirection to the opposite for column |
 | 'CloseEditor' | {<br/>type:'CloseEditor',<br/>rowKeyValue: any,<br/>columnKey: string,<br/>} | closeEditor(<br/> rowKeyValue,<br/> columnKey<br/>) | close cell editor |
 | 'DeleteRow' | {<br/>type:'DeleteRow',<br/>rowKeyValue: any<br/>} | deleteRow(<br/> rowKeyValue<br/>) | delete row by id |
 | 'DeselectAllRows' | {<br/>type:'DeselectAllRows'} | deselectAllRows() | deselect all rows in table |
@@ -25,3 +21,8 @@ toc: false
 | 'SelectAllRows' | {<br/>type:'SelectAllRows'} | selectAllRows() | select all rows in table |
 | 'SelectRow' | {<br/>type:'SelectRow',<br/>rowKeyValue: any<br/>} | selectRow(<br/> rowKeyValue<br/>) | select row by id |
 | 'SelectSingleRow' | {<br/>type:'SelectSingleRow',<br/>rowKeyValue: any<br/>} | selectSingleRow(<br/> rowKeyValue<br/>) | select row by id, and deselect other rows |
+| 'UpdateCellValue' | {<br/>type:'UpdateCellValue',<br/>rowKeyValue: any,<br/>columnKey: string,<br/>value: any,<br/>} | changeCellValue(<br/> rowKeyValue,<br/> columnKey,<br/> value<br/>) | update value for cell |
+| 'UpdateData' | {<br/>type:'UpdateData',<br/>data: any[]<br/>} | updateData(<br/> data<br/>) | update Table data |
+| 'UpdateFilterRowOperator' | {<br/>type:'UpdateFilterRowOperator',<br/>columnKey: string,<br/>filterRowOperator: string<br/>} | updateFilterRowOperator(<br/> columnKey,<br/> filterRowOperator<br/>) | update filterRowOperator for column |
+| 'UpdateFilterRowValue' | {<br/>type:'UpdateFilterRowValue',<br/>columnKey: string,<br/>filterRowValue: any<br/>} | updateFilterRowValue(<br/> columnKey,<br/> filterRowValue<br/>) | update filterRowValue for column |
+| 'UpdateSortingDirection' | {<br/>type:'UpdateSortingDirection',<br/>columnKey: string<br/>} | updateSortingDirection(<br/> columnKey<br/>) | change sortingDirection to the opposite for column |

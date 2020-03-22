@@ -148,7 +148,7 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 
 | Name | Type | Description |
 | --- | --- | --- |
-| childAttributes | <code>[ChildAttributes](#childattributes)</code> | Object describes attributes for data grid child components (Demo: [Events](https://komarovalexander.github.io/ka-table/#/events)) |
+| childAttributes | [<code>ChildAttributes</code>](#childattributes) | Object describes attributes for data grid child components (Demo: [Events](https://komarovalexander.github.io/ka-table/#/events)) |
 | column | [<code>Column</code>](#column) | column of the cell |
 | dispatch | <code>(type: string, data: any) => void</code> | can forse Table make change in data, open the editor, and other actions |
 | editingMode | 'cell' <br/> 'none' | Editing mode of cell column |
