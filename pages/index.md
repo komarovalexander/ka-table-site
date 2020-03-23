@@ -75,19 +75,51 @@ layout: index_layout
         <h3 class="header-tag">FEATURES</h3>
         <h2 class="post-title-main">Main Features</h2>
       </div>
-      <div class="col-md-4"><h4>Editing</h4></div>
-      <div class="col-md-4"><h4>Events</h4></div>
-      <div class="col-md-4"><h4>Filtering</h4></div>
-      <div class="col-md-4"><h4>Grouping</h4></div>
-      <div class="col-md-4"><h4>Search</h4></div>
-      <div class="col-md-4"><h4>Selection</h4></div>
-      <div class="col-md-4"><h4>State Storing</h4></div>
-      <div class="col-md-4"><h4>Validation</h4></div>
-      <div class="col-md-4"><h4>Virtual Scrolling</h4></div>
+      <div class="col-md-4">
+        <div class="img"><img src="images/icons/Editing.svg" alt="Editing"/></div>
+        <h4>Editing</h4>
+        <p>Editors for different data types out-of-the-box, and good ability for customisation</p>
+      </div>
+      <div class="col-md-4">
+        <div class="img"><img src="images/icons/Events.svg" alt="Events"/></div>
+        <h4>Events</h4>
+        <p>All possible events can be added to childElements</p>
+      </div>
+      <div class="col-md-4">
+        <div class="img"><img src="images/icons/Filtering.svg" alt="Filtering"/></div>
+        <h4>Filtering</h4>
+        <p>Use predefined filter row with customisable editors or use extended filter</p>
+      </div>
+      <div class="col-md-4">
+        <div class="img"><img src="images/icons/Grouping.svg" alt="Grouping"/></div>
+        <h4>Grouping</h4>
+        <p>Grouping is supported with cell and row customization</p>
+      </div>
+      <div class="col-md-4">
+        <div class="img"><img src="images/icons/Search.svg" alt="Search"/></div>
+        <h4>Search</h4>
+        <p>Search by the whole Table is easy</p>
+      </div>
+      <div class="col-md-4">
+        <div class="img"><img src="images/icons/Selection.svg" alt="Selection"/></div>
+        <h4>Selection</h4>
+        <p>Multiple & single selection</p>
+      </div>
+      <div class="col-md-4">
+        <div class="img"><img src="images/icons/StateStoring.svg" alt="StateStoring"/></div>
+        <h4>State Storing</h4>
+        <p>Save Table's state and restore it after page reload</p>
+      </div>
+      <div class="col-md-4">
+        <div class="img"><img src="images/icons/Validation.svg" alt="Validation"/></div>
+        <h4>Validation</h4>
+        <p>Validate editor value before apply it</p>
+      </div>
+      <div class="col-md-4">
+        <div class="img"><img src="images/icons/VirtualScrolling.svg" alt="VirtualScrolling"/></div>
+        <h4>Virtual Scrolling</h4>
+        <p>Virtualisation work well with with big amount of data and grouping</p>
+      </div>
     </div>
   </div>
-</div>
-
-
-[demos](#) [docs](#) [github repo](#) [npm](#)
 </div>

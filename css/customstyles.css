@@ -216,10 +216,6 @@ li.dropdownActive a {
     color: #248EC2;
 }
 
-footer {
-    font-size: smaller;
-}
-
 /* FAQ page */
 #accordion .panel-heading {
     font-size: 12px;
@@ -345,10 +341,6 @@ ul#mysidebar {
 
 span.projectTitle {
     font-weight: bold;
-}
-
-.footer {
-    text-align: right;
 }
 
 .footerMeta {
@@ -510,9 +502,6 @@ a[data-toggle] {
 a.fa.fa-envelope-o.mailto {
     font-weight: 600;
 }
-
-h3 {color: #ED1951; font-weight:normal; font-size:130%;}
-h4 {color: #808080; font-weight:normal; font-size:120%; font-style:italic;}
 
 .alert, .callout {
     overflow: hidden;
@@ -1121,8 +1110,41 @@ h3.header-tag {
     margin-bottom: 0;
 }
 
+.features .col-md-4{
+    margin-bottom: 80px;
+}
+.features img{
+    width: 30px;
+}
+.features .img{
+    height: 30px;
+    margin-bottom: 22px;
+}
+
+h4{
+    color: #353C44 !important;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 140%;
+}
+
 @media (min-width: 1400px){
     .container {
         max-width: 1350px;
     }
+}
+
+.btn{
+    width: 200px;
+    padding: 15px;
+}
+
+.btn-primary{
+    margin-right: 30px;
+}
+
+footer{
+    border-top: 2px solid #CBDCE4;
+    padding-top: 55px;
+    padding-bottom: 90px;
 }
