@@ -24,8 +24,8 @@ layout: index_layout
           <h3 class="header-tag">ka-table</h3>
           <h1 class="post-title-main">React Table Component</h1>
           <p>Controllable MIT React Table component with Sorting, Filtering, Grouping, Virtualization, Editing and many more</p>
-          <div class="btn btn-primary">Demos</div>
-          <div class="btn btn-outline-primary">Docs</div>
+          <a class="btn btn-primary" href="https://komarovalexander.github.io/ka-table/#/overview">Demos</a>
+          <a class="btn btn-outline-primary" href="#">Docs</a>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@ layout: index_layout
         <div class="main-banner-text">
           <h3 class="header-tag">IDEA</h3>
           <h2 class="post-title-main">"state - view - action - reducer"</h2>
-          <p>Like in Redux all changes of grid are performed by dispatching action, it means you have full control of Table and can track every change. It easily integrates to Redux but also can be used without it.</p>
+          <p>Like in Redux all changes of the ka-table are performed by dispatching an action, it means you have full control of the Table and can track every change. It easily integrates with Redux but also can be used without it.</p>
         </div>
       </div>
     </div>
@@ -52,8 +52,8 @@ layout: index_layout
       <div class="col-md-12">
         <div class="main-banner-text">
           <h3 class="header-tag">CUSTOMIZABLE</h3>
-          <h2 class="post-title-main">High view customisation</h2>
-          <p>Every part can be customised and required additional events can be added</p>
+          <h2 class="post-title-main">High view customization</h2>
+          <p>Every part can be customized and required additional events can be added</p>
         </div>
         <img src="images/customisation.svg" alt='ka-table customisation'/>
       </div>
@@ -63,7 +63,7 @@ layout: index_layout
         <div class="main-banner-text">
           <h3 class="header-tag">FREE COMPONENT</h3>
           <h2 class="post-title-main">Open source MIT component</h2>
-          <p>ka-table is under MIT licence, and it can be used everywhere for free. Contribution and feedback are always welcome in the <a href="https://github.com/komarovalexander/ka-table" target="_blank">ka-table repo</a></p>
+          <p>ka-table is under MIT license, and it can be used everywhere for free. Contribution and feedback are always welcome in the <a href="https://github.com/komarovalexander/ka-table" target="_blank">ka-table repo</a></p>
         </div>
       </div>
       <div class="col-md-6">
@@ -78,7 +78,7 @@ layout: index_layout
       <div class="col-md-4">
         <div class="img"><img src="images/icons/Editing.svg" alt="Editing"/></div>
         <h4>Editing</h4>
-        <p>Editors for different data types out-of-the-box, and good ability for customisation</p>
+        <p>Editors for different data types out-of-the-box, and good ability for customization</p>
       </div>
       <div class="col-md-4">
         <div class="img"><img src="images/icons/Events.svg" alt="Events"/></div>
@@ -88,7 +88,7 @@ layout: index_layout
       <div class="col-md-4">
         <div class="img"><img src="images/icons/Filtering.svg" alt="Filtering"/></div>
         <h4>Filtering</h4>
-        <p>Use predefined filter row with customisable editors or use extended filter</p>
+        <p>Use predefined filter row with customizable editors or use an extended filter</p>
       </div>
       <div class="col-md-4">
         <div class="img"><img src="images/icons/Grouping.svg" alt="Grouping"/></div>
@@ -113,12 +113,12 @@ layout: index_layout
       <div class="col-md-4">
         <div class="img"><img src="images/icons/Validation.svg" alt="Validation"/></div>
         <h4>Validation</h4>
-        <p>Validate editor value before apply it</p>
+        <p>Validate editor value before applying it</p>
       </div>
       <div class="col-md-4">
         <div class="img"><img src="images/icons/VirtualScrolling.svg" alt="VirtualScrolling"/></div>
         <h4>Virtual Scrolling</h4>
-        <p>Virtualisation work well with with big amount of data and grouping</p>
+        <p>Virtualization work well with the big amount of data and grouping</p>
       </div>
     </div>
   </div>

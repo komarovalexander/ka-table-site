@@ -6,6 +6,22 @@ body {
     font-family: 'Roboto',  'Helvetica Neue Light', 'Open Sans', Helvetica;
 }
 
+.post-content h2 {
+    margin-top: 50px;
+}
+.post-content h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #353C44;
+}
+.post-content h4 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.post-content pre {
+    margin-bottom: 30px;
+}
 
 .post-content img {
     margin: 12px 0px 3px 0px;
@@ -255,9 +271,6 @@ a.accordion-toggle, a.accordion-collapsed {
     color: #333;
     display: block;
     outline: none;
-    /*-webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;*/
     text-decoration: none;
 }
 
@@ -280,54 +293,34 @@ a.accordion-toggle, a.accordion-collapsed {
     color: #f5f5f5;
 }
 
-.nav > li.active > a  {
-background-color: #347DBE;
+ul.nav > li.active > a  {
+    background: none;
+    color: #000;
+    text-decoration: underline;
 }
 
-.nav li a {
-    font-size: 12px;
-    line-height: 18px;
-    padding: 2px 10px;
-    background-color: #f1f1f1;
-}
-
-.nav > li > a {
+footer .nav li a {
     font-size: 14px;
-    line-height: 20px;
-    padding: 4px 10px;
+    margin-right:20px;
+}
+footer .container .container, footer .navbar{
+    padding-left: 0;
+}
+.nav li a {
+    font-size: 18px;
+    line-height: 123.8%;
+    letter-spacing: 0.05em;
+    color: #353C44;
+    margin-right:60px;
+}
+ul.nav > li > a:hover {
+    text-decoration: underline;
+    color: #353C44;
+    background: none;
 }
 
 ul#mysidebar {
     border-radius:0px;
-}
-
-.nav ul li ul li a {
-    padding-left:40px;
-}
-
-.nav li.thirdlevel > a {
-    color: #248EC2;
-    font-weight:bold;
-    padding-left:20px;
-    background-color: whitesmoke !important;
-}
-
-
-.nav ul li a {
-    background-color: #FAFAFA;
-}
-
-.nav li a {
-    padding-right:10px;
-}
-
-.nav li a:hover {
-    background-color: #8D8D8D;
-}
-
-.nav ul li a {
-    border-top:1px solid whitesmoke;
-    padding-left:10px;
 }
 /* end sidebar */
 
@@ -746,7 +739,7 @@ pre {
 }
 
 /* this part adds an icon after external links, using FontAwesome*/
-a[href^="http://"]:after, a[href^="https://"]:after {
+a[target^="_blank"]:after {
     content: "\f08e";
     font-family: FontAwesome;
     font-weight: normal;
@@ -1030,9 +1023,10 @@ pre {
     border-radius: 4px;
 }
 
-.navbar{
+body > .navbar{
     position: absolute;
     width: 100%;
+    top: 25px;
     z-index: 1;
 }
 h3.header-tag {
@@ -1110,6 +1104,10 @@ h3.header-tag {
     margin-bottom: 0;
 }
 
+.open-source img{
+    float: right;
+}
+
 .features .col-md-4{
     margin-bottom: 80px;
 }
@@ -1145,6 +1143,18 @@ h4{
 
 footer{
     border-top: 2px solid #CBDCE4;
-    padding-top: 55px;
-    padding-bottom: 90px;
+    padding-top: 45px;
+    padding-bottom: 60px;
+}
+footer .col-md-3{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+footer .col-md-3 a {
+    margin-left: 5px;
+}
+
+#main {
+    margin-top: 100px;
 }
