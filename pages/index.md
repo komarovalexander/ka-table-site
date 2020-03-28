@@ -13,7 +13,7 @@ layout: index_layout
   <div class="main-banner-container">
     <div class="container">
       <div class="main-banner">
-        <img src="images/main@2x.png" alt='ka-table banner'/>
+        <img src="images/main.svg" alt='ka-table banner'/>
       </div>
     </div>
   </div>

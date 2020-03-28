@@ -70,7 +70,8 @@ Describes the position of a cell in  the table
 
 ## ChildAttributes
 Describes the attributes for a specific child component
-It is possible to override default behaviour just specify particular handler [Events Demo](https://komarovalexander.github.io/ka-table/#/events)
+
+It is possible to override default behaviour just specify particular handler (see [Events Demo](https://komarovalexander.github.io/ka-table/#/events))
 
 | Name | Type | Description |
 | --- | --- | --- |

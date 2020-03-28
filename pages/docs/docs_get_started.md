@@ -18,17 +18,17 @@ yarn add ka-table
 ```
 
 ## Main idea
-ka-table is "props - UI - action - reducer" pattern. *(Thanks to Redux & Flux for the inspiration)*
+ka-table is "props - UI - action - reducer". *(Thanks to Redux & Flux for the inspiration)*
 
- ka-table UI is rendered according to props -> all changes are performed by dispatching an action -> action and previous props are passed to the kaReducer -> kaReducer generates new props.
+ ka-table UI is rendered according to props -> all changes are performed by dispatching an action -> action and previous props are passed to the kaReducer -> kaReducer generates new props
 
 ![Pattern](./images/schema-docs.svg)
 
- ka-table easily integrates with Redux but also can be used without it.
+ ka-table easily integrates with Redux but also can be used without it
 
- ka-table is controllable - props should be changed to perform changing UI - this approach gives full control of component and every change.
+ ka-table is controllable - props should be changed to perform changing UI - this approach gives full control of component and every change
 
- Props of ka-table can be obtained from every type of storage. Examples of storage: state of parent component, remote server, redux store, custom store, etc.
+ Props of ka-table can be obtained from every type of storage. Examples of storage: state of parent component, remote server, redux store, custom store, etc
 
 
 All changes of ka-table are performed by dispatching action
@@ -78,7 +78,7 @@ const OverviewDemo: React.FC = () => {
   const [tableProps, changeTableProps] = useState(tablePropsInit);
 
   const dispatch: DispatchFunc = (action) => { // dispatch has an *action as an argument
-    // kaReducer returns new *props according to previous state and *action, and saves new props to the state
+    // *kaReducer returns new *props according to previous state and *action, and saves new props to the state
     changeTableProps((prevState: ITableOption) => kaReducer(prevState, action));
   };
 
@@ -92,5 +92,9 @@ const OverviewDemo: React.FC = () => {
 
 export default OverviewDemo;
 ```
+*: [props](./docs_props.html) |
+[UI](./docs_ui.html) |
+[action](./docs_action.html) |
+[kaReducer](./docs_reducer.html)
 
 [Example link](https://komarovalexander.github.io/ka-table/#/sorting)
