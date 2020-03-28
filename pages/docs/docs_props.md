@@ -1,15 +1,14 @@
 ---
-title: "API"
+title: "Props"
 keywords: ka-table, react table, flux, redux, api
 sidebar: mydoc_sidebar
 search: include
-permalink: docs_api.html
-url: docs_api.html
+permalink: docs_props.html
+url: docs_props.html
 toc: true
 ---
 
-## Table
-**Properties**
+## ka-table Props
 
 | Name | Type | Description |
 | --- | --- | --- |

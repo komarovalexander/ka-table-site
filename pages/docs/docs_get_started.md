@@ -17,42 +17,28 @@ yarn
 yarn add ka-table
 ```
 
-## Usage
+## Main idea
+ka-table is "props - UI - action - reducer" pattern. *(Thanks to Redux & Flux for the inspiration)*
 
-#### Main idea
-ka-table implements "state - view - action - reducer" pattern. *Thanks to Redux for the inspiration*
+ ka-table UI is rendered according to props -> all changes are performed by dispatching an action -> action and previous props are passed to the kaReducer -> kaReducer generates new props.
 
-![Pattern](./images/pattern.png)
+![Pattern](./images/schema-docs.svg)
 
-All changes of grid performs by dispatching action
+ ka-table easily integrates with Redux but also can be used without it.
+
+ ka-table is controllable - props should be changed to perform changing UI - this approach gives full control of component and every change.
+
+ Props of ka-table can be obtained from every type of storage. Examples of storage: state of parent component, remote server, redux store, custom store, etc.
+
+
+All changes of ka-table are performed by dispatching action
 
     dispatch({
       type: 'ACTION_TYPE',
       ...payload
     })
 
-Because of it every change in Table can be controlled:
-
-    // (1) state - (2) view - (3) action - (4) reducer
-    const OverviewDemo: React.FC = () => {
-      const [option, changeOptions] = useState(tableOption); // (1) state
-      const dispatch: DispatchFunc = (action) => {
-        // subscribe to dispatch: takes (3) action as an argument
-        // and change (1) state by passing previous state and action to kaReducer
-        changeOptions((prevState: ITableOption) => kaReducer(prevState, action)); // (4) reducer
-      };
-
-      return (
-        <Table
-          {...option}
-          dispatch={dispatch}
-        /> // (2) table is only view logic and it renders by state
-           //and dispatches action using 'dispatch' function
-      );
-    };
-
 ### Basic example
-
 
 ```js
 import React, { useState } from 'react';
@@ -62,6 +48,7 @@ import { DataType, EditingMode, SortingMode } from 'ka-table/enums';
 import { kaReducer } from 'ka-table/reducers';
 import { DispatchFunc } from 'ka-table/types';
 
+// data for ka-table
 const dataArray = Array(10).fill(undefined).map(
   (_, index) => ({
     column1: `column:1 row:${index}`,
@@ -72,7 +59,8 @@ const dataArray = Array(10).fill(undefined).map(
   }),
 );
 
-const tableOption: ITableOption = {
+// initial value of the *props
+const tablePropsInit: ITableOption = {
   columns: [
     { key: 'column1', title: 'Column 1', dataType: DataType.String },
     { key: 'column2', title: 'Column 2', dataType: DataType.String },
@@ -86,15 +74,18 @@ const tableOption: ITableOption = {
 };
 
 const OverviewDemo: React.FC = () => {
-  const [option, changeOptions] = useState(tableOption);
-  const dispatch: DispatchFunc = (action) => {
-    changeOptions((prevState: ITableOption) => kaReducer(prevState, action));
+  // in this case *props are stored in the state of parent component
+  const [tableProps, changeTableProps] = useState(tablePropsInit);
+
+  const dispatch: DispatchFunc = (action) => { // dispatch has an *action as an argument
+    // kaReducer returns new *props according to previous state and *action, and saves new props to the state
+    changeTableProps((prevState: ITableOption) => kaReducer(prevState, action));
   };
 
   return (
     <Table
-      {...option}
-      dispatch={dispatch}
+      {...tableProps} // (2) ka-table UI is rendered according to props
+      dispatch={dispatch} // dispatch is required for obtain new actions from the UI
     />
   );
 };

@@ -1,10 +1,10 @@
 ---
-title: "Actions"
+title: "Action"
 keywords: ka-table, react table, flux, redux, actions
 sidebar: mydoc_sidebar
 search: include
-permalink: docs_actions.html
-url: docs_actions.html
+permalink: docs_action.html
+url: docs_action.html
 toc: false
 ---
 

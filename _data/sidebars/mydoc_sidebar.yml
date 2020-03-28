@@ -11,16 +11,19 @@ entries:
     - title: Getting Started
       url: /docs_get_started.html
       output: web
-      type: homepage
 
-    - title: API
-      url: /docs_api.html
+    - title: Props
+      url: /docs_props.html
       output: web
-      type: homepage
 
-    - title: Actions
-      url: /docs_actions.html
+    - title: UI
+      url: /docs_ui.html
       output: web
-      type: homepage
 
+    - title: Action
+      url: /docs_action.html
+      output: web
 
+    - title: Reducer
+      url: /docs_reducer.html
+      output: web
