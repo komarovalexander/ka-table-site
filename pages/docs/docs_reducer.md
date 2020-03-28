@@ -8,9 +8,9 @@ url: docs_reducer.html
 toc: false
 ---
 
-Reducer is an object which takes previous props and action and returns new props.
+Reducer is an object which takes previous props and action and returns new props
 
-ka-table has predefined kaReducer
+There is predefined kaReducer
 
 ```js
   // example with hooks,
