@@ -23,7 +23,7 @@ There is an example with predefined kaReducer
   // in this case props are stored in the state
   const [tableProps, changeTableProps] = useState(tablePropsInit);
   const dispatch: DispatchFunc = (action) => { // describe how to behave when action is dispatched
-    changeTableProps((prevProps: ITableOption) =>
+    changeTableProps((prevProps: ITableProps) =>
       kaReducer(prevProps, action) // kaReducer returns new props to the state to update the Table
     );
   };

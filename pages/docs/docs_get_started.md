@@ -43,7 +43,7 @@ All changes of ka-table are performed by dispatching action
 ```js
 import React, { useState } from 'react';
 
-import { ITableOption, Table } from 'ka-table';
+import { ITableProps, Table } from 'ka-table';
 import { DataType, EditingMode, SortingMode } from 'ka-table/enums';
 import { kaReducer } from 'ka-table/reducers';
 import { DispatchFunc } from 'ka-table/types';
@@ -60,7 +60,7 @@ const dataArray = Array(10).fill(undefined).map(
 );
 
 // initial value of the *props
-const tablePropsInit: ITableOption = {
+const tablePropsInit: ITableProps = {
   columns: [
     { key: 'column1', title: 'Column 1', dataType: DataType.String },
     { key: 'column2', title: 'Column 2', dataType: DataType.String },
@@ -79,7 +79,7 @@ const OverviewDemo: React.FC = () => {
 
   const dispatch: DispatchFunc = (action) => { // dispatch has an *action as an argument
     // *kaReducer returns new *props according to previous state and *action, and saves new props to the state
-    changeTableProps((prevState: ITableOption) => kaReducer(prevState, action));
+    changeTableProps((prevState: ITableProps) => kaReducer(prevState, action));
   };
 
   return (

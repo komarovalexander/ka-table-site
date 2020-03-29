@@ -56,7 +56,7 @@ Every part of the UI (Row, GroupRow, Column, HeaderCell, Cell, Editors) is custo
   };
 
   // set editor for specific column of tableProps
-  const tableProps: ITableOption = {
+  const tableProps: ITableProps = {
     columns: [
       // ...
       {

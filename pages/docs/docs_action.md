@@ -69,7 +69,7 @@ Custom actions also can be dispatched and processed by dispatch function or cust
         // action.myData.value == 5
         // do action things or pass it to the custom reducer
         break;
-      default: changeTableProps((prevState: ITableOption) => kaReducer(prevState, action));
+      default: changeTableProps((prevState: ITableProps) => kaReducer(prevState, action));
     }
   };
 
