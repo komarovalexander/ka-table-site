@@ -5,12 +5,18 @@ sidebar: mydoc_sidebar
 search: include
 permalink: docs_reducer.html
 url: docs_reducer.html
-toc: false
+toc: true
 ---
 
-Reducer is an object which takes previous props and action and returns new props
+## Definition
+Reducer is a function which takes previous props and action and returns new props
 
-There is predefined kaReducer
+```js
+  kaReducer(prevProps, action) // returns new props
+```
+
+## kaReducer
+There is an example with predefined kaReducer
 
 ```js
   // example with hooks,
@@ -29,6 +35,7 @@ There is predefined kaReducer
   );
 ```
 
+## Custom Reducer
 kaReducer can be combined/extended/replaced with custom reducers:
 
 ```js

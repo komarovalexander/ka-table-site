@@ -20,7 +20,7 @@ yarn add ka-table
 ## Main idea
 ka-table is "props - UI - action - reducer". *(Thanks to Redux & Flux for the inspiration)*
 
- ka-table UI is rendered according to props -> all changes are performed by dispatching an action -> action and previous props are passed to the kaReducer -> kaReducer generates new props
+ ka-table UI is rendered according to props -> all changes are performed by dispatching an action -> previous props and action are passed to the kaReducer -> kaReducer generates new props
 
 ![Pattern](./images/schema-docs.svg)
 
@@ -98,3 +98,6 @@ export default OverviewDemo;
 [kaReducer](./docs_reducer.html)
 
 [Example link](https://komarovalexander.github.io/ka-table/#/sorting)
+
+## Examples
+kaTable has [big set of Examples](https://komarovalexander.github.io/ka-table/#/overview) where all features are covered by separate cases for easier and faster start.
