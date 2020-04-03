@@ -9,6 +9,8 @@ topnav:
     - title: Demos
       external_url: https://komarovalexander.github.io/ka-table/#/overview
     - title: GitHub
+      target: true
       external_url: https://github.com/komarovalexander/ka-table
     - title: npm
+      target: true
       external_url: https://www.npmjs.com/package/ka-table

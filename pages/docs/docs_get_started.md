@@ -17,6 +17,9 @@ yarn
 yarn add ka-table
 ```
 
+## License
+ka-table is a MIT component. It is fully free, and contribution and feedback are always welcome
+
 ## Main idea
 ka-table is "props - UI - action - reducer". *(Thanks to Redux & Flux for the inspiration)*
 

@@ -1188,3 +1188,11 @@ footer .col-md-3 a {
 #main {
     margin-top: 100px;
 }
+
+.features p {
+    margin-bottom: 5px;
+}
+
+.demos{
+    text-align: center;
+}

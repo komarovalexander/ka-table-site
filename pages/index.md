@@ -81,46 +81,55 @@ layout: index_layout
         <div class="img"><img src="images/icons/Editing.svg" alt="Editing"/></div>
         <h4>Editing</h4>
         <p>Editors for different data types out-of-the-box, and good ability for customization</p>
+        <a href="https://komarovalexander.github.io/ka-table/#/editing">Demo</a>
       </div>
       <div class="col-md-4">
         <div class="img"><img src="images/icons/Events.svg" alt="Events"/></div>
         <h4>Events</h4>
         <p>All possible events can be added to childElements</p>
+        <a href="https://komarovalexander.github.io/ka-table/#/events">Demo</a>
       </div>
       <div class="col-md-4">
         <div class="img"><img src="images/icons/Filtering.svg" alt="Filtering"/></div>
         <h4>Filtering</h4>
         <p>Use predefined filter row with customizable editors or use an extended filter</p>
+        <a href="https://komarovalexander.github.io/ka-table/#/filter-row">Demo</a>
       </div>
       <div class="col-md-4">
         <div class="img"><img src="images/icons/Grouping.svg" alt="Grouping"/></div>
         <h4>Grouping</h4>
         <p>Grouping is supported with cell and row customization</p>
+        <a href="https://komarovalexander.github.io/ka-table/#/grouping">Demo</a>
       </div>
       <div class="col-md-4">
         <div class="img"><img src="images/icons/Search.svg" alt="Search"/></div>
         <h4>Search</h4>
         <p>Search by the whole Table is easy</p>
+        <a href="https://komarovalexander.github.io/ka-table/#/search">Demo</a>
       </div>
       <div class="col-md-4">
         <div class="img"><img src="images/icons/Selection.svg" alt="Selection"/></div>
         <h4>Selection</h4>
         <p>Multiple & single selection</p>
+        <a href="https://komarovalexander.github.io/ka-table/#/selection">Demo</a>
       </div>
       <div class="col-md-4">
         <div class="img"><img src="images/icons/StateStoring.svg" alt="StateStoring"/></div>
         <h4>State Storing</h4>
         <p>Save Table's state and restore it after page reload</p>
+        <a href="https://komarovalexander.github.io/ka-table/#/state-storing">Demo</a>
       </div>
       <div class="col-md-4">
         <div class="img"><img src="images/icons/Validation.svg" alt="Validation"/></div>
         <h4>Validation</h4>
         <p>Validate editor value before applying it</p>
+        <a href="https://komarovalexander.github.io/ka-table/#/validation">Demo</a>
       </div>
       <div class="col-md-4">
         <div class="img"><img src="images/icons/VirtualScrolling.svg" alt="VirtualScrolling"/></div>
         <h4>Virtual Scrolling</h4>
         <p>Virtualization work well with the big amount of data and grouping</p>
+        <a href="https://komarovalexander.github.io/ka-table/#/many-rows">Demo</a>
       </div>
     </div>
   </div>
