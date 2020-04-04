@@ -46,9 +46,8 @@ All changes of ka-table are performed by dispatching action
 ```js
 import React, { useState } from 'react';
 
-import { ITableProps, Table } from 'ka-table';
+import { ITableProps, kaReducer, Table } from 'ka-table';
 import { DataType, EditingMode, SortingMode } from 'ka-table/enums';
-import { kaReducer } from 'ka-table/reducers';
 import { DispatchFunc } from 'ka-table/types';
 
 // data for ka-table
