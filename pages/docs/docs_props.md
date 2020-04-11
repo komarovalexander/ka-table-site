@@ -22,6 +22,7 @@ toc: true
 | groupRow | (props:[<code>IGroupRowProps</code>](#igrouprowprops)) => any; | Returns Group Row Template |
 | groups | [<code>Group[]</code>](#Group) | Group's in the table (Demo: [Grouping Example](https://komarovalexander.github.io/ka-table/#/grouping)) |
 | groupsExpanded | <code>any[][]</code> | Expanded groups - array of group keys |
+| loading | <code>boolean</code> | Show/hide loading indicator |
 | noDataRow | <code>() => any</code> | The function returns string or a component which should appear when there are no data to show |
 | dispatch | <code>(action) => any</code> | The function takes action as an argument, is used as a notification about any changes and events in the Table |
 | rowKeyField | <code>string</code> | Data's field which is used to identify row |
