@@ -16,6 +16,7 @@ toc: true
 | columns | [<code>Column[]</code>](#column) | Columns in table and their look and behaviour |
 | data | <code>any[]</code> | The Table's data |
 | dataRow | (props: [IDataRowProps](#idatarowprops)) => any; | Returns Data Row Template (Demo: [Custom Data Row Example](https://komarovalexander.github.io/ka-table/#/custom-data-row)) |
+| dispatch | <code>(action) => any</code> | The function takes action as an argument, is used as a notification about any changes and events in the Table |
 | editableCells | [<code>Cell[]</code>](#Cell) | Array of cells currently editing (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
 | editingMode | 'cell' <br/> 'none' | Sets the table's editing mode (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
 | filteringMode | 'filterRow' <br/> 'none' | Show filter UI elements in Table (Demo: [Filter Row Example](https://komarovalexander.github.io/ka-table/#/filter-row)) |
@@ -24,7 +25,6 @@ toc: true
 | groupsExpanded | <code>any[][]</code> | Expanded groups - array of group keys |
 | loading | <code>boolean</code> | Show/hide loading indicator |
 | noDataRow | <code>() => any</code> | The function returns string or a component which should appear when there are no data to show |
-| dispatch | <code>(action) => any</code> | The function takes action as an argument, is used as a notification about any changes and events in the Table |
 | rowKeyField | <code>string</code> | Data's field which is used to identify row |
 | search <a name="Table.search"></a> | <code>string</code> | Specifies the text for search by data (Demo: [Search Example](https://komarovalexander.github.io/ka-table/#/search)) |
 | selectedRows | <code>any[]</code> | Array of selected rows keys (Demo: [Selection Example](https://komarovalexander.github.io/ka-table/#/selection)) |
