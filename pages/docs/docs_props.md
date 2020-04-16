@@ -17,11 +17,11 @@ toc: true
 | data | <code>any[]</code> | The Table's data |
 | dataRow | (props: [IDataRowProps](#idatarowprops)) => any; | Returns Data Row Template (Demo: [Custom Data Row Example](https://komarovalexander.github.io/ka-table/#/custom-data-row)) |
 | dispatch | <code>(action) => any</code> | The function takes action as an argument, is used as a notification about any changes and events in the Table |
-| editableCells | [<code>Cell[]</code>](#Cell) | Array of cells currently editing (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
+| editableCells | [<code>Cell[]</code>](#cell) | Array of cells currently editing (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
 | editingMode | 'cell' <br/> 'none' | Sets the table's editing mode (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
 | filteringMode | 'filterRow' <br/> 'none' | Show filter UI elements in Table (Demo: [Filter Row Example](https://komarovalexander.github.io/ka-table/#/filter-row)) |
 | groupRow | (props:[<code>IGroupRowProps</code>](#igrouprowprops)) => any; | Returns Group Row Template |
-| groups | [<code>Group[]</code>](#Group) | Group's in the table (Demo: [Grouping Example](https://komarovalexander.github.io/ka-table/#/grouping)) |
+| groups | [<code>Group[]</code>](#group) | Group's in the table (Demo: [Grouping Example](https://komarovalexander.github.io/ka-table/#/grouping)) |
 | groupsExpanded | <code>any[][]</code> | Expanded groups - array of group keys |
 | loading | <code>{enabled?: boolean,<br/>text?: string;}</code> | Show/hide loading indicator (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)) |
 | noDataRow | <code>() => any</code> | The function returns string or a component which should appear when there are no data to show |
