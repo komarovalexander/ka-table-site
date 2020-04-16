@@ -36,7 +36,7 @@ All of actions below are processed by kaReducer:
 | 'SelectAllRows' | {<br/>type:'SelectAllRows'<br/>} | selectAllRows() | no | add all items ids of *data* to *selectedRows* |
 | 'SelectRow' | {<br/>type:'SelectRow',<br/>rowKeyValue: any<br/>} | selectRow(<br/> rowKeyValue<br/>) | no | add row id to *selectedRows* |
 | 'SelectSingleRow' | {<br/>type:'SelectSingleRow',<br/>rowKeyValue: any<br/>} | selectSingleRow(<br/> rowKeyValue<br/>) | no | set *selectedRows* as an array with one row id |
-| 'ShowLoading' | {<br/>type:'ShowLoading'<br/>} | showLoading() | no | set *loading* = true |
+| 'ShowLoading' | {<br/>type:'ShowLoading',<br/>text?:string<br/>} | showLoading(text?) | no | set *loading* = true and updates the text if text is specified |
 | 'UpdateCellValue' | {<br/>type:'UpdateCellValue',<br/>rowKeyValue: any,<br/>columnKey: string,<br/>value: any,<br/>} | changeCellValue(<br/> rowKeyValue,<br/> columnKey,<br/> value<br/>) | yes | update *data* |
 | 'UpdateData' | {<br/>type:'UpdateData',<br/>data: any[]<br/>} | updateData(<br/> data<br/>) | no | update *data* |
 | 'UpdateFilterRowOperator' | {<br/>type:'UpdateFilterRowOperator',<br/>columnKey: string,<br/>filterRowOperator: string<br/>} | updateFilterRowOperator(<br/> columnKey,<br/> filterRowOperator<br/>) | no | update *filterRowOperator* for specific column |
