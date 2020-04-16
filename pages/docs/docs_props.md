@@ -50,7 +50,7 @@ Describes column of table its look and behaviour
 | headCell | (props:[<code>IHeadCellProps</code>](#iheadcellprops)) => any; | Returns a custom header cell (Demo: [Custom Head Cell Example](https://komarovalexander.github.io/ka-table/#/custom-header-cell)) |
 | isEditable | <code>boolean</code> | Specifies can column be editable or not |
 | key | <code>string</code> | Mandatory field, specifies unique key for the column |
-| search | (searchText?: string, rowData?: any, column?: Column) => boolean; | Overrides the default search method for the cell. Executes if (Demo: [Table.search](#Table.search)) option is set |
+| search | (searchText?: string, rowData?: any, column?: Column) => boolean; | Overrides the default search method for the cell. Executes if [Table.search](#Table.search) option is set |
 | sortDirection | 'ascend' <br/> 'descend' | Sets the direction of sorting for the column |
 | style | <code>React.CSSProperties</code> | Sets the style options of the elements |
 | title | <code>string</code> | Specifies the text of the header |
