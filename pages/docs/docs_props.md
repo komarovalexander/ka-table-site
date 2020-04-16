@@ -23,7 +23,7 @@ toc: true
 | groupRow | (props:[<code>IGroupRowProps</code>](#igrouprowprops)) => any; | Returns Group Row Template |
 | groups | [<code>Group[]</code>](#group) | Group's in the table (Demo: [Grouping Example](https://komarovalexander.github.io/ka-table/#/grouping)) |
 | groupsExpanded | <code>any[][]</code> | Expanded groups - array of group keys |
-| loading | <code>{enabled?: boolean,<br/>text?: string;}</code> | Show/hide loading indicator (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)) |
+| loading | <code>[ILoadingProps](#iloadingprops)</code> | Loading indicator options (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)) |
 | noDataRow | <code>() => any</code> | The function returns string or a component which should appear when there are no data to show |
 | rowKeyField | <code>string</code> | Data's field which is used to identify row |
 | search <a name="Table.search"></a> | <code>string</code> | Specifies the text for search by data (Demo: [Search Example](https://komarovalexander.github.io/ka-table/#/search)) |
@@ -191,6 +191,13 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 | isExpanded | <code>boolean</code> | Expanded state of current group |
 | text | <code>string</code> | Formatted text of group row |
 
+## ILoadingProps
+**Properties**
+
+| Name | Type | Description |
+| --- | --- | --- |
+| enabled | <code>boolean</code> | Show/hide loading indicator (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)) |
+| text | <code>string</code> | Set text of loading indicator (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)) |
 
 ## IHeadCellProps
 **Properties**
