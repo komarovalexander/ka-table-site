@@ -25,6 +25,7 @@ toc: true
 | groupsExpanded | <code>any[][]</code> | Expanded groups - array of group keys |
 | loading | [<code>ILoadingProps</code>](#iloadingprops) | Loading indicator options (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)) |
 | noDataRow | <code>() => any</code> | The function returns string or a component which should appear when there are no data to show |
+| pagingProps | [<code>IPagingProps</code>](#ipagingprops) | Paging settings (Demo: [Paging](https://komarovalexander.github.io/ka-table/#/paging)) |
 | rowKeyField | <code>string</code> | Data's field which is used to identify row |
 | search <a name="Table.search"></a> | <code>string</code> | Specifies the text for search by data (Demo: [Search Example](https://komarovalexander.github.io/ka-table/#/search)) |
 | selectedRows | <code>any[]</code> | Array of selected rows keys (Demo: [Selection Example](https://komarovalexander.github.io/ka-table/#/selection)) |
@@ -33,7 +34,6 @@ toc: true
 
 ## Column
 Describes column of table its look and behaviour
-**Properties**
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -60,8 +60,6 @@ Describes column of table its look and behaviour
 
 ## Cell
 Describes the position of a cell in  the table
-
-**Properties**
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -98,8 +96,6 @@ A second parameter in each [react Synthetic Event](https://reactjs.org/docs/even
 
 ## Group
 
-**Properties**
-
 | Name | Type | Description |
 | --- | --- | --- |
 | field | <code>string</code> | The grouped column's field |
@@ -119,33 +115,7 @@ A second parameter in each [react Synthetic Event](https://reactjs.org/docs/even
 You can set VirtualScrolling as empty object {} to enable virtual scrolling and auto calculate its parameters
 
 
-
-## ICellEditorProps
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| column | [<code>Column</code>](#column) | column of the editor |
-| dispatch | <code>(type: string, data: any) => void</code> | can forse Table make change in data, close the editor, and other actions |
-| field | <code>string</code> | field name of current column |
-| isSelectedRow | <code>boolean</code> | selection state of the current row |
-| rowData | <code>any</code> | data of the row in which editor is shown |
-| rowKeyField | <code>string</code> | field which is used to identify row |
-| rowKeyValue | <code>any</code> | value of the field which is used to identify row |
-
-<a name="IFilterRowEditorProps"></a>
-## IFilterRowEditorProps
-**Properties**
-
-| Name | Type | Description |
-| --- | --- | --- |
-| column | [<code>Column</code>](#column) | column of the editor |
-| dispatch | <code>(type: string, data: any) => void</code> |  can forse Table make change in filter data and other actions  |
-
-
-
 ## ICellContentProps
-**Properties**
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -160,10 +130,28 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 | rowKeyValue | <code>any</code> | value of the field which is used to identify cell row |
 | value | <code>any</code> | value of the cell |
 
+## ICellEditorProps
+
+| Name | Type | Description |
+| --- | --- | --- |
+| column | [<code>Column</code>](#column) | column of the editor |
+| dispatch | <code>(type: string, data: any) => void</code> | can forse Table make change in data, close the editor, and other actions |
+| field | <code>string</code> | field name of current column |
+| isSelectedRow | <code>boolean</code> | selection state of the current row |
+| rowData | <code>any</code> | data of the row in which editor is shown |
+| rowKeyField | <code>string</code> | field which is used to identify row |
+| rowKeyValue | <code>any</code> | value of the field which is used to identify row |
+
+<a name="IFilterRowEditorProps"></a>
+## IFilterRowEditorProps
+
+| Name | Type | Description |
+| --- | --- | --- |
+| column | [<code>Column</code>](#column) | column of the editor |
+| dispatch | <code>(type: string, data: any) => void</code> |  can forse Table make change in filter data and other actions  |
 
 
 ## IDataRowProps
-**Properties**
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -176,10 +164,16 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 | rowKeyField | <code>string</code> | Data's field which is used to identify row |
 | selectedRows | <code>any[]</code> | Array of rows keys which are marked as selected |
 
+## IHeadCellProps
 
+| Name | Type | Description |
+| --- | --- | --- |
+| areAllRowsSelected | <code>boolean</code> | Indicates selection state of all columns |
+| column | [<code>Column</code>](#column) | Grouped column |
+| sortingMode |  'single' <br/> 'none'  | SortingMode of current cell column |
+| dispatch | <code>(type: string, data: any) => void</code> | Executes specific action with specific data |
 
 ## IGroupRowProps
-**Properties**
 
 | Name | Type | Description |
 | --- | --- | --- |
@@ -192,19 +186,20 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 | text | <code>string</code> | Formatted text of group row |
 
 ## ILoadingProps
-**Properties**
+
+Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| enabled | <code>boolean</code> | Show/hide loading indicator (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)) |
-| text | <code>string</code> | Set text of loading indicator (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)) |
+| enabled | <code>boolean</code> | Show/hide loading indicator |
+| text | <code>string</code> | Set text of loading indicator |
 
-## IHeadCellProps
-**Properties**
+## IPagingProps
+
+Demo: [Paging](https://komarovalexander.github.io/ka-table/#/paging)
 
 | Name | Type | Description |
 | --- | --- | --- |
-| areAllRowsSelected | <code>boolean</code> | Indicates selection state of all columns |
-| column | [<code>Column</code>](#column) | Grouped column |
-| sortingMode |  'single' <br/> 'none'  | SortingMode of current cell column |
-| dispatch | <code>(type: string, data: any) => void</code> | Executes specific action with specific data |
+| enabled | <code>boolean</code> | Show/hide Paging |
+| pageIndex | <code>number</code> | Active page index |
+| pageSize | <code>number</code> | Data items count on one page |

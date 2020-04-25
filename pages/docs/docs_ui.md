@@ -102,4 +102,5 @@ There are [actions](./docs_action.html) which ka-table UI dispatches in response
 | 'OpenEditor' | click by data cell |
 | 'UpdateCellValue' | click outside editor or Enter Key press - executes before 'CloseEditor' action |
 | 'UpdateFilterRowValue' | each change of value in filter row editor |
+| 'UpdatePageIndex' | click by page number |
 | 'UpdateSortDirection' | click by sort button |
