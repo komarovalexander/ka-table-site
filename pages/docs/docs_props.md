@@ -79,11 +79,11 @@ It is possible to override default behaviour just specify particular handler (se
 | table | [<code>ChildAttributesItem</code>](#ChildAttributesItem)<[Table](#ITableAllProps)> | Sets custom attributes for table element |
 
 
-### ChildAttributesItem&lt;T&gt;
+#### ChildAttributesItem&lt;T&gt;
 This object is an extension for React HTMLAttributes. It contains all attributes and all [react Synthetic Events](https://reactjs.org/docs/events.html), but in each event it adds a second parameter which contains additional data with [<code>AttributeTableData type</code>](#AttributeTableData).
 
 
-### AttributeTableData&lt;T&gt;
+#### AttributeTableData&lt;T&gt;
 A second parameter in each [react Synthetic Event](https://reactjs.org/docs/events.html). Contains component-related information.
 
 | Name | Type | Description |
@@ -203,3 +203,20 @@ Demo: [Paging](https://komarovalexander.github.io/ka-table/#/paging)
 | enabled | <code>boolean</code> | Show/hide Paging |
 | pageIndex | <code>number</code> | Active page index |
 | pageSize | <code>number</code> | Data items count on one page |
+
+## kaPropsUtils
+
+Set of specific functions used for parsing table props
+```js
+import { kaPropsUtils } from 'ka-talbe/utils';
+```
+
+#### kaPropsUtils.getData
+
+Obtains sorted, filtered, grouped, paged data for table according to current properties
+(Demo: [Get Data By Props](https://komarovalexander.github.io/ka-table/#/get-data-by-props))
+
+```js
+  const data = kaPropsUtils.getData(tableProps);
+```
+
