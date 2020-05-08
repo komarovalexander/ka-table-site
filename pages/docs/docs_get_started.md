@@ -44,6 +44,9 @@ All changes of ka-table are performed by dispatching action
 ### Basic example
 
 ```js
+import "ka-table/style.css";
+// or import "ka-table/style.scss";
+
 import React, { useState } from 'react';
 
 import { ITableProps, kaReducer, Table } from 'ka-table';

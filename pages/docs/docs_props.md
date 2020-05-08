@@ -17,7 +17,7 @@ toc: true
 | data | <code>any[]</code> | The Table's data |
 | dataRow | (props: [IDataRowProps](#idatarowprops)) => any; | Returns Data Row Template (Demo: [Custom Data Row Example](https://komarovalexander.github.io/ka-table/#/custom-data-row)) |
 | dispatch | <code>(action) => any</code> | The function takes action as an argument, is used as a notification about any changes and events in the Table |
-| editableCells | [<code>Cell[]</code>](#cell) | Array of cells currently editing (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
+| editableCells | [<code>EditableCell[]</code>](#editablecell) | Array of cells currently editing (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
 | editingMode | 'cell' <br/> 'none' | Sets the table's editing mode (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
 | filteringMode | 'filterRow' <br/> 'none' | Show filter UI elements in Table (Demo: [Filter Row Example](https://komarovalexander.github.io/ka-table/#/filter-row)) |
 | groupRow | (props:[<code>IGroupRowProps</code>](#igrouprowprops)) => any; | Returns Group Row Template |
@@ -58,13 +58,15 @@ Describes column of table its look and behaviour
 
 
 
-## Cell
-Describes the position of a cell in  the table
+## EditableCell
+Describes the editor of a cell in the table
 
 | Name | Type | Description |
 | --- | --- | --- |
-| field | <code>string</code> | The field of specific column |
-| rowKeyValue | <code>any</code> | Data's key value of every specific row |
+| columnKey | <code>string</code> | the key of specific column |
+| rowKeyValue | <code>any</code> | data's key value of every specific row |
+| editorValue | <code>any</code> | value of the editor |
+| validationMessage | <code>any</code> | validation message of the column |
 
 
 ## ChildAttributes
@@ -134,6 +136,8 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 
 | Name | Type | Description |
 | --- | --- | --- |
+| editingMode | 'cell' <br/> 'none' | editing mode of current cell |
+| editorValue | <code>any</code> | value of the editor |
 | column | [<code>Column</code>](#column) | column of the editor |
 | dispatch | <code>(type: string, data: any) => void</code> | can forse Table make change in data, close the editor, and other actions |
 | field | <code>string</code> | field name of current column |
@@ -141,6 +145,8 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 | rowData | <code>any</code> | data of the row in which editor is shown |
 | rowKeyField | <code>string</code> | field which is used to identify row |
 | rowKeyValue | <code>any</code> | value of the field which is used to identify row |
+| value | <code>any</code> | value of the current field in the rowData |
+| validationMessage | <code>string</code> | validation message for the current cell |
 
 <a name="IFilterRowEditorProps"></a>
 ## IFilterRowEditorProps
@@ -157,7 +163,7 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 | --- | --- | --- |
 | columns | [<code>Column[]</code>](#column) | Columns in table and their look and behaviour |
 | dispatch | <code>(type: string, data: any) => void</code> | Executes specific action with specific data |
-| editableCells | [<code>Cell[]</code>](#Cell) | Array of cells that are in edit mode |
+| editableCells | [<code>EditableCell[]</code>](#editablecell) | Array of cells that are in edit mode |
 | editingMode | 'cell' <br/> 'none' | Table's editing mode |
 | rowData | <code>any</code> | Data of current row |
 | isSelectedRow | <code>boolean</code> | Describes selected state of current row |
