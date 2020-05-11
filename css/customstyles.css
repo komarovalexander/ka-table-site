@@ -203,6 +203,8 @@ ul#results-container a:hover {
 .main-banner-text .btn.btn-outline-primary:active{
     background-color: transparent;
     border: none;
+    outline: none;
+    box-shadow: none !important;
     color: #5396F5;
 }
 

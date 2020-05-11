@@ -20,7 +20,7 @@ layout: index_layout
           <h1 class="post-title-main">React Table Component</h1>
           <p>Controllable MIT React Table component with Sorting, Filtering, Grouping, Virtualization, Editing and many more</p>
           <a class="btn btn-primary" href="https://komarovalexander.github.io/ka-table/#/overview">View Demos</a>
-          <a class="btn btn-outline-primary" href="/docs_get_started.html">Read Documentation</a>
+          <a class="btn btn-outline-primary" href="/docs_props.html">Read Documentation</a>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ entries:
 - title: sidebar
   folders:
 
-  - title: Documentation
+  - title: Docs
     output: web
     folderitems:
 
