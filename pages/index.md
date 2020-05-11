@@ -33,7 +33,7 @@ layout: index_layout
       <div class="col-md-5">
         <div class="main-banner-text">
           <h3 class="header-tag">IDEA</h3>
-          <h2 class="post-title-main">props - UI - action - reducer</h2>
+          <h2 class="post-title-main">props-UI-action-reducer</h2>
           <p>
             ka-table UI is rendered according to props passed to the component. All changes are performed by dispatching an action, and kaReducer generates new props. This approach allows having full control over every change. Because of it ka-table easily integrates with Redux but also can be used without it
           </p>

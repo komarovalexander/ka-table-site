@@ -15,6 +15,10 @@
     src: local('Nunito Sans ExtraBold'), local('NunitoSans-ExtraBold'), url(https://fonts.gstatic.com/s/nunitosans/v5/pe03MImSLYBIv1o4X1M8cc8aBc5tU1E.woff2) format('woff2');
   }
 
+p, h1, h2{
+    letter-spacing: 0.01em;
+}
+
 body {
     font-size:15px;
     font-family: 'Nunito Sans', 'Helvetica Neue Light', 'Open Sans', Helvetica;
@@ -26,7 +30,7 @@ body {
 .post-content h3 {
     margin-top: 20px;
     font-size: 22px;
-    color: #353C44;
+    color: #1E266D;
 }
 .post-content h4 {
     margin-top: 20px;
@@ -361,7 +365,7 @@ footer .container .container, footer .navbar{
     font-size: 18px;
     line-height: 123.8%;
     letter-spacing: 0.05em;
-    color: #53585b;
+    color: #455880;
     margin-right:60px;
 }
 ul.nav > li > a:hover {
@@ -1094,7 +1098,7 @@ h3.header-tag {
 
 .main-banner-container{
     background-image: url(/images/main.svg);
-    background-position: center -1850px;
+    background-position: center -1800px;
     background-repeat: no-repeat;
     position: absolute;
     z-index: -1;
@@ -1110,7 +1114,7 @@ h3.header-tag {
     overflow: hidden;
 }
 .main-banner-row{
-    padding-top: 120px;
+    padding-top: 170px;
     height: 800px;
 }
 
@@ -1128,17 +1132,16 @@ h3.header-tag {
     line-height: 140%;
     letter-spacing: 0.01em;
     font-weight: 800;
-    color: #353C44;
+    color: #1E266D;
 }
 .main-page h2 {
     font-size: 40px;
 }
 .main-page p {
     margin-bottom: 45px;
-    letter-spacing: 0.05em;
     font-size: 18px;
     line-height: 150%;
-    color: #868A8F;
+    color: #455880;
 }
 .main-banner img{
     height: 962px;
@@ -1190,7 +1193,7 @@ h3.header-tag {
 }
 
 h4{
-    color: #353C44 !important;
+    color: #1E266D !important;
     font-weight: 500;
     font-size: 30px;
     line-height: 140%;
