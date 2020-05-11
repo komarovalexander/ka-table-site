@@ -3,7 +3,7 @@
 topnav:
 - title: Topnav
   items:
-    - title: Docs
+    - title: Documentation
       url: docs_get_started.html
       folder: docs
     - title: Demos
