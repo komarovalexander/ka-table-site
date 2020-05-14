@@ -16,8 +16,8 @@ layout: index_layout
     <div class="row main-banner-row">
       <div class="col-md-5">
         <div class="main-banner-text">
-          <h3 class="header-tag">ka-table</h3>
-          <h1 class="post-title-main">React Table Component</h1>
+          <h3 class="header-tag">component</h3>
+          <h1 class="post-title-main">React Table</h1>
           <p>Controllable MIT React Table component with Sorting, Filtering, Grouping, Virtualization, Editing and many more</p>
           <a class="btn btn-primary" href="https://komarovalexander.github.io/ka-table/#/overview">View Demos</a>
           <a class="btn btn-outline-primary" href="/docs_props.html">Read Documentation</a>

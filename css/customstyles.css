@@ -216,6 +216,7 @@ ul#results-container a:hover {
     background-color: transparent;
     border: none;
     color: #1D66FF;
+    padding: 19px 0px;
 }
 .main-banner-text .btn.btn-outline-primary:hover,
 .main-banner-text .btn.btn-outline-primary:focus,
@@ -328,6 +329,7 @@ a.accordion-toggle, a.accordion-collapsed {
     display: block;
     outline: none;
     text-decoration: none;
+    letter-spacing: 0.05em;
 }
 
 .nav li > a > span {
@@ -1122,14 +1124,14 @@ h3.header-tag {
     margin-bottom: 35px;
     font-weight: 900;
 }
-.main-page h2, .main-page h1, .header-tag, .features a, a.btn{
+.main-page h2, .main-page h1, .header-tag, .features a, a.btn, .nav a{
     font-family: 'Nunito Sans ExtraBold', sans-serif, 'Nunito Sans', 'Helvetica Neue Light', 'Open Sans', Helvetica;
 }
 .main-page h2, .main-page h1 {
     margin-bottom: 35px;
     font-weight: bold;
     font-size: 56px;
-    line-height: 140%;
+    line-height: 100%;
     letter-spacing: 0.01em;
     font-weight: 800;
     color: #1E266D;
@@ -1245,4 +1247,86 @@ footer .col-md-3 a {
 .features a{
     color: #1D66FF;
     font-weight: bold;
+}
+img{
+    width: 100%;
+}
+.computer-block img{
+    width: 1074px;
+}
+
+@media (max-width: 767px){
+    .nav li a, footer .nav li a {
+        margin-right:20px;
+    }
+    footer .navbar .container {
+        padding-right: 0;
+    }
+    footer .col-md-3 {
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+    footer {
+        padding-bottom: 0;
+        margin: 0 0 20px;
+    }
+    .navbar {
+        padding: 0;
+    }
+    .navbar-header{
+        margin-bottom: 25px;
+    }
+    .main-banner-row {
+        padding-top: 120px;
+    }
+
+    .main-banner-row .btn-primary{
+        display: none;
+    }
+    .main-page .anchorjs-link {
+        display: none;
+    }
+    .main-page p {
+        margin-bottom: 25px;
+    }
+    .btn-outline-primary{
+        padding: 0;
+    }
+    .main-banner-container {
+        background-position: -1200px -600px;
+        background-size: 2500px;
+    }
+    .row.reducer-row{
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        padding-top: 0;
+    }
+    .row.reducer-row img{
+        width: 100%;
+    }
+    .customizable-row{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .customizable-row img{
+        width: 100%;
+    }
+    .open-source-absolute{
+        display: none;
+    }
+    .open-source{
+        padding-top: 0;
+        height: 350px;
+    }
+    .features .col-md-4 {
+        margin-bottom: 60px;
+    }
+    .features .img {
+        margin-bottom: 0;
+        float: left;
+        margin-right: 15px;
+        position: relative;
+        top: 4px;
+    }
 }
