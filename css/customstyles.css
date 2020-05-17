@@ -799,16 +799,7 @@ pre {
     padding:10px;
 }
 
-/* this part adds an icon after external links, using FontAwesome*/
-a[target^="_blank"]:after {
-    content: "\f08e";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    display: inline-block;
-    text-decoration: none;
-    padding-left: 3px;
-}
+
 
 /* Strip the outbound icon when this class is present */
 a[href].noCrossRef::after,
@@ -1258,6 +1249,9 @@ img{
 @media (max-width: 767px){
     .nav li a, footer .nav li a {
         margin-right:20px;
+    }
+    #main {
+        margin-top: 130px;
     }
     footer .navbar .container {
         padding-right: 0;
