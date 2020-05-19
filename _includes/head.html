@@ -20,7 +20,10 @@
 <!-- Anchor.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
 <script>
-  window.onload = () => { anchors.add('h2,h3,h4,h5'); };
+  window.onload = () => {
+    anchors.add('h2,h3,h4,h5');
+    document.body.className += " loaded";
+  };
 </script>
 
 <link rel="shortcut icon" href="{{ "images/favicon.ico"  }}">

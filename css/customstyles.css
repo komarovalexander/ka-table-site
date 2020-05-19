@@ -15,12 +15,17 @@
     src: local('Nunito Sans ExtraBold'), local('NunitoSans-ExtraBold'), url(https://fonts.gstatic.com/s/nunitosans/v5/pe03MImSLYBIv1o4X1M8cc8aBc5tU1E.woff2) format('woff2');
   }
 
+.navbar{
+    box-shadow: none;
+}
+
 p, h1, h2{
     letter-spacing: 0.01em;
 }
 
 body {
     font-size:15px;
+    overflow-y: scroll;
     font-family: 'Nunito Sans', 'Helvetica Neue Light', 'Open Sans', Helvetica;
 }
 
@@ -194,29 +199,37 @@ ul#results-container a:hover {
 /* end search */
 
 .btn{
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05em !important;
     outline: none;
+    font-size: 16px !important;
+    text-transform: none;
+    border-radius: 6px;
 }
 
 .btn-primary{
     margin-right: 30px;
     padding: 19px 58px;
-    box-shadow: 0px 2px 4px rgba(0, 16, 75, 0.2);
+    box-shadow: 0px 2px 4px rgba(0, 16, 75, 0.2) !important;
 }
 .btn.btn-primary {
-    background-color: #1D66FF;
+    background-color: #1D66FF !important;
     border-color: #1D66FF;
 }
 .btn.btn-primary:hover {
-    background-color: #2D76FF;
+    background-color: #2D76FF !important;
+    border-color: #2D76FF;
+}
+.btn.btn-primary.waves-effect.waves-light:active {
+    background-color: #004CED !important;
     border-color: #2D76FF;
 }
 
 .btn.btn-outline-primary{
     background-color: transparent;
-    border: none;
+    border: none !important;
     color: #1D66FF;
     padding: 19px 0px;
+    box-shadow: none !important;
 }
 .main-banner-text .btn.btn-outline-primary:hover,
 .main-banner-text .btn.btn-outline-primary:focus,
@@ -1088,9 +1101,7 @@ h3.header-tag {
     text-transform: uppercase;
     color: #1D66FF !important;
 }
-
-.main-banner-container{
-    background-image: url(/images/main.svg);
+.main-banner-image{
     background-position: center -1800px;
     background-repeat: no-repeat;
     position: absolute;
@@ -1099,6 +1110,130 @@ h3.header-tag {
     height: 2088px;
     width: 100%;
 }
+.main-banner-background{
+    background-image: url(/images/main-banner/background.svg);
+}
+.main-banner-fon{
+    background-image: url(/images/main-banner/fon.svg);
+    opacity: 0;
+}
+.loaded .main-banner-fon{
+    animation: showFon 300ms linear;
+    opacity: 1;
+}
+.main-banner-blur{
+    background-image: url(/images/main-banner/blur.svg);
+    opacity: 0;
+}
+.loaded .main-banner-blur{
+    animation: showBlur 600ms linear;
+    opacity: 1;
+}
+.main-banner-grid{
+    background-image: url(/images/main-banner/grid.svg);
+    opacity: 0;
+}
+.loaded .main-banner-grid{
+    animation: showBanner 1000ms linear;
+    opacity: 1;
+}
+.main-banner-filter{
+    background-image: url(/images/main-banner/filter.svg);
+    opacity: 0;
+}
+.loaded .main-banner-filter{
+    animation: showFilter 1100ms linear;
+    opacity: 1;
+}
+.main-banner-alert{
+    background-image: url(/images/main-banner/alert.svg);
+    opacity: 0;
+}
+.loaded .main-banner-alert{
+    animation: showAlert 1300ms linear;
+    opacity: 1;
+}
+
+.main-banner-row{
+    opacity: 0;
+}
+.loaded .main-banner-row{
+    opacity: 1;
+    animation: showMainText 600ms linear;
+}
+@keyframes showMainText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showFon {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes showBlur {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showAlert {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showFilter {
+    0% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showBanner {
+    0% {
+        opacity: 0;
+        top: 138px;
+        left: -50px;
+    }
+    50% {
+        opacity: 0;
+        top: 138px;
+        left: -50px;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+        left: 0;
+    }
+  }
 
 .main-banner{
     height: 962px;

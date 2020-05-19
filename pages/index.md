@@ -11,6 +11,18 @@ layout: index_layout
 ---
 <div class="main-page">
   <div class="main-banner-container">
+    <div class="main-banner-image main-banner-background">
+    </div>
+    <div class="main-banner-image main-banner-fon">
+    </div>
+    <div class="main-banner-image main-banner-blur">
+    </div>
+    <div class="main-banner-image main-banner-grid show">
+    </div>
+    <div class="main-banner-image main-banner-filter show">
+    </div>
+    <div class="main-banner-image main-banner-alert show">
+    </div>
   </div>
   <div class="container">
     <div class="row main-banner-row">
