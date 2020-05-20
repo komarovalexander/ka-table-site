@@ -1161,6 +1161,25 @@ h3.header-tag {
     opacity: 1;
     animation: showMainText 600ms linear;
 }
+.main-banner-buble{
+    background-image: url(/images/main-banner/buble.svg);
+    opacity: 0;
+}
+.loaded .main-banner-buble{
+    animation: showBuble 1500ms linear;
+    opacity: 1;
+}
+@keyframes showBuble {
+    0% {
+        opacity: 0;
+    }
+    80% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 @keyframes showMainText {
     0% {
         opacity: 0;

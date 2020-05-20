@@ -23,6 +23,8 @@ layout: index_layout
     </div>
     <div class="main-banner-image main-banner-alert show">
     </div>
+    <div class="main-banner-image main-banner-buble show">
+    </div>
   </div>
   <div class="container">
     <div class="row main-banner-row">
