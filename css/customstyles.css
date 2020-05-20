@@ -1236,11 +1236,11 @@ h3.header-tag {
 @keyframes showBanner {
     0% {
         opacity: 0;
-        background-position: -webkit-calc(50% - 50px) -1662px;
+        background-position: -webkit-calc(50% - 59px) -1665px;
     }
     50% {
         opacity: 0;
-        background-position: -webkit-calc(50% - 50px) -1662px;
+        background-position: -webkit-calc(50% - 59px) -1665px;
     }
     85% {
         opacity: 1;
