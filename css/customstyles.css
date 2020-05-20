@@ -1217,13 +1217,11 @@ h3.header-tag {
 @keyframes showBanner {
     0% {
         opacity: 0;
-        top: 138px;
-        left: -50px;
+        background-position: -webkit-calc(50% - 50px) -1662px;
     }
     50% {
         opacity: 0;
-        top: 138px;
-        left: -50px;
+        background-position: -webkit-calc(50% - 50px) -1662px;
     }
     85% {
         opacity: 1;
@@ -1232,6 +1230,7 @@ h3.header-tag {
         opacity: 1;
         top: 0;
         left: 0;
+        background-position: 50% -1800px;
     }
   }
 
