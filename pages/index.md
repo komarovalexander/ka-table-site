@@ -76,7 +76,7 @@ layout: index_layout
           <p>Every part can be customized and required additional events can be added</p>
         </div>
         <img data-aos="fade-up"
-        data-aos-anchor-placement="center-center" src="images/customisation.svg" alt='ka-table customisation'/>
+        data-aos-anchor-placement="center-bottom" src="images/customisation.svg" alt='ka-table customisation'/>
       </div>
     </div>
   </div>
