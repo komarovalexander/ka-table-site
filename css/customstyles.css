@@ -1293,13 +1293,25 @@ h3.header-tag {
     height: 962px;
     width: 2146px;
 }
-
+.anchorjs-link {
+    position: absolute;
+}
 .main-banner-text{
     padding-top: 80px;
 }
 .row.reducer-row {
     padding-top: 200px;
     height: 800px;
+}
+.row.open-source-absolute{
+    margin-right: 0;
+    margin-left: 0;
+}
+.reducer-row .col-md-7{
+    height: 516px;
+}
+.reducer-row img{
+    width: 616px;
 }
 .reducer-container{
     position: absolute;

@@ -9,6 +9,19 @@ hide_sidebar: true
 permalink: index.html
 layout: index_layout
 ---
+
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 700,
+    once: true,
+    anchorPlacement: 'top-center',
+    mirror: true,
+  });
+</script>
+
 <div class="main-page">
   <div class="main-banner-container">
     <div class="main-banner-image main-banner-background">
@@ -42,7 +55,8 @@ layout: index_layout
   <div class="container">
     <div class="row reducer-row">
       <div class="col-md-7">
-        <img src="images/shema.svg" alt='ka-table schema'/>
+        <img src="images/shema.svg" alt='ka-table schema'  data-aos="zoom-in"
+        data-aos-anchor-placement="center-bottom" />
       </div>
       <div class="col-md-5">
         <div class="main-banner-text">
@@ -61,7 +75,8 @@ layout: index_layout
           <h2 class="post-title-main">High view customization</h2>
           <p>Every part can be customized and required additional events can be added</p>
         </div>
-        <img src="images/customisation.svg" alt='ka-table customisation'/>
+        <img data-aos="fade-up"
+        data-aos-anchor-placement="center-center" src="images/customisation.svg" alt='ka-table customisation'/>
       </div>
     </div>
   </div>
@@ -69,7 +84,8 @@ layout: index_layout
     <div class="col-md-6">
     </div>
     <div class="col-md-6 computer-block">
-      <img src="images/computer.svg" alt='ka-table open source'/>
+      <img  data-aos="fade-left"
+        data-aos-anchor-placement="top-top" src="images/computer.svg" alt='ka-table open source'/>
     </div>
   </div>
   <div class="container">
