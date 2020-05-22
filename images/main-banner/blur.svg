@@ -89,12 +89,12 @@
 </g>
 </g>
 <defs>
-<filter id="filter0_f" x="2369.04" y="1986.12" width="1010.76" height="657.319" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_f" x="2369.04" y="1986.12" width="1010.76" height="857.319" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="7.5" result="effect1_foregroundBlur"/>
 </filter>
-<filter id="filter1_d" x="2360.04" y="1981.12" width="1040.76" height="687.319" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter1_d" x="2360.04" y="1981.12" width="1040.76" height="887.319" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
 <feOffset dx="6" dy="10"/>
