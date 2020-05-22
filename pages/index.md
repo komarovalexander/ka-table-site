@@ -85,7 +85,7 @@ layout: index_layout
     </div>
     <div class="col-md-6 computer-block">
       <img  data-aos="fade-left"
-        data-aos-anchor-placement="top-top" src="images/computer.svg" alt='ka-table open source'/>
+        data-aos-anchor-placement="top-center" src="images/computer.svg" alt='ka-table open source'/>
     </div>
   </div>
   <div class="container">
