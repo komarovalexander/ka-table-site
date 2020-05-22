@@ -14,6 +14,18 @@
 </head>
 <body>
 {% include topnav.html %}
+{% unless page.hide_sidebar %}
+<div class="doc-search-back">
+</div>
+<div class="doc-search">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 search">
+            </div>
+        </div>
+    </div>
+</div>
+{% endunless %}
 <!-- Page Content -->
 <div class="container">
   <div id="main" class="{% if page.style %}{{ page.style }} {% endif %}">

@@ -1408,6 +1408,15 @@ img{
     width: 1074px;
 }
 
+.doc-search-back{
+    background-image: url(/images/main-banner/background.svg);
+    background-position: center bottom;
+    height: 800px;
+    position: absolute;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
 @media (max-width: 767px){
     .main-banner-image{
         display: none;
