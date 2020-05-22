@@ -1307,11 +1307,8 @@ h3.header-tag {
     margin-right: 0;
     margin-left: 0;
 }
-.reducer-row .col-md-7{
-    height: 516px;
-}
 .reducer-row img{
-    width: 616px;
+    max-width: 616px;
 }
 .reducer-container{
     position: absolute;
