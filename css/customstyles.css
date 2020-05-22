@@ -1409,6 +1409,16 @@ img{
 }
 
 @media (max-width: 767px){
+    .main-banner-image{
+        display: none;
+    }
+    .row.main-banner-row{
+        height: 640px;
+    }
+    .main-banner-image.main-banner-background{
+        display: block;
+        background-position: center -2050px;
+    }
     .nav li a, footer .nav li a {
         margin-right:20px;
     }
