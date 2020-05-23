@@ -76,9 +76,9 @@ It is possible to override default behaviour just specify particular handler (se
 
 | Name | Type | Description |
 | --- | --- | --- |
-| cell | [<code>ChildAttributesItem</code>](#ChildAttributesItem)<[ICellContentProps](#ICellContentProps)> | Sets custom attributes for cell element |
-| dataRow | [<code>ChildAttributesItem</code>](#ChildAttributesItem)<[IDataRowProps](#idatarowprops)> | Sets custom attributes for table element |
-| table | [<code>ChildAttributesItem</code>](#ChildAttributesItem)<[Table](#ITableAllProps)> | Sets custom attributes for table element |
+| cell | [<code>ChildAttributesItem</code>](#childattributesitem)<[ICellContentProps](#icellcontentprops)> | Sets custom attributes for cell element |
+| dataRow | [<code>ChildAttributesItem</code>](#childattributesitem)<[IDataRowProps](#idatarowprops)> | Sets custom attributes for table element |
+| table | [<code>ChildAttributesItem</code>](#childattributesitem)<[Table](#itableallprops)> | Sets custom attributes for table element |
 
 
 #### ChildAttributesItem&lt;T&gt;
