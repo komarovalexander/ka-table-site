@@ -82,7 +82,7 @@ It is possible to override default behaviour just specify particular handler (se
 
 
 #### ChildAttributesItem&lt;T&gt;
-This object is an extension for React HTMLAttributes. It contains all attributes and all [react Synthetic Events](https://reactjs.org/docs/events.html), but in each event it adds a second parameter which contains additional data with [<code>AttributeTableData type</code>](#AttributeTableData).
+This object is an extension for React HTMLAttributes. It contains all attributes and all [react Synthetic Events](https://reactjs.org/docs/events.html), but in each event it adds a second parameter which contains additional data with [<code>AttributeTableData type</code>](#attributetabledatat).
 
 
 #### AttributeTableData&lt;T&gt;
