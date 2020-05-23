@@ -10,7 +10,10 @@
   function search_ev(value){
       clearTimeout(timeoutId);
     if(value){
-      timeoutId = setTimeout(() => gtag('event', 'search', { 'value': value }), 300);
+      timeoutId = setTimeout(() => gtag(
+        'event',
+        value,
+        { 'event_category': 'search' }), 300);
     }
   }
 </script>
