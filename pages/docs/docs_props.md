@@ -8,7 +8,7 @@ url: docs_props.html
 toc: true
 ---
 
-## ka-table Props
+## Table
 
 | Name | Type | Description |
 | --- | --- | --- |

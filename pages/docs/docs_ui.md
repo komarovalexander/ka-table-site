@@ -19,7 +19,7 @@ Table is stateless - every change of the UI can dispatch the action
   />
 ```
 
-## Customize elements
+## Elements
 Every part of the UI (Row, GroupRow, Column, HeaderCell, Cell, Editors) is customizable and can be set up as a custom component ([see props](./docs_props.html))
 
 ![Pattern](./images/customisation.svg)
@@ -72,7 +72,7 @@ Every part of the UI (Row, GroupRow, Column, HeaderCell, Cell, Editors) is custo
 ```
 
 
-## Customize elements attributes
+## Attributes
 Attributes of the UI elements also can be customized using [childAttributes](./docs_props.html#childattributes) ([see Events demo](https://komarovalexander.github.io/ka-table/#/events){:target="_blank"}).
 
 ```js
@@ -92,8 +92,8 @@ Attributes of the UI elements also can be customized using [childAttributes](./d
   };
 ```
 
+## UI Actions
 There are [actions](./docs_action.html) which ka-table UI dispatches in response to user interaction out-of-the-box:
-
 
 | Action Type | UI event |
 | --- | --- |
