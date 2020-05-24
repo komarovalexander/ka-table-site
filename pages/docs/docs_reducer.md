@@ -6,6 +6,7 @@ search: include
 permalink: docs_reducer.html
 url: docs_reducer.html
 toc: true
+id: reducer
 ---
 
 ## Definition

@@ -5,6 +5,7 @@ sidebar: mydoc_sidebar
 search: include
 permalink: docs_ui.html
 url: docs_ui.html
+id: ui
 toc: false
 ---
 

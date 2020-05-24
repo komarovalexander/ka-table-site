@@ -5,6 +5,7 @@ sidebar: mydoc_sidebar
 search: include
 permalink: docs_get_started.html
 url: docs_get_started.html
+id: getstarted
 ---
 
 ## Installation
