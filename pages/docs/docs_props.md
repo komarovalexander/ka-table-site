@@ -26,7 +26,7 @@ id: props
 | groupsExpanded | <code>any[][]</code> | Expanded groups - array of group keys |
 | loading | [<code>ILoadingProps</code>](#iloadingprops) | Loading indicator options (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)) |
 | noDataRow | <code>() => any</code> | The function returns string or a component which should appear when there are no data to show |
-| pagingProps | [<code>IPagingProps</code>](#ipagingprops) | Paging settings (Demo: [Paging](https://komarovalexander.github.io/ka-table/#/paging)) |
+| paging | [<code>IPagingProps</code>](#ipagingprops) | Paging settings (Demo: [Paging](https://komarovalexander.github.io/ka-table/#/paging)) |
 | rowKeyField | <code>string</code> | Data's field which is used to identify row |
 | search <a name="Table.search"></a> | <code>string</code> | Specifies the text for search by data (Demo: [Search Example](https://komarovalexander.github.io/ka-table/#/search)) |
 | selectedRows | <code>any[]</code> | Array of selected rows keys (Demo: [Selection Example](https://komarovalexander.github.io/ka-table/#/selection)) |
