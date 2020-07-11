@@ -50,7 +50,7 @@ Describes column of table its look and behaviour
 | groupCell | (props:[<code>IGroupRowProps</code>](#igrouprowprops)) => any; | Returns a custom group cell |
 | headCell | (props:[<code>IHeadCellProps</code>](#iheadcellprops)) => any; | Returns a custom header cell (Demo: [Custom Head Cell Example](https://komarovalexander.github.io/ka-table/#/custom-header-cell)) |
 | isEditable | <code>boolean</code> | Specifies can a column be editable or not |
-| isResizable | <code>boolean</code> | Specifies can a column be resized or not |
+| isResizable | <code>boolean</code> | Specifies can a column be resized or not (Demo: [Column Resizing](https://komarovalexander.github.io/ka-table/#/column-resizing)) |
 | key | <code>string</code> | Mandatory field, specifies unique key for the column |
 | search | (searchText?: string, rowData?: any, column?: Column) => boolean; | Overrides the default search method for the cell. Executes if [Table.search](#Table.search) option is set |
 | sortDirection | 'ascend' <br/> 'descend' | Sets the direction of sorting for the column |
