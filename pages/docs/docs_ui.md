@@ -73,22 +73,27 @@ Every part of the UI (Row, GroupRow, Column, HeaderCell, Cell, Editors) is custo
 ```
 
 
-## Attributes
-Attributes of the UI elements also can be customized using [childAttributes](./docs_props.html#childattributes) ([see Events demo](https://komarovalexander.github.io/ka-table/#/events){:target="_blank"}).
+## Child Components
+Attributes & Components of the child UI elements also can be customized using [childComponents](./docs_props.html#childcomponents) (see [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Custom Cell](https://komarovalexander.github.io/ka-table/#/custom-cell)).
 
 ```js
-  const childAttributes = {
+  const childComponents = {
     cell: {
-      className: 'my-cell-class', // add custom class to cell element
-      onClick: (e, extendedEvent) => {  // additional onClick handler for cell
-        const { childProps: { dispatch } } = extendedEvent;
-        dispatch('MY_CELL_onClick', { extendedEvent });
+      elementAttributes: {
+        className: 'my-cell-class', // add custom class to cell element
+        onClick: (e, extendedEvent) => {  // additional onClick handler for cell
+          const { childProps: { dispatch } } = extendedEvent;
+          dispatch('MY_CELL_onClick', { extendedEvent });
+        },
       },
-    },
+      content: (props) => props.column.key === 'someKey' && <div>Custom Content</div>; // default in case nothing is returned
+    }
     dataRow: {
-      onContextMenu: (e, extendedEvent) => { // additional onContextMenu handler for dataRow
-        extendedEvent.dispatch('MY_CELL_onContextMenu', { extendedEvent });
-      },
+      elementAttributes: {
+        onContextMenu: (e, extendedEvent) => { // additional onContextMenu handler for dataRow
+          extendedEvent.dispatch('MY_CELL_onContextMenu', { extendedEvent });
+        },
+      }
     }
   };
 ```
