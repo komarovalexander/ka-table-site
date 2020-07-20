@@ -126,7 +126,7 @@ You can set VirtualScrolling as empty object {} to enable virtual scrolling and 
 
 Set of specific functions used for parsing table props
 ```js
-import { kaPropsUtils } from 'ka-talbe/utils';
+import { kaPropsUtils } from 'ka-table/utils';
 ```
 
 #### kaPropsUtils.getData
