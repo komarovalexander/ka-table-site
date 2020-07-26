@@ -35,7 +35,9 @@ All of actions below are processed by kaReducer:
 | 'HideLoading' | {<br/>type:'HideLoading'<br/>} | hideLoading() | no | set *loading* = false |
 | 'HideNewRow' | {<br/>type:'HideNewRow'<br/>} | hideNewRow() | no | removes row cells from *editableCells* |
 | 'OpenEditor' | {<br/>type:'OpenEditor',<br/>rowKeyValue: any,<br/>columnKey: string,<br/>} | openEditor(<br/> rowKeyValue,<br/> columnKey<br/>) | yes | add cell to *editableCells* |
-| 'OpenRowEditors ' | {<br/>type:'OpenRowEditors ',<br/>rowKeyValue: any<br/>} | openRowEditors(<br/> rowKeyValue<br/>) | no | add row cells to *editableCells* |
+| 'OpenRowEditors' | {<br/>type:'OpenRowEditors',<br/>rowKeyValue: any<br/>} | openRowEditors(<br/> rowKeyValue<br/>) | no | add row cells to *editableCells* |
+| 'ReorderRows' | {<br/>type:'ReorderRows',<br/>rowKeyValue: any<br/>,targetRowKeyValue: any<br/>} | reorderRows(<br/> rowKeyValue<br/>, targetRowKeyValue<br/>) | yes | place rowKeyValue to the position targetRowKeyValue |
+| 'ResizeColumn' | {<br/>type:'ResizeColumn',<br/>columnKey: string<br/>,width: number<br/>} | resizeColumn(<br/> columnKey<br/>, width<br/>) | yes | chane column width |
 | 'SaveNewRow' | {<br/>type:'SaveNewRow',<br/>rowKeyValue: any,<br/>validate?: boolean<br/>} | saveNewRow(<br/> rowKeyValue,<br/> settings?: {  validate?: boolean }<br/>) | no | Saves editor values to the new item of *data* and removes row cells from *editableCells*. <br/>Settings is optional: <br/>validate - validate values before save, do not save if validation is unsuccessful. |
 | 'SaveRowEditors' | {<br/>type:'SaveRowEditors',<br/>rowKeyValue: any,<br/>closeAfterSave?: boolean,<br/>validate?: boolean<br/>} | saveNewRow(<br/> rowKeyValue,<br/> settings?: {  validate?: boolean }<br/>) | no | Saves editor values to *data** and removes row cells from *editableCells*. <br/>Settings is optional: <br/>validate - validate values before save, do not save and do not close if validation is unsuccessful. |
 | 'Search' | {<br/>type:'Search',<br/>searchValue: any<br/>} | search(<br/>searchValue<br/>) | no | change *search* option |

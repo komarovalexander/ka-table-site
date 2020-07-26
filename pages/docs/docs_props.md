@@ -26,6 +26,7 @@ id: props
 | loading | <code>{ <br/>enabled?: boolean, <br/>text?: string <br/>}</code>| Loading indicator options (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)) |
 | paging | <code>{<br/>enabled?: boolean;<br/>pageIndex?: number;<br/>pageSize?: number;<br/>pagesCount?: number;<br/>}</code> | Paging settings (Demo: [Paging](https://komarovalexander.github.io/ka-table/#/paging)) |
 | rowKeyField | <code>string</code> | Data's field which is used to identify row |
+| rowReordering | <code>boolean</code> | Enables rows reordering using drag and drop |
 | search | <code>(props: { <br/>searchText: string, <br/>rowData: any, <br/>column: Column <br/>}) => boolean</code> | Overrides the default search method for the cell. Executes if [Table.search](#Table.searchText) option is set |
 | searchText <a name="Table.searchText"></a> | <code>string</code> | Specifies the text for search by data (Demo: [Search Example](https://komarovalexander.github.io/ka-table/#/search)) |
 | selectedRows | <code>any[]</code> | Array of selected rows keys (Demo: [Selection Example](https://komarovalexander.github.io/ka-table/#/selection)) |

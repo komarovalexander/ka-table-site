@@ -104,9 +104,11 @@ There are [actions](./docs_action.html) which ka-table UI dispatches in response
 | Action Type | UI event |
 | --- | --- |
 | 'CloseEditor' | click outside editor or Enter Key press (to apply value) or ESC press (to discard changes) |
-| 'UpdateGroupsExpanded' | click by group arrow cell |
 | 'OpenEditor' | click by data cell |
+| 'ReorderRows' | drag and prop the row |
+| 'ResizeColumn' | drag and drop of the right border of the column |
 | 'UpdateCellValue' | click outside editor or Enter Key press - executes before 'CloseEditor' action |
 | 'UpdateFilterRowValue' | each change of value in filter row editor |
+| 'UpdateGroupsExpanded' | click by group arrow cell |
 | 'UpdatePageIndex' | click by page number |
 | 'UpdateSortDirection' | click by sort button |
