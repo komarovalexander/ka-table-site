@@ -79,7 +79,7 @@ Demos: [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Cus
 | groupRow | [<code>ChildComponent</code>](#childcomponent)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-custom-row) |
 | headCell | [<code>ChildComponent</code>](#childcomponent)<[IHeadCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/custom-header-cell) |
 | noDataRow | [<code>ChildComponent</code>](#childcomponent)<[INoDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/search) |
-| rootDiv | [<code>ChildComponent</code>](#childcomponent)<[ITableProps](#table)> | .ka root div |  |
+| rootDiv | [<code>ChildComponent</code>](#childcomponent)<[ITableProps](#table)> | .ka div |  |
 | table | [<code>ChildComponent</code>](#childcomponent)<[ITableProps](#table)> | table |  |
 | tableHead | [<code>ChildComponent</code>](#childcomponent)<[ITableHeadProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | thead |  |
 
