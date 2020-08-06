@@ -43,6 +43,7 @@ All of actions below are processed by kaReducer:
 | 'Search' | {<br/>type:'Search',<br/>searchValue: any<br/>} | search(<br/>searchValue<br/>) | no | change *search* option |
 | 'SelectAllRows' | {<br/>type:'SelectAllRows'<br/>} | selectAllRows() | no | add all items ids of *data* to *selectedRows* |
 | 'SelectRow' | {<br/>type:'SelectRow',<br/>rowKeyValue: any<br/>} | selectRow(<br/> rowKeyValue<br/>) | no | add row id to *selectedRows* |
+| 'SelectRowsRange' | {<br/>type:'SelectRowsRange',<br/>rowKeyValueFrom: any,<br/>rowKeyValueTo: any<br/>} | selectRowsRange(<br/> rowKeyValueFrom,<br/>rowKeyValueTo<br/>) | no | rowKeyValueFrom, rowKeyValueTo describe start and end of visible elements range, all ids added to *selectedRows* |
 | 'SelectSingleRow' | {<br/>type:'SelectSingleRow',<br/>rowKeyValue: any<br/>} | selectSingleRow(<br/> rowKeyValue<br/>) | no | set *selectedRows* as an array with one row id |
 | 'ShowLoading' | {<br/>type:'ShowLoading',<br/>text?:string<br/>} | showLoading(text?) | no | set *loading* = true and updates the text if text is specified |
 | 'ShowNewRow ' | {<br/>type:'ShowNewRow '<br/>} | showNewRow() | no | add new row cells to *editableCells* |
