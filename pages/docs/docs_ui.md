@@ -105,6 +105,7 @@ There are [actions](./docs_action.html) which ka-table UI dispatches in response
 | --- | --- |
 | 'CloseEditor' | click outside editor or Enter Key press (to apply value) or ESC press (to discard changes) |
 | 'OpenEditor' | click by data cell |
+| 'ReorderColumns' | drag and prop the column |
 | 'ReorderRows' | drag and prop the row |
 | 'ResizeColumn' | drag and drop of the right border of the column |
 | 'UpdateCellValue' | click outside editor or Enter Key press - executes before 'CloseEditor' action |

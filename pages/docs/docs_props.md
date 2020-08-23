@@ -14,6 +14,7 @@ id: props
 | Name | Type &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description |
 | --- | --- | --- |
 | childComponents | [<code>ChildComponents</code>](#childcomponents)| Object describes contains customization logic for child components (Demo: [Events](https://komarovalexander.github.io/ka-table/#/events), [Custom Cell](https://komarovalexander.github.io/ka-table/#/custom-cell)) |
+| columnReordering | <code>boolean</code> | Enables columns reordering using drag and drop |
 | columns | [<code>Column[]</code>](#column) | Columns in table and their look and behaviour |
 | data | <code>any[]</code> | The Table's data |
 | dispatch | <code>(action) => any</code> | The function takes action as an argument, is used as a notification about any changes and events in the Table |
@@ -23,6 +24,7 @@ id: props
 | format | <code>(props: { <br/>value: any, <br/>column: Column <br/>}) => any</code> | Returns formated cell string (Demo: [Example](https://komarovalexander.github.io/ka-table/#/custom-cell)) |
 | groups | [<code>Group[]</code>](#group) | Group's in the table (Demo: [Grouping Example](https://komarovalexander.github.io/ka-table/#/grouping)) |
 | groupsExpanded | <code>any[][]</code> | Expanded groups - array of group keys |
+| height | <code>string | number</code> | height of the component |
 | loading | <code>{ <br/>enabled?: boolean, <br/>text?: string <br/>}</code>| Loading indicator options (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)) |
 | paging | <code>{<br/>enabled?: boolean;<br/>pageIndex?: number;<br/>pageSize?: number;<br/>pagesCount?: number;<br/>}</code> | Paging settings (Demo: [Paging](https://komarovalexander.github.io/ka-table/#/paging)) |
 | rowKeyField | <code>string</code> | Data's field which is used to identify row |
@@ -33,6 +35,7 @@ id: props
 | sortingMode | 'single' <br/> 'none' | Sorting mode (Demo: [Sorting Example](https://komarovalexander.github.io/ka-table/#/sorting)) |
 | validation | <code>(props: { <br/>value: any, <br/>rowData: any, <br/>column: Column <br/>}) => (string | void)</code> | Returns the validation error string or does not return anything in case of passed validation (Demo: [Validation Example](https://komarovalexander.github.io/ka-table/#/validation)) |
 | virtualScrolling | [<code>VirtualScrolling</code>](#virtualscrolling) | Virtual scrolling options (Demo: [Many Rows Example](https://komarovalexander.github.io/ka-table/#/many-rows)) |
+| width | <code>string | number</code> | width of the component |
 
 
 ## Column
@@ -79,11 +82,13 @@ Demos: [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Cus
 | pagingPages | [<code>ChildComponent</code>](#childcomponent)<[IPagingPagesProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/bootstrap) |
 | groupCell | [<code>ChildComponent</code>](#childcomponent)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-custom-cell) |
 | groupRow | [<code>ChildComponent</code>](#childcomponent)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-custom-row) |
-| headCell | [<code>ChildComponent</code>](#childcomponent)<[IHeadCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/custom-header-cell) |
+| headCell | [<code>ChildComponent</code>](#childcomponent)<[IHeadCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | th | [Demo](https://komarovalexander.github.io/ka-table/#/custom-header-cell) |
+| headCellContent | [<code>ChildComponent</code>](#childcomponent)<[IHeadCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/column-reordering) |
 | noDataRow | [<code>ChildComponent</code>](#childcomponent)<[INoDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/search) |
 | rootDiv | [<code>ChildComponent</code>](#childcomponent)<[ITableProps](#table)> | .ka div |  |
 | table | [<code>ChildComponent</code>](#childcomponent)<[ITableProps](#table)> | table |  |
 | tableHead | [<code>ChildComponent</code>](#childcomponent)<[ITableHeadProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | thead |  |
+| tableWrapper | [<code>ChildComponent</code>](#childcomponent)<[ITableProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
 
 #### ChildComponent&lt;T&gt;
 
