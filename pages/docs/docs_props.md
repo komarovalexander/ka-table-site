@@ -87,6 +87,7 @@ Demos: [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Cus
 | noDataRow | [<code>ChildComponent</code>](#childcomponent)<[INoDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/search) |
 | rootDiv | [<code>ChildComponent</code>](#childcomponent)<[ITableProps](#table)> | .ka div |  |
 | table | [<code>ChildComponent</code>](#childcomponent)<[ITableProps](#table)> | table |  |
+| tableBody | [<code>ChildComponent</code>](#childcomponent)<[ITableBodyProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tbody |  |
 | tableHead | [<code>ChildComponent</code>](#childcomponent)<[ITableHeadProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | thead |  |
 | tableWrapper | [<code>ChildComponent</code>](#childcomponent)<[ITableProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
 
