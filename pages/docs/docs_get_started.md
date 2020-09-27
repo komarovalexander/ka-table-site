@@ -90,7 +90,7 @@ const OverviewDemo: React.FC = () => {
 
   return (
     <Table
-      {...tableProps} // (2) ka-table UI is rendered according to props
+      {...tableProps} // ka-table UI is rendered according to props
       dispatch={dispatch} // dispatch is required for obtain new actions from the UI
     />
   );

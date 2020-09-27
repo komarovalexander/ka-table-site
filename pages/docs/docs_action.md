@@ -31,6 +31,8 @@ All of actions below are processed by kaReducer:
 | 'CloseRowEditors' | {<br/>type:'CloseRowEditors',<br/>rowKeyValue: any<br/>} | closeRowEditors(<br/> rowKeyValue<br/>) | no | removes row cells from *editableCells* |
 | 'DeleteRow' | {<br/>type:'DeleteRow',<br/>rowKeyValue: any<br/>} | deleteRow(<br/> rowKeyValue<br/>) | no | deletes row from *data* |
 | 'DeselectAllRows' | {<br/>type:'DeselectAllRows'} | deselectAllRows() | no | clears *selectedRows* |
+| 'DeselectAllFilteredRows' | {<br/>type:'DeselectAllFilteredRows'} | deselectAllFilteredRows() | no | remove all filtered items ids of *data* to *selectedRows* |
+| 'DeselectAllVisibleRows' | {<br/>type:'DeselectAllVisibleRows'} | deselectAllVisibleRows() | no | remove all visible items ids of *data* to *selectedRows* |
 | 'DeselectRow' | {<br/>type:'DeselectRow',<br/>rowKeyValue: any<br/>} | deselectRow(<br/> rowKeyValue<br/>) | no | removes row id from *selectedRows* |
 | 'HideLoading' | {<br/>type:'HideLoading'<br/>} | hideLoading() | no | set *loading* = false |
 | 'HideNewRow' | {<br/>type:'HideNewRow'<br/>} | hideNewRow() | no | removes row cells from *editableCells* |
@@ -43,6 +45,8 @@ All of actions below are processed by kaReducer:
 | 'SaveRowEditors' | {<br/>type:'SaveRowEditors',<br/>rowKeyValue: any,<br/>closeAfterSave?: boolean,<br/>validate?: boolean<br/>} | saveNewRow(<br/> rowKeyValue,<br/> settings?: {  validate?: boolean }<br/>) | no | Saves editor values to *data** and removes row cells from *editableCells*. <br/>Settings is optional: <br/>validate - validate values before save, do not save and do not close if validation is unsuccessful. |
 | 'Search' | {<br/>type:'Search',<br/>searchValue: any<br/>} | search(<br/>searchValue<br/>) | no | change *search* option |
 | 'SelectAllRows' | {<br/>type:'SelectAllRows'<br/>} | selectAllRows() | no | add all items ids of *data* to *selectedRows* |
+| 'SelectAllFilteredRows' | {<br/>type:'SelectAllFilteredRows'<br/>} | selectAllFilteredRows() | no | add all filtered items ids of *data* to *selectedRows* |
+| 'SelectAllVisibleRows' | {<br/>type:'SelectAllVisibleRows'<br/>} | selectAllVisibleRows() | no | add all visible items ids of *data* to *selectedRows* |
 | 'SelectRow' | {<br/>type:'SelectRow',<br/>rowKeyValue: any<br/>} | selectRow(<br/> rowKeyValue<br/>) | no | add row id to *selectedRows* |
 | 'SelectRowsRange' | {<br/>type:'SelectRowsRange',<br/>rowKeyValueFrom: any,<br/>rowKeyValueTo: any<br/>} | selectRowsRange(<br/> rowKeyValueFrom,<br/>rowKeyValueTo<br/>) | no | rowKeyValueFrom, rowKeyValueTo describe start and end of visible elements range, all ids added to *selectedRows* |
 | 'SelectSingleRow' | {<br/>type:'SelectSingleRow',<br/>rowKeyValue: any<br/>} | selectSingleRow(<br/> rowKeyValue<br/>) | no | set *selectedRows* as an array with one row id |

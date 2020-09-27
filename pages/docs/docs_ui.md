@@ -79,21 +79,21 @@ Attributes & Components of the child UI elements also can be customized using [c
 ```js
   const childComponents = {
     cell: {
-      elementAttributes: {
+      elementAttributes: (props) => ({
         className: 'my-cell-class', // add custom class to cell element
         onClick: (e, extendedEvent) => {  // additional onClick handler for cell
           const { childProps: { dispatch } } = extendedEvent;
           dispatch('MY_CELL_onClick', { extendedEvent });
         },
-      },
+      }),
       content: (props) => props.column.key === 'someKey' && <div>Custom Content</div>; // default in case nothing is returned
     }
     dataRow: {
-      elementAttributes: {
+      elementAttributes: (props) => ({
         onContextMenu: (e, extendedEvent) => { // additional onContextMenu handler for dataRow
           extendedEvent.dispatch('MY_CELL_onContextMenu', { extendedEvent });
         },
-      }
+      })
     }
   };
 ```

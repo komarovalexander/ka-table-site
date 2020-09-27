@@ -72,24 +72,24 @@ Demos: [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Cus
 
 | Name | Type | Element | Demo |
 | --- | --- | --- | --- |
-| cell | [<code>ChildComponent</code>](#childcomponent)<[ICellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | |
-| cellEditor | [<code>ChildComponent</code>](#childcomponent)<[ICellEditorProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/custom-editor) |
-| cellText | [<code>ChildComponent</code>](#childcomponent)<[ICellTextProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/custom-cell) |
-| dataRow | [<code>ChildComponent</code>](#childcomponent)<[IDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/custom-data-row) |
-| detailsRow | [<code>ChildComponent</code>](#childcomponent)<[IDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/details-row) |
-| filterRowCell | [<code>ChildComponent</code>](#childcomponent)<[IFilterRowEditorProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/filter-row-custom-editor) |
-| pagingIndex | [<code>ChildComponent</code>](#childcomponent)<[IPagingIndexProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/bootstrap) |
-| pagingPages | [<code>ChildComponent</code>](#childcomponent)<[IPagingPagesProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/bootstrap) |
-| groupCell | [<code>ChildComponent</code>](#childcomponent)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-custom-cell) |
-| groupRow | [<code>ChildComponent</code>](#childcomponent)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-custom-row) |
-| headCell | [<code>ChildComponent</code>](#childcomponent)<[IHeadCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | th | [Demo](https://komarovalexander.github.io/ka-table/#/custom-header-cell) |
-| headCellContent | [<code>ChildComponent</code>](#childcomponent)<[IHeadCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/column-reordering) |
-| noDataRow | [<code>ChildComponent</code>](#childcomponent)<[INoDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/search) |
-| rootDiv | [<code>ChildComponent</code>](#childcomponent)<[ITableProps](#table)> | .ka div |  |
-| table | [<code>ChildComponent</code>](#childcomponent)<[ITableProps](#table)> | table |  |
-| tableBody | [<code>ChildComponent</code>](#childcomponent)<[ITableBodyProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tbody |  |
-| tableHead | [<code>ChildComponent</code>](#childcomponent)<[ITableHeadProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | thead |  |
-| tableWrapper | [<code>ChildComponent</code>](#childcomponent)<[ITableProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
+| cell | [<code>ChildComponent</code>](#childcomponentt)<[ICellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | |
+| cellEditor | [<code>ChildComponent</code>](#childcomponentt)<[ICellEditorProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/custom-editor) |
+| cellText | [<code>ChildComponent</code>](#childcomponentt)<[ICellTextProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/custom-cell) |
+| dataRow | [<code>ChildComponent</code>](#childcomponentt)<[IDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/custom-data-row) |
+| detailsRow | [<code>ChildComponent</code>](#childcomponentt)<[IDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/details-row) |
+| filterRowCell | [<code>ChildComponent</code>](#childcomponentt)<[IFilterRowEditorProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/filter-row-custom-editor) |
+| pagingIndex | [<code>ChildComponent</code>](#childcomponentt)<[IPagingIndexProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/bootstrap) |
+| pagingPages | [<code>ChildComponent</code>](#childcomponentt)<[IPagingPagesProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/bootstrap) |
+| groupCell | [<code>ChildComponent</code>](#childcomponentt)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-custom-cell) |
+| groupRow | [<code>ChildComponent</code>](#childcomponentt)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-custom-row) |
+| headCell | [<code>ChildComponent</code>](#childcomponentt)<[IHeadCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | th | [Demo](https://komarovalexander.github.io/ka-table/#/custom-header-cell) |
+| headCellContent | [<code>ChildComponent</code>](#childcomponentt)<[IHeadCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/column-reordering) |
+| noDataRow | [<code>ChildComponent</code>](#childcomponentt)<[INoDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/search) |
+| rootDiv | [<code>ChildComponent</code>](#childcomponentt)<[ITableProps](#table)> | .ka div |  |
+| table | [<code>ChildComponent</code>](#childcomponentt)<[ITableProps](#table)> | table |  |
+| tableBody | [<code>ChildComponent</code>](#childcomponentt)<[ITableBodyProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tbody |  |
+| tableHead | [<code>ChildComponent</code>](#childcomponentt)<[ITableHeadProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | thead |  |
+| tableWrapper | [<code>ChildComponent</code>](#childcomponentt)<[ITableProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
 
 #### ChildComponent&lt;T&gt;
 
@@ -139,12 +139,28 @@ Set of specific functions used for parsing table props
 import { kaPropsUtils } from 'ka-table/utils';
 ```
 
-#### kaPropsUtils.getData
+#### kaPropsUtils.getData(tableProps)
 
 Obtains sorted, filtered, grouped, paged data for table according to current properties
 (Demo: [Get Data By Props](https://komarovalexander.github.io/ka-table/#/get-data-by-props))
 
 ```js
   const data = kaPropsUtils.getData(tableProps);
+```
+
+#### kaPropsUtils.areAllFilteredRowsSelected(tableProps)
+
+returns true if all filtered rows are selected
+
+```js
+  const data = kaPropsUtils.areAllFilteredRowsSelected(tableProps);
+```
+
+#### kaPropsUtils.areAllVisibleRowsSelected(tableProps)
+
+returns true if all visible rows are selected
+
+```js
+  const data = kaPropsUtils.areAllVisibleRowsSelected(tableProps);
 ```
 
