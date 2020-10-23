@@ -32,7 +32,7 @@ id: props
 | search | <code>(props: { <br/>searchText: string, <br/>rowData: any, <br/>column: Column <br/>}) => boolean</code> | Overrides the default search method for the cell. Executes if [Table.search](#Table.searchText) option is set |
 | searchText <a name="Table.searchText"></a> | <code>string</code> | Specifies the text for search by data (Demo: [Search Example](https://komarovalexander.github.io/ka-table/#/search)) |
 | selectedRows | <code>any[]</code> | Array of selected rows keys (Demo: [Selection Example](https://komarovalexander.github.io/ka-table/#/selection)) |
-| sortingMode | 'single' <br/> 'none' | Sorting mode (Demo: [Sorting Example](https://komarovalexander.github.io/ka-table/#/sorting)) |
+| sortingMode | 'single' <br/> 'singleTripleState' <br/> 'singleRemote' <br/> 'singleTripleStateRemote' <br/> 'multipleRemote' <br/> 'multipleTripleStateRemote' <br/> 'none' | Sorting mode. <br/> *Remote* - means only grid elements are updated but data should be sorted outside of the grid. <br/>*TripleState* - means: "ascend - descend - no sorting" <br/>(Demo: [Sorting Example](https://komarovalexander.github.io/ka-table/#/sorting)) |
 | validation | <code>(props: { <br/>value: any, <br/>rowData: any, <br/>column: Column <br/>}) => (string | void)</code> | Returns the validation error string or does not return anything in case of passed validation (Demo: [Validation Example](https://komarovalexander.github.io/ka-table/#/validation)) |
 | virtualScrolling | [<code>VirtualScrolling</code>](#virtualscrolling) | Virtual scrolling options (Demo: [Many Rows Example](https://komarovalexander.github.io/ka-table/#/many-rows)) |
 | width | <code>string | number</code> | width of the component |
@@ -49,7 +49,8 @@ id: props
 | isEditable | <code>boolean</code> | Specifies can a column be editable or not |
 | isResizable | <code>boolean</code> | Specifies can a column be resized or not (Demo: [Column Resizing](https://komarovalexander.github.io/ka-table/#/column-resizing)) |
 | key | <code>string</code> | Mandatory field, specifies unique key for the column |
-| sortDirection | 'ascend' <br/> 'descend' | Sets the direction of sorting for the column |
+| sortDirection | 'ascend' <br/> 'descend' | Sets the direction of sorting for the column (Demo: [Sorting](https://komarovalexander.github.io/ka-table/#/sorting)) |
+| sortIndex | <code>number</code>  | The priority of the column for sorting (Demo: [Sorting](https://komarovalexander.github.io/ka-table/#/sorting)) |
 | style | <code>React.CSSProperties</code> | Sets the style options of the elements |
 | title | <code>string</code> | Specifies the text of the header |
 
@@ -163,4 +164,13 @@ returns true if all visible rows are selected
 ```js
   const data = kaPropsUtils.areAllVisibleRowsSelected(tableProps);
 ```
+
+#### kaPropsUtils.getSortedColumns(tableProps)
+
+returns array of columns with sortDirection only, and they are sorted by sortIndex (if it is set)
+
+```js
+  const data = kaPropsUtils.getSortedColumns(tableProps);
+```
+
 
