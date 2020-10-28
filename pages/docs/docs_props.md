@@ -53,6 +53,7 @@ id: props
 | sortIndex | <code>number</code>  | The priority of the column for sorting (Demo: [Sorting](https://komarovalexander.github.io/ka-table/#/sorting)) |
 | style | <code>React.CSSProperties</code> | Sets the style options of the elements |
 | title | <code>string</code> | Specifies the text of the header |
+| visible | <code>boolean</code> | Shows/Hides columns |
 
 
 ## EditableCell
