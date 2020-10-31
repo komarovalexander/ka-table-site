@@ -61,7 +61,7 @@ Every part of the UI (Row, GroupRow, Column, HeaderCell, Cell, Editors) is custo
     columns: [
       // ...
       {
-        dataType: DataType.String
+        dataType: DataType.String,
         editor: CustomLookupEditor,
         key: 'passed',
         title: 'Passed',

@@ -51,7 +51,7 @@ import "ka-table/style.css";
 import React, { useState } from 'react';
 
 import { ITableProps, kaReducer, Table } from 'ka-table';
-import { EditingMode, SortingMode } from 'ka-table/enums';
+import { DataType, EditingMode, SortingMode } from 'ka-table/enums';
 import { DispatchFunc } from 'ka-table/types';
 
 // data for ka-table
