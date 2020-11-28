@@ -98,7 +98,7 @@ Demos: [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Cus
 | Name | Type | Element |
 | --- | --- | --- |
 | elementAttributes | <code>(props: PropsWithChildren&lt;T&gt;) => </code> [<code>ChildAttributesItem&lt;T&gt;</code>](#childattributesitemt) | [Events Demo](https://komarovalexander.github.io/ka-table/#/events) |
-| content | <code>(props: PropsWithChildren<TProps>) => any</code> | [Custom Cell](https://komarovalexander.github.io/ka-table/#/custom-cell) |
+| content | <code>(props: PropsWithChildren&lt;TProps&gt;) => any </code> | [Custom Cell](https://komarovalexander.github.io/ka-table/#/custom-cell) |
 
 #### ChildAttributesItem&lt;T&gt;
 This object is an extension for React HTMLAttributes. It contains all attributes and all [react Synthetic Events](https://reactjs.org/docs/events.html), but in each event it adds a second parameter which contains additional data with [<code>AttributeTableData type</code>](#attributetabledatat).
