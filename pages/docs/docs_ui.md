@@ -116,7 +116,7 @@ There are [actions](./docs_action.html) which ka-table UI dispatches in response
 
 ## Themes
 ##### Customization
-To override colors, sizes and paddings you can use sass valiables: [link to default.scss]
+To override colors, sizes and paddings you can use sass valiables: [default.scss](https://github.com/komarovalexander/ka-table/blob/master/src/lib/static/themes/default.scss)
 
 Demo: [Custom Theme](https://komarovalexander.github.io/ka-table/#/custom-theme)
 
