@@ -53,6 +53,7 @@ All of actions below are processed by kaReducer:
 | 'SelectRow' | {<br/>type:'SelectRow',<br/>rowKeyValue: any<br/>} | selectRow(<br/> rowKeyValue<br/>) | no | add row id to *selectedRows* |
 | 'SelectRowsRange' | {<br/>type:'SelectRowsRange',<br/>rowKeyValueFrom: any,<br/>rowKeyValueTo: any<br/>} | selectRowsRange(<br/> rowKeyValueFrom,<br/>rowKeyValueTo<br/>) | no | rowKeyValueFrom, rowKeyValueTo describe start and end of visible elements range, all ids added to *selectedRows* |
 | 'SelectSingleRow' | {<br/>type:'SelectSingleRow',<br/>rowKeyValue: any<br/>} | selectSingleRow(<br/> rowKeyValue<br/>) | no | set *selectedRows* as an array with one row id |
+| 'SetSingleAction' | {<br/>type:'SetSingleAction',<br/>singleAction: any<br/>} | setSingleAction(<br/> singleAction<br/>) | no | set *singleAction* property |
 | 'ShowColumn' | {<br/>type:'ShowColumn',<br/>columnKey: any<br/>} | showColumn(<br/> rowKeyValue<br/>) | no | sets *visible=true* for specific column |
 | 'ShowLoading' | {<br/>type:'ShowLoading',<br/>text?:string<br/>} | showLoading(text?) | no | set *loading* = true and updates the text if text is specified |
 | 'ShowNewRow ' | {<br/>type:'ShowNewRow '<br/>} | showNewRow() | no | add new row cells to *editableCells* |
@@ -63,7 +64,6 @@ All of actions below are processed by kaReducer:
 | 'UpdateFilterRowValue' | {<br/>type:'UpdateFilterRowValue',<br/>columnKey: string,<br/>filterRowValue: any<br/>} | updateFilterRowValue(<br/> columnKey,<br/> filterRowValue<br/>) | yes | update *filterRowValue* for specific column |
 | 'UpdateGroupsExpanded' | {<br/>type:'UpdateGroupsExpanded',<br/>groupKey: any[]<br/>} | updateGroupsExpanded(<br/> groupKey<br/>) | yes | add/remove group id to/from *groupsExpanded* |
 | 'UpdatePageIndex' | {<br/>type:'UpdatePageIndex',<br/>pageIndex: number,<br/>} | updatePageIndex(<br/> pageIndex<br/>) | yes | update *paging.pageIndex* option and show new page data |
-| 'UpdateSingleAction' | {<br/>type:'UpdateSingleAction',<br/>singleAction: any<br/>} | updateSingleAction(<br/> singleAction<br/>) | no | set *singleAction* property |
 | 'UpdateSortDirection' | {<br/>type:'UpdateSortDirection',<br/>columnKey: string<br/>} | updateSortDirection(<br/> columnKey<br/>) | yes | update *sortDirection* to the oposite for specific column |
 
 ## Custom actions
