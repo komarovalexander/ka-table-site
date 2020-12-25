@@ -27,16 +27,18 @@ All of actions below are processed by kaReducer:
 
 | Type | Action | ActionCreator | <nobr>UI OOTB</nobr> | kaReducer |
 | --- | --- | --- | --- |
+| 'ClearSingleAction' | {<br/>type:'ClearSingleAction' } | clearSingleAction() | no | sets singleAction as undefined |
 | 'CloseEditor' | {<br/>type:'CloseEditor',<br/>rowKeyValue: any,<br/>columnKey: string<br/>} | closeEditor(<br/> rowKeyValue,<br/> columnKey<br/>) | yes | removes cell from *editableCells* |
 | 'CloseRowEditors' | {<br/>type:'CloseRowEditors',<br/>rowKeyValue: any<br/>} | closeRowEditors(<br/> rowKeyValue<br/>) | no | removes row cells from *editableCells* |
 | 'DeleteRow' | {<br/>type:'DeleteRow',<br/>rowKeyValue: any<br/>} | deleteRow(<br/> rowKeyValue<br/>) | no | deletes row from *data* |
-| 'DeselectAllRows' | {<br/>type:'DeselectAllRows'} | deselectAllRows() | no | clears *selectedRows* |
 | 'DeselectAllFilteredRows' | {<br/>type:'DeselectAllFilteredRows'} | deselectAllFilteredRows() | no | remove all filtered items ids of *data* to *selectedRows* |
+| 'DeselectAllRows' | {<br/>type:'DeselectAllRows'} | deselectAllRows() | no | clears *selectedRows* |
 | 'DeselectAllVisibleRows' | {<br/>type:'DeselectAllVisibleRows'} | deselectAllVisibleRows() | no | remove all visible items ids of *data* to *selectedRows* |
 | 'DeselectRow' | {<br/>type:'DeselectRow',<br/>rowKeyValue: any<br/>} | deselectRow(<br/> rowKeyValue<br/>) | no | removes row id from *selectedRows* |
 | 'HideColumn' | {<br/>type:'HideColumn',<br/>columnKey: any<br/>} | hideColumn(<br/> rowKeyValue<br/>) | no | sets *visible=false* for specific column |
 | 'HideLoading' | {<br/>type:'HideLoading'<br/>} | hideLoading() | no | set *loading* = false |
 | 'HideNewRow' | {<br/>type:'HideNewRow'<br/>} | hideNewRow() | no | removes row cells from *editableCells* |
+| 'LoadData' | {<br/>type:'LoadData'<br/>} | loadData() | no | notifies grid about time to reload its data |
 | 'OpenEditor' | {<br/>type:'OpenEditor',<br/>rowKeyValue: any,<br/>columnKey: string,<br/>} | openEditor(<br/> rowKeyValue,<br/> columnKey<br/>) | yes | add cell to *editableCells* |
 | 'OpenRowEditors' | {<br/>type:'OpenRowEditors',<br/>rowKeyValue: any<br/>} | openRowEditors(<br/> rowKeyValue<br/>) | no | add row cells to *editableCells* |
 | 'ReorderColumns' | {<br/>type:'ReorderColumns',<br/>columnKey: any<br/>,targetColumnKey: any<br/>} | rorderColumns(<br/> columnKey<br/>, targetColumnKey<br/>) | yes | place columnKey to the position of targetColumnKey |
@@ -51,6 +53,7 @@ All of actions below are processed by kaReducer:
 | 'SelectRow' | {<br/>type:'SelectRow',<br/>rowKeyValue: any<br/>} | selectRow(<br/> rowKeyValue<br/>) | no | add row id to *selectedRows* |
 | 'SelectRowsRange' | {<br/>type:'SelectRowsRange',<br/>rowKeyValueFrom: any,<br/>rowKeyValueTo: any<br/>} | selectRowsRange(<br/> rowKeyValueFrom,<br/>rowKeyValueTo<br/>) | no | rowKeyValueFrom, rowKeyValueTo describe start and end of visible elements range, all ids added to *selectedRows* |
 | 'SelectSingleRow' | {<br/>type:'SelectSingleRow',<br/>rowKeyValue: any<br/>} | selectSingleRow(<br/> rowKeyValue<br/>) | no | set *selectedRows* as an array with one row id |
+| 'SetSingleAction' | {<br/>type:'SetSingleAction',<br/>singleAction: any<br/>} | setSingleAction(<br/> singleAction<br/>) | no | set *singleAction* property |
 | 'ShowColumn' | {<br/>type:'ShowColumn',<br/>columnKey: any<br/>} | showColumn(<br/> rowKeyValue<br/>) | no | sets *visible=true* for specific column |
 | 'ShowLoading' | {<br/>type:'ShowLoading',<br/>text?:string<br/>} | showLoading(text?) | no | set *loading* = true and updates the text if text is specified |
 | 'ShowNewRow ' | {<br/>type:'ShowNewRow '<br/>} | showNewRow() | no | add new row cells to *editableCells* |
