@@ -11,7 +11,7 @@ id: action
 
 ## Definition
 
-Action is an object which contains type and payload
+Action is an object which contains the type and payload
 ```js
   {
     type: string,
