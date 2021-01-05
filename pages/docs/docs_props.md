@@ -13,7 +13,7 @@ id: props
 
 | Name | Type &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Description |
 | --- | --- | --- |
-| childComponents | [<code>ChildComponents</code>](#childcomponents)| Object describes contains customization logic for child components (Demo: [Events](https://komarovalexander.github.io/ka-table/#/events), [Custom Cell](https://komarovalexander.github.io/ka-table/#/custom-cell)) |
+| childComponents | [<code>ChildComponents</code>](#childcomponents)| customization logic for ka-table parts (cells, rows, editors, etc.) (Demo: [Events](https://komarovalexander.github.io/ka-table/#/events), [Custom Cell](https://komarovalexander.github.io/ka-table/#/custom-cell)) |
 | columnReordering | <code>boolean</code> | Enables columns reordering using drag and drop |
 | columns | [<code>Column[]</code>](#column) | Columns in table and their look and behaviour |
 | data | <code>any[]</code> | The Table's data |
