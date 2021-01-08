@@ -144,7 +144,7 @@ import { kaPropsUtils } from 'ka-table/utils';
 
 #### kaPropsUtils.getData(tableProps)
 
-Obtains sorted, filtered, grouped, paged data for table according to current properties
+Obtains sorted, filtered, grouped, paged data for table according to current props
 (Demo: [Get Data By Props](https://komarovalexander.github.io/ka-table/#/get-data-by-props))
 
 ```js
@@ -153,7 +153,7 @@ Obtains sorted, filtered, grouped, paged data for table according to current pro
 
 #### kaPropsUtils.getSelectedData(tableProps)
 
-Obtains selected data for table according to current properties
+Obtains selected data for table according to current props
 (Demo: [Selection - Single](https://komarovalexander.github.io/ka-table/#/selection-single))
 
 ```js
