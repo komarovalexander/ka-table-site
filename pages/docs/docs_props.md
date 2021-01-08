@@ -157,7 +157,7 @@ Obtains selected data for table according to current properties
 (Demo: [Selection - Single](https://komarovalexander.github.io/ka-table/#/selection-single))
 
 ```js
-  const data = kaPropsUtils.getData(tableProps);
+  const data = kaPropsUtils.getSelectedData(tableProps);
 ```
 
 #### kaPropsUtils.areAllFilteredRowsSelected(tableProps)
