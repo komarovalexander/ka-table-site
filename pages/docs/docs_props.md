@@ -151,6 +151,15 @@ Obtains sorted, filtered, grouped, paged data for table according to current pro
   const data = kaPropsUtils.getData(tableProps);
 ```
 
+#### kaPropsUtils.getSelectedData(tableProps)
+
+Obtains selected data for table according to current properties
+(Demo: [Selection - Single](https://komarovalexander.github.io/ka-table/#/selection-single))
+
+```js
+  const data = kaPropsUtils.getData(tableProps);
+```
+
 #### kaPropsUtils.areAllFilteredRowsSelected(tableProps)
 
 returns true if all filtered rows are selected
