@@ -27,6 +27,7 @@ All of actions below are processed by kaReducer:
 
 | Type | Action | ActionCreator | <nobr>UI OOTB</nobr> | kaReducer |
 | --- | --- | --- | --- |
+| 'ClearFocused' | {<br/>type:'ClearFocused'<br/>} | clearFocused() | no | sets focused as undefined |
 | 'ClearSingleAction' | {<br/>type:'ClearSingleAction'<br/>} | clearSingleAction() | no | sets singleAction as undefined |
 | 'CloseEditor' | {<br/>type:'CloseEditor',<br/>rowKeyValue: any,<br/>columnKey: string<br/>} | closeEditor(<br/> rowKeyValue,<br/> columnKey<br/>) | yes | removes cell from *editableCells* |
 | 'CloseRowEditors' | {<br/>type:'CloseRowEditors',<br/>rowKeyValue: any<br/>} | closeRowEditors(<br/> rowKeyValue<br/>) | no | removes row cells from *editableCells* |
@@ -39,6 +40,10 @@ All of actions below are processed by kaReducer:
 | 'HideLoading' | {<br/>type:'HideLoading'<br/>} | hideLoading() | no | set *loading* = false |
 | 'HideNewRow' | {<br/>type:'HideNewRow'<br/>} | hideNewRow() | no | removes row cells from *editableCells* |
 | 'LoadData' | {<br/>type:'LoadData'<br/>} | loadData() | no | notifies grid about time to reload its data |
+| 'MoveFocusedDown' | {<br/>type:'MoveFocusedDown',<br/>settings?: { end?: boolean } <br/>} | moveFocusedDown(settings) | no | move focused one cell down |
+| 'MoveFocusedLeft' | {<br/>type:'MoveFocusedLeft',<br/>settings?: { end?: boolean } <br/>} | moveFocusedLeft(settings) | no | move focused one cell left |
+| 'MoveFocusedRight' | {<br/>type:'MoveFocusedRight',<br/>settings?: { end?: boolean } <br/>} | moveFocusedRight(settings) | no | move focused one cell right |
+| 'MoveFocusedUp' | {<br/>type:'MoveFocusedUp',<br/>settings?: { end?: boolean } <br/>} | moveFocusedUp(settings) | no | move focused one cell up |
 | 'OpenEditor' | {<br/>type:'OpenEditor',<br/>rowKeyValue: any,<br/>columnKey: string,<br/>} | openEditor(<br/> rowKeyValue,<br/> columnKey<br/>) | yes | add cell to *editableCells* |
 | 'OpenRowEditors' | {<br/>type:'OpenRowEditors',<br/>rowKeyValue: any<br/>} | openRowEditors(<br/> rowKeyValue<br/>) | no | add row cells to *editableCells* |
 | 'ReorderColumns' | {<br/>type:'ReorderColumns',<br/>columnKey: any<br/>,targetColumnKey: any<br/>} | rorderColumns(<br/> columnKey<br/>, targetColumnKey<br/>) | yes | place columnKey to the position of targetColumnKey |
@@ -53,6 +58,7 @@ All of actions below are processed by kaReducer:
 | 'SelectRow' | {<br/>type:'SelectRow',<br/>rowKeyValue: any<br/>} | selectRow(<br/> rowKeyValue<br/>) | no | add row id to *selectedRows* |
 | 'SelectRowsRange' | {<br/>type:'SelectRowsRange',<br/>rowKeyValueFrom: any,<br/>rowKeyValueTo: any<br/>} | selectRowsRange(<br/> rowKeyValueFrom,<br/>rowKeyValueTo<br/>) | no | rowKeyValueFrom, rowKeyValueTo describe start and end of visible elements range, all ids added to *selectedRows* |
 | 'SelectSingleRow' | {<br/>type:'SelectSingleRow',<br/>rowKeyValue: any<br/>} | selectSingleRow(<br/> rowKeyValue<br/>) | no | set *selectedRows* as an array with one row id |
+| 'SetFocused' | {<br/>type:'SetFocused',<br/>focused: any<br/>} | setFocused(<br/> focused<br/>) | no | set *focused* property |
 | 'SetSingleAction' | {<br/>type:'SetSingleAction',<br/>singleAction: any<br/>} | setSingleAction(<br/> singleAction<br/>) | no | set *singleAction* property |
 | 'ShowColumn' | {<br/>type:'ShowColumn',<br/>columnKey: any<br/>} | showColumn(<br/> rowKeyValue<br/>) | no | sets *visible=true* for specific column |
 | 'ShowLoading' | {<br/>type:'ShowLoading',<br/>text?:string<br/>} | showLoading(text?) | no | set *loading* = true and updates the text if text is specified |
