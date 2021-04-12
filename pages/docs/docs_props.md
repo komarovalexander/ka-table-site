@@ -135,6 +135,7 @@ A second parameter in each [react Synthetic Event](https://reactjs.org/docs/even
 
 | Name | Type | Description |
 | --- | --- | --- |
+| enabled | <code>boolean</code> | Enables virtual scrolling |
 | scrollPosition | <code>number</code> | Current scroll top position |
 | itemHeight | <code>((data: any) => number)</code> \| <code>number</code> | Returns height of specific row |
 | tbodyHeight | <code>number</code> | tbody height |
