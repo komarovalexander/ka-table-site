@@ -21,6 +21,7 @@ id: props
 | dispatch | <code>(action) => any</code> | The function takes action as an argument, is used as a notification about any changes and events in the Table |
 | editableCells | [<code>EditableCell[]</code>](#editablecell) | Array of cells currently editing (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
 | editingMode | 'cell' <br/> 'none' | Sets the table's editing mode (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
+| extendedFilter | <code>(data: any[]) => boolean</code> | adds additional filtering layer [Demo](http://localhost:3000/ka-table/#/filter-extended) |
 | filter | <code>(props: { <br/>column: Column  <br/>}) => ((value: any, filterRowValue: any) => boolean) | void;</code> | Returns filter function (Demo: [Filter Custom Logic](https://komarovalexander.github.io/ka-table/#/filter-row-custom-logic)) |
 | filteringMode | 'filterRow' <br/> 'none' | Show filter UI elements in Table (Demo: [Filter Row Example](https://komarovalexander.github.io/ka-table/#/filter-row)) |
 | focused | <code>{<br/> cell?: {<br/>  columnKey: string,<br/>  rowKeyValue: any<br/> },<br/> cellEditorInput?: {<br/>  columnKey: string,<br/>  rowKeyValue: any<br/> },<br/>}</code> | stores information about the currently focused element (Demo: [Keyboard navigation](https://komarovalexander.github.io/ka-table/#/keyboard-navigation))  |
