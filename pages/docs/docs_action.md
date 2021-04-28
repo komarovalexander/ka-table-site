@@ -51,7 +51,7 @@ All of actions below are processed by kaReducer:
 | 'ResizeColumn' | {<br/>type:'ResizeColumn',<br/>columnKey: string<br/>,width: number<br/>} | resizeColumn(<br/> columnKey<br/>, width<br/>) | yes | chane column width |
 | 'SaveNewRow' | {<br/>type:'SaveNewRow',<br/>rowKeyValue: any,<br/>validate?: boolean<br/>} | saveNewRow(<br/> rowKeyValue,<br/> settings?: {  validate?: boolean }<br/>) | no | Saves editor values to the new item of *data* and removes row cells from *editableCells*. <br/>Settings is optional: <br/>validate - validate values before save, do not save if validation is unsuccessful. |
 | 'SaveRowEditors' | {<br/>type:'SaveRowEditors',<br/>rowKeyValue: any,<br/>closeAfterSave?: boolean,<br/>validate?: boolean<br/>} | saveNewRow(<br/> rowKeyValue,<br/> settings?: {  validate?: boolean }<br/>) | no | Saves editor values to *data** and removes row cells from *editableCells*. <br/>Settings is optional: <br/>validate - validate values before save, do not save and do not close if validation is unsuccessful. |
-| 'Search' | {<br/>type:'Search',<br/>searchValue: any<br/>} | search(<br/>searchValue<br/>) | no | change *search* option |
+| 'Search' | {<br/>type:'Search',<br/>searchText: string<br/>} | search(<br/>searchText<br/>) | no | change *searchText* option |
 | 'SelectAllRows' | {<br/>type:'SelectAllRows'<br/>} | selectAllRows() | no | add all items ids of *data* to *selectedRows* |
 | 'SelectAllFilteredRows' | {<br/>type:'SelectAllFilteredRows'<br/>} | selectAllFilteredRows() | no | add all filtered items ids of *data* to *selectedRows* |
 | 'SelectAllVisibleRows' | {<br/>type:'SelectAllVisibleRows'<br/>} | selectAllVisibleRows() | no | add all visible items ids of *data* to *selectedRows* |
