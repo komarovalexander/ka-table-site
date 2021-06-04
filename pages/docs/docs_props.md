@@ -96,8 +96,11 @@ Demos: [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Cus
 | headCellResize | [<code>ChildComponent</code>](#childcomponentt)<[IHeadCellResizeProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
 | noDataRow | [<code>ChildComponent</code>](#childcomponentt)<[INoDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/search) |
 | rootDiv | [<code>ChildComponent</code>](#childcomponentt)<[ITableProps](#table)> | .ka div |  |
+| summaryCell | [<code>ChildComponent</code>](#childcomponentt)<[ISummaryCellProps](#table)> | td | [Demo](https://komarovalexander.github.io/ka-table/#/summary) |
+| summaryRow | [<code>ChildComponent</code>](#childcomponentt)<[ISummaryRowProps](#table)> | tr |  |
 | table | [<code>ChildComponent</code>](#childcomponentt)<[ITableProps](#table)> | table |  |
 | tableBody | [<code>ChildComponent</code>](#childcomponentt)<[ITableBodyProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tbody |  |
+| tableFoot | [<code>ChildComponent</code>](#childcomponentt)<[ITableFootProps](#table)> | tfoot |  |
 | tableHead | [<code>ChildComponent</code>](#childcomponentt)<[ITableHeadProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | thead |  |
 | tableWrapper | [<code>ChildComponent</code>](#childcomponentt)<[ITableProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
 
