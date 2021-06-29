@@ -91,6 +91,8 @@ Demos: [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Cus
 | pagingPages | [<code>ChildComponent</code>](#childcomponentt)<[IPagingPagesProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/bootstrap) |
 | groupCell | [<code>ChildComponent</code>](#childcomponentt)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-custom-cell) |
 | groupRow | [<code>ChildComponent</code>](#childcomponentt)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-custom-row) |
+| groupSummaryCell | [<code>ChildComponent</code>](#childcomponentt)<[IGroupSummaryCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts)> | td | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-summary) |
+| groupSummaryRow | [<code>ChildComponent</code>](#childcomponentt)<[IGroupSummaryRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts)> | tr |  |
 | headCell | [<code>ChildComponent</code>](#childcomponentt)<[IHeadCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | th | [Demo](https://komarovalexander.github.io/ka-table/#/custom-header-cell) |
 | headCellContent | [<code>ChildComponent</code>](#childcomponentt)<[IHeadCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/column-reordering) |
 | headCellResize | [<code>ChildComponent</code>](#childcomponentt)<[IHeadCellResizeProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
@@ -131,6 +133,7 @@ A second parameter in each [react Synthetic Event](https://reactjs.org/docs/even
 | Name | Type | Description |
 | --- | --- | --- |
 | field | <code>string</code> | The grouped column's field |
+| enableSummary | <code>boolean</code> | Enable summary row for the group |
 
 
 ## VirtualScrolling
