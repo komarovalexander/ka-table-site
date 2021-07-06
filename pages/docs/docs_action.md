@@ -71,6 +71,7 @@ All of actions below are processed by kaReducer:
 | 'UpdateGroupsExpanded' | {<br/>type:'UpdateGroupsExpanded',<br/>groupKey: any[]<br/>} | updateGroupsExpanded(<br/> groupKey<br/>) | yes | add/remove group id to/from *groupsExpanded* |
 | 'UpdatePageIndex' | {<br/>type:'UpdatePageIndex',<br/>pageIndex: number,<br/>} | updatePageIndex(<br/> pageIndex<br/>) | yes | update *paging.pageIndex* option and show new page data |
 | 'UpdateSortDirection' | {<br/>type:'UpdateSortDirection',<br/>columnKey: string<br/>} | updateSortDirection(<br/> columnKey<br/>) | yes | update *sortDirection* to the oposite for specific column |
+| 'UpdateTreeGroupsExpanded' | {<br/>type:'UpdateTreeGroupsExpanded',<br/>rowKeyValue: any<br/>} | updateTreeGroupsExpanded(<br/> rowKeyValue<br/>) | yes | adds/removes *rowKeyValue* to/from *treeGroupsExpanded* |
 
 ## Custom actions
 
