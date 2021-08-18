@@ -44,11 +44,13 @@ All of actions below are processed by kaReducer:
 | 'MoveFocusedLeft' | {<br/>type:'MoveFocusedLeft',<br/>settings?: { end?: boolean } <br/>} | moveFocusedLeft(settings) | no | move focused one cell left |
 | 'MoveFocusedRight' | {<br/>type:'MoveFocusedRight',<br/>settings?: { end?: boolean } <br/>} | moveFocusedRight(settings) | no | move focused one cell right |
 | 'MoveFocusedUp' | {<br/>type:'MoveFocusedUp',<br/>settings?: { end?: boolean } <br/>} | moveFocusedUp(settings) | no | move focused one cell up |
+| 'OpenAllEditors' | {<br/>type:'OpenAllEditors'} | openAllEditors() | no | adds each data cell to *editableCells* |
 | 'OpenEditor' | {<br/>type:'OpenEditor',<br/>rowKeyValue: any,<br/>columnKey: string,<br/>} | openEditor(<br/> rowKeyValue,<br/> columnKey<br/>) | yes | add cell to *editableCells* |
 | 'OpenRowEditors' | {<br/>type:'OpenRowEditors',<br/>rowKeyValue: any<br/>} | openRowEditors(<br/> rowKeyValue<br/>) | no | add row cells to *editableCells* |
 | 'ReorderColumns' | {<br/>type:'ReorderColumns',<br/>columnKey: any<br/>,targetColumnKey: any<br/>} | rorderColumns(<br/> columnKey<br/>, targetColumnKey<br/>) | yes | place columnKey to the position of targetColumnKey |
 | 'ReorderRows' | {<br/>type:'ReorderRows',<br/>rowKeyValue: any<br/>,targetRowKeyValue: any<br/>} | reorderRows(<br/> rowKeyValue<br/>, targetRowKeyValue<br/>) | yes | place rowKeyValue to the position of targetRowKeyValue |
 | 'ResizeColumn' | {<br/>type:'ResizeColumn',<br/>columnKey: string<br/>,width: number<br/>} | resizeColumn(<br/> columnKey<br/>, width<br/>) | yes | chane column width |
+| 'SaveAllEditors' | {<br/>type:'SaveAllEditors'} | saveAllEditors() | no | saves *editableCells* editorValues to *data* |
 | 'SaveNewRow' | {<br/>type:'SaveNewRow',<br/>rowKeyValue: any,<br/>validate?: boolean<br/>} | saveNewRow(<br/> rowKeyValue,<br/> settings?: {  validate?: boolean }<br/>) | no | Saves editor values to the new item of *data* and removes row cells from *editableCells*. <br/>Settings is optional: <br/>validate - validate values before save, do not save if validation is unsuccessful. |
 | 'SaveRowEditors' | {<br/>type:'SaveRowEditors',<br/>rowKeyValue: any,<br/>closeAfterSave?: boolean,<br/>validate?: boolean<br/>} | saveNewRow(<br/> rowKeyValue,<br/> settings?: {  validate?: boolean }<br/>) | no | Saves editor values to *data** and removes row cells from *editableCells*. <br/>Settings is optional: <br/>validate - validate values before save, do not save and do not close if validation is unsuccessful. |
 | 'Search' | {<br/>type:'Search',<br/>searchText: string<br/>} | search(<br/>searchText<br/>) | no | change *searchText* option |
@@ -72,6 +74,7 @@ All of actions below are processed by kaReducer:
 | 'UpdatePageIndex' | {<br/>type:'UpdatePageIndex',<br/>pageIndex: number,<br/>} | updatePageIndex(<br/> pageIndex<br/>) | yes | update *paging.pageIndex* option and show new page data |
 | 'UpdateSortDirection' | {<br/>type:'UpdateSortDirection',<br/>columnKey: string<br/>} | updateSortDirection(<br/> columnKey<br/>) | yes | update *sortDirection* to the oposite for specific column |
 | 'UpdateTreeGroupsExpanded' | {<br/>type:'UpdateTreeGroupsExpanded',<br/>rowKeyValue: any<br/>} | updateTreeGroupsExpanded(<br/> rowKeyValue<br/>) | yes | adds/removes *rowKeyValue* to/from *treeGroupsExpanded* |
+| 'Validate' | {<br/>type:'Validate'} | validate() | no | adds/removes *validationMessage* to/from *editableCells* items |
 
 ## Custom actions
 
