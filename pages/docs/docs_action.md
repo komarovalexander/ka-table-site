@@ -39,7 +39,7 @@ All of actions below are processed by kaReducer:
 | 'HideColumn' | {<br/>type:'HideColumn',<br/>columnKey: any<br/>} | hideColumn(<br/> rowKeyValue<br/>) | no | sets *visible=false* for specific column |
 | 'HideLoading' | {<br/>type:'HideLoading'<br/>} | hideLoading() | no | set *loading* = false |
 | 'HideNewRow' | {<br/>type:'HideNewRow'<br/>} | hideNewRow() | no | removes row cells from *editableCells* |
-| 'InserRow' | {<br/>type:'InsetRow',<br/> rowData: any,<br/> options: { rowKeyValue: any, insertRowPosition: 'after' | 'before'} <br/>} | insertRow(<br/> rowData,<br/> options) | no | Inserts row to specific position in the *data* |
+| 'InsertRow' | {<br/>type:'InsertRow',<br/> rowData: any,<br/> options: { rowKeyValue: any, insertRowPosition: ['after' or 'before']} <br/>} | insertRow(<br/> rowData,<br/> options) | no | Inserts row to specific position in the *data* |
 | 'LoadData' | {<br/>type:'LoadData'<br/>} | loadData() | no | notifies grid about time to reload its data |
 | 'MoveFocusedDown' | {<br/>type:'MoveFocusedDown',<br/>settings?: { end?: boolean } <br/>} | moveFocusedDown(settings) | no | move focused one cell down |
 | 'MoveFocusedLeft' | {<br/>type:'MoveFocusedLeft',<br/>settings?: { end?: boolean } <br/>} | moveFocusedLeft(settings) | no | move focused one cell left |
