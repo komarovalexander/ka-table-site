@@ -29,7 +29,7 @@ All of actions below are processed by kaReducer:
 | --- | --- | --- | --- |
 | 'ClearFocused' | {<br/>type:'ClearFocused'<br/>} | clearFocused() | no | sets focused as undefined |
 | 'ClearSingleAction' | {<br/>type:'ClearSingleAction'<br/>} | clearSingleAction() | no | sets singleAction as undefined |
-| 'CloseEditor' | {<br/>type:'CloseEditor',<br/>rowKeyValue: any,<br/>columnKey: string<br/>} | closeEditor(<br/> rowKeyValue,<br/> columnKey<br/>) | yes | removes cell from *editableCells* |
+| 'CloseEditor' | {<br/>type:'CloseEditor',<br/>rowKeyValue: any,<br/>columnKey: string<br/>} | closeEditor(<br/> rowKeyValue,<br/> columnKey<br/>) | yes | removes cell from *editableCells* <br/> note: when *EditingMode.Cell* is enabled table calls *CloseEditor* action each time editor loses focus |
 | 'CloseRowEditors' | {<br/>type:'CloseRowEditors',<br/>rowKeyValue: any<br/>} | closeRowEditors(<br/> rowKeyValue<br/>) | no | removes row cells from *editableCells* |
 | 'DeleteRow' | {<br/>type:'DeleteRow',<br/>rowKeyValue: any<br/>} | deleteRow(<br/> rowKeyValue<br/>) | no | deletes row from *data* |
 | 'DeselectAllFilteredRows' | {<br/>type:'DeselectAllFilteredRows'} | deselectAllFilteredRows() | no | remove all filtered items ids of *data* to *selectedRows* |

@@ -20,7 +20,8 @@ id: props
 | data | <code>any[]</code> | The Table's data |
 | dispatch | <code>(action) => any</code> | The function takes action as an argument, is used as a notification about any changes and events in the Table |
 | editableCells | [<code>EditableCell[]</code>](#editablecell) | Array of cells currently editing (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
-| editingMode | 'cell' <br/> 'none' | Sets the table's editing mode (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
+| editingMode | 'cell' <br/> 'none' | Sets the table's editing mode (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing))
+<br/> note: when *EditingMode.Cell* is enabled table calls *CloseEditor* action each time editor loses focus |
 | extendedFilter | <code>(data: any[]) => boolean</code> | adds additional filtering layer [Demo](http://localhost:3000/ka-table/#/filter-extended) |
 | filter | <code>(props: { <br/>column: Column  <br/>}) => ((value: any, filterRowValue: any) => boolean) | void;</code> | Returns filter function (Demo: [Filter Custom Logic](https://komarovalexander.github.io/ka-table/#/filter-row-custom-logic)) |
 | filteringMode | 'filterRow' <br/>'headerFilter' <br/> 'none' | Show filter UI elements in Table (Demo: [Filter Row Example](https://komarovalexander.github.io/ka-table/#/filter-row)) |
