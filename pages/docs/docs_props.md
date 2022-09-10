@@ -61,6 +61,7 @@ id: props
 | isHeaderFilterPopupShown | <code>boolean</code> | Shows/hides header filter popup for cpecific column |
 | isEditable | <code>boolean</code> | Specifies can a column be editable or not |
 | isResizable | <code>boolean</code> | Specifies can a column be resized or not (Demo: [Column Resizing](https://komarovalexander.github.io/ka-table/#/column-resizing)) |
+| isSortable | <code>boolean</code> | Specifies can a column be sorted or not (Demo: [Column Resizing](https://komarovalexander.github.io/ka-table/#/sorting)) |
 | key | <code>string</code> | Mandatory field, specifies unique key for the column |
 | sortDirection | 'ascend' <br/> 'descend' | Sets the direction of sorting for the column (Demo: [Sorting](https://komarovalexander.github.io/ka-table/#/sorting)) |
 | sortIndex | <code>number</code>  | The priority of the column for sorting (Demo: [Sorting](https://komarovalexander.github.io/ka-table/#/sorting)) |
@@ -111,6 +112,7 @@ Demos: [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Cus
 | popupContent | [<code>ChildComponent</code>](#childcomponentt)<[IPopupContentProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
 | popupContentItem | [<code>ChildComponent</code>](#childcomponentt)<[IPopupContentItemProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
 | rootDiv | [<code>ChildComponent</code>](#childcomponentt)<[ITableProps](#table)> | .ka div |  |
+| sortIcon | [<code>ChildComponent</code>](#childcomponentt)<[ISortIconProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts)> | td | [Demo](https://komarovalexander.github.io/ka-table/#/sorting) |
 | summaryCell | [<code>ChildComponent</code>](#childcomponentt)<[ISummaryCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts)> | td | [Demo](https://komarovalexander.github.io/ka-table/#/summary) |
 | summaryRow | [<code>ChildComponent</code>](#childcomponentt)<[ISummaryRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts)> | tr |  |
 | table | [<code>ChildComponent</code>](#childcomponentt)<[ITableProps](#table)> | table |  |
