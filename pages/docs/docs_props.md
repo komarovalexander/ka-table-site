@@ -18,7 +18,7 @@ id: props
 | columnResizing | <code>boolean</code> | Enables columns resizing |
 | columns | [<code>Column[]</code>](#column) | Columns in table and their look and behaviour |
 | data | <code>any[]</code> | The Table's data |
-| dispatch | <code>(action) => any</code> | The function takes action as an argument, is used as a notification about any changes and events in the Table |
+| dispatch | <code>(action) => any</code> | The function takes action as an argument, is used as a notification about any changes and events in the Table. `dispatch` enables controlled mode in the table |
 | editableCells | [<code>EditableCell[]</code>](#editablecell) | Array of cells currently editing (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
 | editingMode | 'cell' <br/> 'none' | Sets the table's editing mode (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) <br/> note: when *EditingMode.Cell* is enabled table calls *CloseEditor* action each time editor loses focus |
 | extendedFilter | <code>(data: any[]) => boolean</code> | adds additional filtering layer [Demo](http://localhost:3000/ka-table/#/filter-extended) |
@@ -40,6 +40,7 @@ id: props
 | singleAction | <code>any</code> | dispathes only ones after Table render (Demo: [Remote Data](https://komarovalexander.github.io/ka-table/#/remote-data)), after this action ka-table will dispatch 'ClearSingleAction' to set singleAction as undefined |
 | sort | <code>(props: { <br/>column: Column</br> }) =>  ((value1: any, value2: any) => 0 | 1 | -1) | void;</code> | Returns sorting function (Demo: [Sorting Custom Logic](https://komarovalexander.github.io/ka-table/#/sorting-custom-logic)) |
 | sortingMode | 'single' <br/> 'singleTripleState' <br/> 'singleRemote' <br/> 'singleTripleStateRemote' <br/> 'multipleRemote' <br/> 'multipleTripleStateRemote' <br/> 'none' | Sorting mode. <br/> *Remote* - means only grid elements are updated but data should be sorted outside of the grid. <br/>*TripleState* - means: "ascend - descend - no sorting" <br/>(Demo: [Sorting Example](https://komarovalexander.github.io/ka-table/#/sorting)) |
+| table | { <code><br/>props: ITableProps;<br/>changeProps: React.Dispatch;<br/>onDispatch: OnDispatchFunc;<br/>dispatch: DispatchFunc; </code> <br/>[<code> ...actionCreators</code>](/docs_action.html#predefined-actions) <br/>}| object is used only by *uncontrolled mode* to get/set table props, use `useTable()` to create your own instance and handle changes using `onDispatch`, and use `useTableInstance()` to get instance of table from context |
 | treeGroupsExpanded | <code>any[]</code> | array of ids of expanded rows, if it is `undefined` - all rows are expanded (Demo: [Tree Mode](https://komarovalexander.github.io/ka-table/#/tree-mode)) |
 | treeGroupKeyField | <code>string</code> | group key field (Demo: [Tree Mode](https://komarovalexander.github.io/ka-table/#/tree-mode)) |
 | validation | <code>(props: { <br/>value: any, <br/>rowData: any, <br/>column: Column <br/>}) => (string | void)</code> | Returns the validation error string or does not return anything in case of passed validation (Demo: [Validation Example](https://komarovalexander.github.io/ka-table/#/validation)) |
@@ -173,6 +174,32 @@ Demo: [Grouped Columns](https://komarovalexander.github.io/ka-table/#/grouped-co
 | tbodyHeight | <code>number</code> | tbody height |
 
 You can set VirtualScrolling as empty object {} to enable virtual scrolling and auto calculate its parameters
+
+## useTable()
+
+Returns a value to pass to `table` property of the component
+```js
+import { Table, useTable } from 'ka-table';
+
+const table = useTable({
+  onDispatch: (action) => { // subscription to all actions in the table 
+
+  }
+});
+
+return <Table 
+        table={table} 
+        rowKeyId="id"
+        data={[]} />
+```
+
+## useTableInstance()
+
+Returns a value which was passed to `table` property of the component, can be used if table is in uncontrolled mode
+```js
+import { useTableInstance } from 'ka-table';
+```
+
 
 ## kaPropsUtils
 
