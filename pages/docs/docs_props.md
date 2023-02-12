@@ -17,6 +17,8 @@ id: props
 | columnReordering | <code>boolean</code> | Enables columns reordering using drag and drop |
 | columnResizing | <code>boolean</code> | Enables columns resizing |
 | columns | [<code>Column[]</code>](#column) | Columns in table and their look and behaviour |
+| controlledPropsKeys | (keyof ITableProps)[] |  is used to specify controlled properties in uncontrolled mode
+default: ['searchText', 'loading'] if loading is enabled, ['searchText', 'loading', 'data', 'paging'] if loading is disabled |
 | data | <code>any[]</code> | The Table's data |
 | dispatch | <code>(action) => any</code> | The function takes action as an argument, is used as a notification about any changes and events in the Table. `dispatch` enables controlled mode in the table |
 | editableCells | [<code>EditableCell[]</code>](#editablecell) | Array of cells currently editing (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
@@ -96,6 +98,7 @@ Demos: [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Cus
 | cellText | [<code>ChildComponent</code>](#childcomponentt)<[ICellTextProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/custom-cell) |
 | dataRow | [<code>ChildComponent</code>](#childcomponentt)<[IDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/custom-data-row) |
 | detailsRow | [<code>ChildComponent</code>](#childcomponentt)<[IDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/details-row) |
+| detailsCell | [<code>ChildComponent</code>](#childcomponentt)<[IDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/details-row) |
 | filterRowCell | [<code>ChildComponent</code>](#childcomponentt)<[IFilterRowEditorProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/filter-row-custom-editor) |
 | groupCell | [<code>ChildComponent</code>](#childcomponentt)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-custom-cell) |
 | groupRow | [<code>ChildComponent</code>](#childcomponentt)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-custom-row) |
