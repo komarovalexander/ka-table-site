@@ -33,6 +33,7 @@ default: ['searchText', 'loading'] if loading is enabled, ['searchText', 'loadin
 | groupsExpanded | <code>any[][]</code> | Expanded groups - array of group keys |
 | height | <code>string | number</code> | height of the component |
 | loading | <code>{ <br/>enabled?: boolean, <br/>text?: string <br/>}</code>| Loading indicator options (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)) |
+| noData | <code>{ <br/>text?: string, <br/>hideHeader?: boolean <br/>}</code>| no data settings (for deeper UI customization childComponents.noDataRow also) (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/search)) |
 | paging | <code>{<br/>enabled?: boolean;<br/>pageIndex?: number;<br/>pageSize?: number;<br/>pagesCount?: number;<br/>position: ('bottom'|'top'|'topAndBottom') <br/>}</code> | Paging settings (Demo: [Paging](https://komarovalexander.github.io/ka-table/#/paging)) |
 | rowKeyField | <code>string</code> | Data's field which is used to identify row |
 | rowReordering | <code>boolean</code> | Enables rows reordering using drag and drop |
