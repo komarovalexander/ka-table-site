@@ -17,8 +17,7 @@ id: props
 | columnReordering | <code>boolean</code> | Enables columns reordering using drag and drop |
 | columnResizing | <code>boolean</code> | Enables columns resizing |
 | columns | [<code>Column[]</code>](#column) | Columns in table and their look and behaviour |
-| controlledPropsKeys | (keyof ITableProps)[] |  is used to specify controlled properties in uncontrolled mode
-default: ['searchText', 'loading'] if loading is enabled, ['searchText', 'loading', 'data', 'paging'] if loading is disabled |
+| controlledPropsKeys | (keyof ITableProps)[] |  is used to specify controlled properties in uncontrolled mode default: ['searchText', 'loading'] if loading is enabled, ['searchText', 'loading', 'data', 'paging'] if loading is disabled |
 | data | <code>any[]</code> | The Table's data |
 | dispatch | <code>(action) => any</code> | The function takes action as an argument, is used as a notification about any changes and events in the Table. `dispatch` enables controlled mode in the table |
 | editableCells | [<code>EditableCell[]</code>](#editablecell) | Array of cells currently editing (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
