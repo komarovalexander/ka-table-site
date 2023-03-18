@@ -36,15 +36,19 @@ All of actions below are processed by kaReducer:
 | 'DeselectAllRows' | {<br/>type:'DeselectAllRows'} | deselectAllRows() | no | clears *selectedRows* |
 | 'DeselectAllVisibleRows' | {<br/>type:'DeselectAllVisibleRows'} | deselectAllVisibleRows() | no | remove all visible items ids of *data* to *selectedRows* |
 | 'DeselectRow' | {<br/>type:'DeselectRow',<br/>rowKeyValue: any<br/>} | deselectRow(<br/> rowKeyValue<br/>) | no | removes row id from *selectedRows* |
+| 'GroupColumn' | {<br/>type:'GroupColumn',<br/>columnKey: string<br/>} | groupColumn(<br/> columnKey<br/>) | no | groups *columnKey* |
 | 'HideColumn' | {<br/>type:'HideColumn',<br/>columnKey: any<br/>} | hideColumn(<br/> rowKeyValue<br/>) | no | sets *visible=false* for specific column |
 | 'HideLoading' | {<br/>type:'HideLoading'<br/>} | hideLoading() | no | set *loading* = false |
 | 'HideNewRow' | {<br/>type:'HideNewRow'<br/>} | hideNewRow() | no | removes row cells from *editableCells* |
+| 'InsertColumn' | {<br/>type:'InsertColumn',<br/> column: Column,<br/> index: number <br/>} | insertColumn(<br/> column,<br/> index) | no | Inserts column to specific position in the *columns* |
 | 'InsertRow' | {<br/>type:'InsertRow',<br/> rowData: any,<br/> options: { rowKeyValue: any, insertRowPosition: ['after' or 'before']} <br/>} | insertRow(<br/> rowData,<br/> options) | no | Inserts row to specific position in the *data* |
 | 'LoadData' | {<br/>type:'LoadData'<br/>} | loadData() | no | notifies grid about time to reload its data |
+| 'MoveColumnBefore' | {<br/>type:'MoveColumnBefore',<br/>columnKey: string, <br/>targetColumnKey: string<br/>} | moveColumnBefore(settings) | no | move *columnKey* to position before *targetColumnKey* in *columns* |
 | 'MoveFocusedDown' | {<br/>type:'MoveFocusedDown',<br/>settings?: { end?: boolean } <br/>} | moveFocusedDown(settings) | no | move focused one cell down |
 | 'MoveFocusedLeft' | {<br/>type:'MoveFocusedLeft',<br/>settings?: { end?: boolean } <br/>} | moveFocusedLeft(settings) | no | move focused one cell left |
 | 'MoveFocusedRight' | {<br/>type:'MoveFocusedRight',<br/>settings?: { end?: boolean } <br/>} | moveFocusedRight(settings) | no | move focused one cell right |
 | 'MoveFocusedUp' | {<br/>type:'MoveFocusedUp',<br/>settings?: { end?: boolean } <br/>} | moveFocusedUp(settings) | no | move focused one cell up |
+| 'MoveColumnToIndex' | {<br/>type:'MoveColumnToIndex',<br/>columnKey: string, <br/>index: number<br/>} | moveColumnToIndex(settings) | no | move *columnKey* to *index* position in *columns* |
 | 'OpenAllEditors' | {<br/>type:'OpenAllEditors'} | openAllEditors() | no | adds each data cell to *editableCells* |
 | 'OpenEditor' | {<br/>type:'OpenEditor',<br/>rowKeyValue: any,<br/>columnKey: string,<br/>} | openEditor(<br/> rowKeyValue,<br/> columnKey<br/>) | yes | add cell to *editableCells* |
 | 'OpenRowEditors' | {<br/>type:'OpenRowEditors',<br/>rowKeyValue: any<br/>} | openRowEditors(<br/> rowKeyValue<br/>) | no | add row cells to *editableCells* |
@@ -66,6 +70,7 @@ All of actions below are processed by kaReducer:
 | 'ShowColumn' | {<br/>type:'ShowColumn',<br/>columnKey: any<br/>} | showColumn(<br/> rowKeyValue<br/>) | no | sets *visible=true* for specific column |
 | 'ShowLoading' | {<br/>type:'ShowLoading',<br/>text?:string<br/>} | showLoading(text?) | no | set *loading* = true and updates the text if text is specified |
 | 'ShowNewRow ' | {<br/>type:'ShowNewRow '<br/>} | showNewRow() | no | add new row cells to *editableCells* |
+| 'UngroupColumn' | {<br/>type:'UngroupColumn',<br/>columnKey: string<br/>} | ungroupColumn(<br/> columnKey<br/>) | no | ungroups *columnKey* |
 | 'UpdateCellValue' | {<br/>type:'UpdateCellValue',<br/>rowKeyValue: any,<br/>columnKey: string,<br/>value: any,<br/>} | changeCellValue(<br/>rowKeyValue,<br/> columnKey,<br/>value<br/>) | yes | update *data* |
 | 'UpdateData' | {<br/>type:'UpdateData',<br/>data: any[]<br/>} | updateData(<br/> data<br/>) | no | update *data* |
 | 'UpdateEditorValue' | {<br/>type:'UpdateEditorValue',,<br/>rowKeyValue: any,<br/>columnKey: string<br/>value: any,<br/>} | updateEditorValue(<br/>rowKeyValue,<br/>columnKey,<br/>value<br/>) | no | update editorCell in *editableCells* |

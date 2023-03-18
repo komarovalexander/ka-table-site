@@ -31,6 +31,7 @@ default: ['searchText', 'loading'] if loading is enabled, ['searchText', 'loadin
 | gropedColumns | [<code>GroupedColumn[]</code>](#groupedcolumn) | Demo: [Grouped Columns](https://komarovalexander.github.io/ka-table/#/grouped-columns) |
 | groups | [<code>Group[]</code>](#group) | Group's in the table (Demo: [Grouping Example](https://komarovalexander.github.io/ka-table/#/grouping)) |
 | groupsExpanded | <code>any[][]</code> | Expanded groups - array of group keys |
+| groupPanel | <code>{ <br/>enabled?: boolean; <br/>public text?: string; <br/>public deep?: number; <br/>}</code> | Allows users to select grouping columns in the UI. Demo: [Grouping](https://komarovalexander.github.io/ka-table/#/grouping) |
 | height | <code>string | number</code> | height of the component |
 | loading | <code>{ <br/>enabled?: boolean, <br/>text?: string <br/>}</code>| Loading indicator options (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)) |
 | noData | <code>{ <br/>text?: string, <br/>hideHeader?: boolean <br/>}</code>| no data settings (for deeper UI customization childComponents.noDataRow also) (Demo: [Search](https://komarovalexander.github.io/ka-table/#/search)) |
@@ -102,6 +103,8 @@ Demos: [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Cus
 | detailsCell | [<code>ChildComponent</code>](#childcomponentt)<[IDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/details-row) |
 | filterRowCell | [<code>ChildComponent</code>](#childcomponentt)<[IFilterRowEditorProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/filter-row-custom-editor) |
 | groupCell | [<code>ChildComponent</code>](#childcomponentt)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-custom-cell) |
+| groupPanel | [<code>ChildComponent</code>](#childcomponentt)<[IGroupPanelProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/grouping) |
+| groupPanelCell | [<code>ChildComponent</code>](#childcomponentt)<[IGroupPanelCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/grouping) |
 | groupRow | [<code>ChildComponent</code>](#childcomponentt)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-custom-row) |
 | groupSummaryCell | [<code>ChildComponent</code>](#childcomponentt)<[IGroupSummaryCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts)> | td | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-summary) |
 | groupSummaryRow | [<code>ChildComponent</code>](#childcomponentt)<[IGroupSummaryRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts)> | tr |  |
@@ -111,6 +114,7 @@ Demos: [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Cus
 | headFilterButton | [<code>ChildComponent</code>](#childcomponentt)<[IHeaderFilterButtonProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr |  |
 | headRow | [<code>ChildComponent</code>](#childcomponentt)<[IHeadRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr |  |
 | loading | [<code>ChildComponent</code>](#childcomponentt)<[ILoadingProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
+| emptyCell | [<code>ChildComponent</code>](#childcomponentt)<[IEmptyCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr |  |
 | noDataRow | [<code>ChildComponent</code>](#childcomponentt)<[INoDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/search) |
 | pagingIndex | [<code>ChildComponent</code>](#childcomponentt)<[IPagingIndexProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/bootstrap) |
 | pagingPages | [<code>ChildComponent</code>](#childcomponentt)<[IPagingPagesProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/bootstrap) |
