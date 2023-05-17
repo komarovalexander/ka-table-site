@@ -62,8 +62,9 @@ id: props
 | field | <code>string</code> | Specifies the property of data's object which value will be used in column, if null value from key option will be used |
 | headerFilterValues | <code>any[]</code> | Array of selected values |
 | headerFilterPopupPosition | <code>{ x: number; y: number; }</code> | Header filter popup position |
-| isHeaderFilterPopupShown | <code>boolean</code> | Shows/hides header filter popup for cpecific column |
 | isEditable | <code>boolean</code> | Specifies can a column be editable or not |
+| isFilterable | <code>boolean</code> | If `false` then header filter cell content will not be shown for a column |
+| isHeaderFilterPopupShown | <code>boolean</code> | Shows/hides header filter popup for cpecific column |
 | isResizable | <code>boolean</code> | Specifies can a column be resized or not (Demo: [Column Resizing](https://komarovalexander.github.io/ka-table/#/column-resizing)) |
 | isSortable | <code>boolean</code> | Specifies can a column be sorted or not (Demo: [Column Resizing](https://komarovalexander.github.io/ka-table/#/sorting)) |
 | key | <code>string</code> | Mandatory field, specifies unique key for the column |
