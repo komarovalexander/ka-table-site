@@ -181,6 +181,8 @@ Demo: [Grouped Columns](https://komarovalexander.github.io/ka-table/#/grouped-co
 | scrollPosition | <code>number</code> | Current scroll top position |
 | itemHeight | <code>((data: any) => number)</code> \| <code>number</code> | Returns height of specific row |
 | tbodyHeight | <code>number</code> | tbody height |
+| topInvisibleCount | <code>number</code> | amount of rows which should be rendered over visible area (usefull for scrolling - in that case some items will be already visible and it will be more smoth) |
+| bottomInvisibleCount | <code>number</code> | amount of rows which should be rendered under visible area |
 
 You can set VirtualScrolling as empty object {} to enable virtual scrolling and auto calculate its parameters
 
