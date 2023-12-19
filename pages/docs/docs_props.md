@@ -26,7 +26,7 @@ id: props
 | filter | <code>(props: { <br/>column: Column  <br/>}) => ((value: any, filterRowValue: any, rowData?: any) => boolean) | void;</code> | Returns filter function (Demo: [Filter Custom Logic](https://komarovalexander.github.io/ka-table/#/filter-row-custom-logic)) |
 | filteringMode | 'filterRow' <br/>'headerFilter'<br/> 'filterRowAndHeaderFilter'<br/> 'none' | Show filter UI elements in Table (Demo: [Filter Row Example](https://komarovalexander.github.io/ka-table/#/filter-row)) |
 | focused | <code>{<br/> cell?: {<br/>  columnKey: string,<br/>  rowKeyValue: any<br/> },<br/> cellEditorInput?: {<br/>  columnKey: string,<br/>  rowKeyValue: any<br/> },<br/>}</code> | stores information about the currently focused element (Demo: [Keyboard navigation](https://komarovalexander.github.io/ka-table/#/keyboard-navigation))  |
-| format | <code>(props: { <br/>value: any, <br/>column: Column <br/>}) => any</code> | Returns formated cell string (Demo: [Example](https://komarovalexander.github.io/ka-table/#/custom-cell)) |
+| format | <code>(props: { <br/>value: any, <br/>rowData: any, <br/>column: Column <br/>}) => any</code> | Returns formated cell string (Demo: [Example](https://komarovalexander.github.io/ka-table/#/custom-cell)) |
 | gropedColumns | [<code>GroupedColumn[]</code>](#groupedcolumn) | Demo: [Grouped Columns](https://komarovalexander.github.io/ka-table/#/grouped-columns) |
 | groups | [<code>Group[]</code>](#group) | Group's in the table (Demo: [Grouping Example](https://komarovalexander.github.io/ka-table/#/grouping)) |
 | groupsExpanded | <code>any[][]</code> | Expanded groups - array of group keys |
