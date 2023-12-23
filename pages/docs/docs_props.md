@@ -23,7 +23,7 @@ id: props
 | editableCells | [<code>EditableCell[]</code>](#editablecell) | Array of cells currently editing (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) |
 | editingMode | 'cell' <br/> 'none' | Sets the table's editing mode (Demo: [Editing Example](https://komarovalexander.github.io/ka-table/#/editing)) <br/> note: when *EditingMode.Cell* is enabled table calls *CloseEditor* action each time editor loses focus |
 | extendedFilter | <code>(data: any[]) => boolean</code> | adds additional filtering layer [Demo](http://localhost:3000/ka-table/#/filter-extended) |
-| filter | <code>(props: { <br/>column: Column  <br/>}) => ((value: any, filterRowValue: any, rowData?: any) => boolean) | void;</code> | Returns filter function (Demo: [Filter Custom Logic](https://komarovalexander.github.io/ka-table/#/filter-row-custom-logic)) |
+| filter | <code>(props: { <br/>column: Column  <br/>}) => ((value: any, filterRowValue: any, rowData?: any) => boolean) | void;</code> | Returns filter function |
 | filteringMode | 'filterRow' <br/>'headerFilter'<br/> 'filterRowAndHeaderFilter'<br/> 'none' | Show filter UI elements in Table (Demo: [Filter Row Example](https://komarovalexander.github.io/ka-table/#/filter-row)) |
 | focused | <code>{<br/> cell?: {<br/>  columnKey: string,<br/>  rowKeyValue: any<br/> },<br/> cellEditorInput?: {<br/>  columnKey: string,<br/>  rowKeyValue: any<br/> },<br/>}</code> | stores information about the currently focused element (Demo: [Keyboard navigation](https://komarovalexander.github.io/ka-table/#/keyboard-navigation))  |
 | format | <code>(props: { <br/>value: any, <br/>rowData: any, <br/>column: Column <br/>}) => any</code> | Returns formated cell string (Demo: [Example](https://komarovalexander.github.io/ka-table/#/custom-cell)) |
@@ -57,9 +57,11 @@ id: props
 | --- | --- | --- |
 | colGroup | <code>React.ColHTMLAttributes<HTMLElement></code> | Sets attributes for col element in table colGroup |
 | dataType | 'boolean' <br /> 'date' <br /> 'number' <br /> 'object' <br /> 'string' | Specifies the type of column |
+| filter | <code>(value: any, filterValue: any, rowData?: any) => boolean;</code> | Returns filter function for particular column (Demo: [Filter Custom Logic](https://komarovalexander.github.io/ka-table/#/filter-row-custom-logic)) |
 | filterRowOperator | <code>string</code> | Sets filter row operator (Demo: [Filter Row Custom Editor](https://komarovalexander.github.io/ka-table/#/filter-row-custom-editor)). Predefined filter operators are:  '=', '>', '<', '>=', '<=', 'contains'  |
 | filterRowValue | <code>any</code> | Sets filter row value (Demo: [Filter Row](https://komarovalexander.github.io/ka-table/#/filter-row)) |
 | field | <code>string</code> | Specifies the property of data's object which value will be used in column, if null value from key option will be used |
+| headerFilterListItems | <code>(props: { data?: any[] }) => any[]</code> | Returns array of header filter items (Demo: [Header Filter - Logic](https://komarovalexander.github.io/ka-table/#/header-filter-logic)) |
 | headerFilterValues | <code>any[]</code> | Array of selected values |
 | headerFilterPopupPosition | <code>{ x: number; y: number; }</code> | Header filter popup position |
 | isEditable | <code>boolean</code> | Specifies can a column be editable or not |
@@ -121,6 +123,7 @@ Demos: [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Cus
 | pagingPages | [<code>ChildComponent</code>](#childcomponentt)<[IPagingPagesProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/bootstrap) |
 | popupContent | [<code>ChildComponent</code>](#childcomponentt)<[IPopupContentProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
 | popupContentItem | [<code>ChildComponent</code>](#childcomponentt)<[IPopupContentItemProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
+| popupContentItemText | [<code>ChildComponent</code>](#childcomponentt)<[IPopupContentItemProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
 | rootDiv | [<code>ChildComponent</code>](#childcomponentt)<[ITableProps](#table)> | .ka div |  |
 | sortIcon | [<code>ChildComponent</code>](#childcomponentt)<[ISortIconProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts)> | td | [Demo](https://komarovalexander.github.io/ka-table/#/sorting) |
 | summaryCell | [<code>ChildComponent</code>](#childcomponentt)<[ISummaryCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts)> | td | [Demo](https://komarovalexander.github.io/ka-table/#/summary) |
