@@ -21,6 +21,7 @@ Table is stateless - every change of the UI can dispatch the action
 ```
 
 ## Elements
+
 Every part of the UI (Row, GroupRow, Column, HeaderCell, Cell, Editors) is customizable and can be set up as a custom component ([see props](./docs_props.html))
 
 ![Pattern](./images/customisation.svg)
@@ -57,19 +58,27 @@ Every part of the UI (Row, GroupRow, Column, HeaderCell, Cell, Editors) is custo
   };
 
   // set editor for specific column of tableProps
-  const tableProps: ITableProps = {
-    columns: [
+  <Table
+    columns={[
       // ...
       {
         dataType: DataType.String,
-        editor: CustomLookupEditor,
         key: 'passed',
         title: 'Passed',
       }
       // ...
-    ],
+    ]}
+    childComponents={{
+        cellEditor: {
+            content: (props) => {
+                switch (props.column.key) {
+                  case 'passed': return <CustomLookupEditor {...props}/>;
+                }
+            }
+        }
+    }}
     // ...
-  };
+  />
 ```
 
 
