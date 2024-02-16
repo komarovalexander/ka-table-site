@@ -1,5 +1,5 @@
 ---
-title: "UI"
+title: 'UI'
 keywords: ka-table, react table, flux, redux, actions
 sidebar: mydoc_sidebar
 search: include
@@ -10,14 +10,16 @@ toc: false
 ---
 
 ## Definition
+
 ka-table UI is the Table component
 
 Table is stateless - every change of the UI can dispatch the action
+
 ```js
-  <Table
-    {...tableProps} // render according to props
-    dispatch={dispatch} // subscribe to dispatch to be able to change tableProps
-  />
+<Table
+  {...tableProps} // render according to props
+  dispatch={dispatch} // subscribe to dispatch to be able to change tableProps
+/>
 ```
 
 ## Elements
@@ -56,6 +58,15 @@ Every part of the UI (Row, GroupRow, Column, HeaderCell, Cell, Editors) is custo
       </div >
     );
   };
+  const childComponents = {
+      cellEditor: {
+          content: (props) => {
+              switch (props.column.key) {
+                case 'passed': return <CustomLookupEditor {...props}/>;
+              }
+          }
+      }
+  };
 
   // set editor for specific column of tableProps
   <Table
@@ -68,21 +79,13 @@ Every part of the UI (Row, GroupRow, Column, HeaderCell, Cell, Editors) is custo
       }
       // ...
     ]}
-    childComponents={{
-        cellEditor: {
-            content: (props) => {
-                switch (props.column.key) {
-                  case 'passed': return <CustomLookupEditor {...props}/>;
-                }
-            }
-        }
-    }}
+    childComponents={childComponents}
     // ...
   />
 ```
 
-
 ## Child Components
+
 Attributes & Components of the child UI elements also can be customized using [childComponents](./docs_props.html#childcomponents) (see [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Custom Cell](https://komarovalexander.github.io/ka-table/#/custom-cell)).
 
 ```js
@@ -108,28 +111,32 @@ Attributes & Components of the child UI elements also can be customized using [c
 ```
 
 ## UI Actions
+
 There are [actions](./docs_action.html) which ka-table UI dispatches in response to user interaction out-of-the-box:
 
-| Action Type | UI event |
-| --- | --- |
-| 'CloseEditor' | click outside editor or Enter Key press (to apply value) or ESC press (to discard changes) |
-| 'OpenEditor' | click by data cell |
-| 'ReorderColumns' | drag and prop the column |
-| 'ReorderRows' | drag and prop the row |
-| 'ResizeColumn' | drag and drop of the right border of the column |
-| 'UpdateCellValue' | click outside editor or Enter Key press - executes before 'CloseEditor' action |
-| 'UpdateFilterRowValue' | each change of value in filter row editor |
-| 'UpdateGroupsExpanded' | click by group arrow cell |
-| 'UpdatePageIndex' | click by page number |
-| 'UpdateSortDirection' | click by sort button |
+| Action Type            | UI event                                                                                   |
+| ---------------------- | ------------------------------------------------------------------------------------------ |
+| 'CloseEditor'          | click outside editor or Enter Key press (to apply value) or ESC press (to discard changes) |
+| 'OpenEditor'           | click by data cell                                                                         |
+| 'ReorderColumns'       | drag and prop the column                                                                   |
+| 'ReorderRows'          | drag and prop the row                                                                      |
+| 'ResizeColumn'         | drag and drop of the right border of the column                                            |
+| 'UpdateCellValue'      | click outside editor or Enter Key press - executes before 'CloseEditor' action             |
+| 'UpdateFilterRowValue' | each change of value in filter row editor                                                  |
+| 'UpdateGroupsExpanded' | click by group arrow cell                                                                  |
+| 'UpdatePageIndex'      | click by page number                                                                       |
+| 'UpdateSortDirection'  | click by sort button                                                                       |
 
 ## Themes
+
 ##### Customization
+
 To override colors, sizes and paddings you can use sass valiables: [default.scss](https://github.com/komarovalexander/ka-table/blob/master/src/lib/static/themes/default.scss)
 
 Demo: [Custom Theme](https://komarovalexander.github.io/ka-table/#/custom-theme)
 
 ##### 3-rd party libraries
+
 As ka-table is a real html table it can be easily used with bootstrap, material or other frameworks.
 
 To use other frameworks styles add required css classes for table elements using [childComponents](#child-components):
