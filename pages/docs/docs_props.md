@@ -231,6 +231,14 @@ Obtains sorted, filtered, grouped, paged data for table according to current pro
   const data = kaPropsUtils.getData(tableProps);
 ```
 
+#### kaPropsUtils.getFilteredData(tableProps)
+
+Obtains filtered data
+
+```js
+  const data = kaPropsUtils.getFilteredData(tableProps);
+```
+
 #### kaPropsUtils.getSelectedData(tableProps)
 
 Obtains selected data for table according to current props
@@ -263,5 +271,4 @@ returns array of columns with sortDirection only, and they are sorted by sortInd
 ```js
   const data = kaPropsUtils.getSortedColumns(tableProps);
 ```
-
 
