@@ -196,7 +196,10 @@ Returns a value to pass to `table` property of the component
 import { Table, useTable } from 'ka-table';
 
 const table = useTable({
-  onDispatch: (action) => { // subscription to all actions in the table 
+  onDispatch: (action) => { // subscription to all actions in the table (optional) 
+
+  },
+  customReducer: () => { // add additional actions or override current behavior (optional) 
 
   }
 });
