@@ -199,8 +199,9 @@ const table = useTable({
   onDispatch: (action) => { // subscription to all actions in the table (optional) 
 
   },
-  customReducer: () => { // add additional actions or override current behavior (optional) 
-
+  customReducer: (nextState, action, prevState) => { // add additional actions or override current behavior (optional) 
+    //...
+    return newState;
   }
 });
 
