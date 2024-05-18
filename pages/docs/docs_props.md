@@ -43,7 +43,7 @@ id: props
 | singleAction | <code>any</code> | dispathes only ones after Table render (Demo: [Remote Data](https://komarovalexander.github.io/ka-table/#/remote-data)), after this action ka-table will dispatch 'ClearSingleAction' to set singleAction as undefined |
 | sort | <code>(props: { <br/>column: Column</br> }) =>  ((value1: any, value2: any) => 0 | 1 | -1) | void;</code> | Returns sorting function (Demo: [Sorting Custom Logic](https://komarovalexander.github.io/ka-table/#/sorting-custom-logic)) |
 | sortingMode | 'single' <br/> 'singleTripleState' <br/> 'singleRemote' <br/> 'singleTripleStateRemote' <br/> 'multipleRemote' <br/> 'multipleTripleStateRemote' <br/> 'none' | Sorting mode. <br/> *Remote* - means only grid elements are updated but data should be sorted outside of the grid. <br/>*TripleState* - means: "ascend - descend - no sorting" <br/>(Demo: [Sorting Example](https://komarovalexander.github.io/ka-table/#/sorting)) |
-| table | { <code><br/>props: ITableProps;<br/>changeProps: React.Dispatch;<br/>onDispatch: OnDispatchFunc;<br/>dispatch: DispatchFunc; </code> <br/>[<code> ...actionCreators</code>](/docs_action.html#predefined-actions) <br/>}| object is used only by *uncontrolled mode* to get/set table props, use `useTable()` to create your own instance and handle changes using `onDispatch`, and use `useTableInstance()` to get instance of table from context |
+| table | { <code><br/>props: ITableProps;<br/>changeProps: React.Dispatch;<br/>onDispatch: [OnDispatchFunc](https://github.com/komarovalexander/ka-table/blob/master/src/lib/types.ts);<br/>dispatch: [DispatchFunc](https://github.com/komarovalexander/ka-table/blob/master/src/lib/types.ts); </code> <br/>[<code> ...actionCreators</code>](/docs_action.html#predefined-actions) <br/>}| object is used only by *uncontrolled mode* to get/set table props, use `useTable()` to create your own instance and handle changes using `onDispatch`, and use `useTableInstance()` to get instance of table from context |
 | treeGroupsExpanded | <code>any[]</code> | array of ids of expanded rows, if it is `undefined` - all rows are expanded (Demo: [Tree Mode](https://komarovalexander.github.io/ka-table/#/tree-mode)) |
 | treeGroupKeyField | <code>string</code> | group key field (Demo: [Tree Mode](https://komarovalexander.github.io/ka-table/#/tree-mode)) |
 | validation | <code>(props: { <br/>value: any, <br/>rowData: any, <br/>column: Column <br/>}) => (string | void)</code> | Returns the validation error string or does not return anything in case of passed validation (Demo: [Validation Example](https://komarovalexander.github.io/ka-table/#/validation)) |
@@ -196,7 +196,7 @@ Returns a value to pass to `table` property of the component
 import { Table, useTable } from 'ka-table';
 
 const table = useTable({
-  onDispatch: (action) => { // subscription to all actions in the table (optional) 
+  onDispatch: (action, tableState, prevState) => { // subscription to all actions in the table (optional) 
 
   },
   customReducer: (nextState, action, prevState) => { // add additional actions or override current behavior (optional) 
