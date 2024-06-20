@@ -62,11 +62,14 @@ id: props
 | filterRowValue | <code>any</code> | Sets filter row value (Demo: [Filter Row](https://komarovalexander.github.io/ka-table/#/filter-row)) |
 | field | <code>string</code> | Specifies the property of data's object which value will be used in column, if null value from key option will be used |
 | headerFilterListItems | <code>(props: { data?: any[] }) => any[]</code> | Returns array of header filter items (Demo: [Header Filter - Logic](https://komarovalexander.github.io/ka-table/#/header-filter-logic)) |
+| headerFilterSearch | <code>(value: any, searchValue: any, rowData?: any) => boolean;</code> | used to customize header filter search logic |
+| headerFilterSearchValue | <code>string</code> | stores value for search by `headerFilterValues` |
 | headerFilterValues | <code>any[]</code> | Array of selected values |
 | headerFilterPopupPosition | <code>{ x: number; y: number; }</code> | Header filter popup position |
 | isEditable | <code>boolean</code> | Specifies can a column be editable or not |
 | isFilterable | <code>boolean</code> | If `false` then header filter cell content will not be shown for a column |
-| isHeaderFilterPopupShown | <code>boolean</code> | Shows/hides header filter popup for cpecific column |
+| isHeaderFilterPopupShown | <code>boolean</code> | Shows/hides header filter popup for specific column |
+| isHeaderFilterSearchable | <code>boolean</code> | enables search in header filter |
 | isResizable | <code>boolean</code> | Specifies can a column be resized or not (Demo: [Column Resizing](https://komarovalexander.github.io/ka-table/#/column-resizing)) |
 | isSortable | <code>boolean</code> | Specifies can a column be sorted or not (Demo: [Column Resizing](https://komarovalexander.github.io/ka-table/#/sorting)) |
 | key | <code>string</code> | Mandatory field, specifies unique key for the column |
@@ -104,6 +107,7 @@ Demos: [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Cus
 | detailsRow | [<code>ChildComponent</code>](#childcomponentt)<[IDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/details-row) |
 | detailsCell | [<code>ChildComponent</code>](#childcomponentt)<[IDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/details-row) |
 | filterRowCell | [<code>ChildComponent</code>](#childcomponentt)<[IFilterRowEditorProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/filter-row-custom-editor) |
+| filterRowCellInput | [<code>ChildComponent</code>](#childcomponentt)<[IFilterRowEditorProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | |
 | groupCell | [<code>ChildComponent</code>](#childcomponentt)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | td | [Demo](https://komarovalexander.github.io/ka-table/#/grouping-custom-cell) |
 | groupExpandButton | [<code>ChildComponent</code>](#childcomponentt)<[IGroupRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
 | groupPanel | [<code>ChildComponent</code>](#childcomponentt)<[IGroupPanelProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/grouping) |
@@ -114,16 +118,17 @@ Demos: [Events Demo](https://komarovalexander.github.io/ka-table/#/events), [Cus
 | headCell | [<code>ChildComponent</code>](#childcomponentt)<[IHeadCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | th | [Demo](https://komarovalexander.github.io/ka-table/#/custom-header-cell) |
 | headCellContent | [<code>ChildComponent</code>](#childcomponentt)<[IHeadCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/column-reordering) |
 | headCellResize | [<code>ChildComponent</code>](#childcomponentt)<[IHeadCellResizeProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
-| headFilterButton | [<code>ChildComponent</code>](#childcomponentt)<[IHeaderFilterButtonProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr |  |
+| headerFilterButton | [<code>ChildComponent</code>](#childcomponentt)<[IHeaderFilterButtonProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr |  |
+| headerFilterPopupSearchInput | [<code>ChildComponent</code>](#childcomponentt)<[IHeaderFilterButtonProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr |  |
 | headRow | [<code>ChildComponent</code>](#childcomponentt)<[IHeadRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr |  |
 | loading | [<code>ChildComponent</code>](#childcomponentt)<[ILoadingProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
 | emptyCell | [<code>ChildComponent</code>](#childcomponentt)<[IEmptyCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr |  |
 | noDataRow | [<code>ChildComponent</code>](#childcomponentt)<[INoDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | tr | [Demo](https://komarovalexander.github.io/ka-table/#/search) |
 | pagingIndex | [<code>ChildComponent</code>](#childcomponentt)<[IPagingIndexProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/bootstrap) |
 | pagingPages | [<code>ChildComponent</code>](#childcomponentt)<[IPagingPagesProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div | [Demo](https://komarovalexander.github.io/ka-table/#/bootstrap) |
-| popupContent | [<code>ChildComponent</code>](#childcomponentt)<[IPopupContentProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
-| popupContentItem | [<code>ChildComponent</code>](#childcomponentt)<[IPopupContentItemProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
-| popupContentItemText | [<code>ChildComponent</code>](#childcomponentt)<[IPopupContentItemProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
+| headerFilterPopupContent | [<code>ChildComponent</code>](#childcomponentt)<[IPopupContentProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
+| headerFilterPopupRow | [<code>ChildComponent</code>](#childcomponentt)<[IDataRowProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
+| headerFilterPopupTextCell | [<code>ChildComponent</code>](#childcomponentt)<[ICellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts){:target="_blank"}> | div |  |
 | rootDiv | [<code>ChildComponent</code>](#childcomponentt)<[ITableProps](#table)> | .ka div |  |
 | sortIcon | [<code>ChildComponent</code>](#childcomponentt)<[ISortIconProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts)> | td | [Demo](https://komarovalexander.github.io/ka-table/#/sorting) |
 | summaryCell | [<code>ChildComponent</code>](#childcomponentt)<[ISummaryCellProps](https://github.com/komarovalexander/ka-table/blob/master/src/lib/props.ts)> | td | [Demo](https://komarovalexander.github.io/ka-table/#/summary) |
