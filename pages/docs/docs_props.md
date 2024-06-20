@@ -62,8 +62,8 @@ id: props
 | filterRowValue | <code>any</code> | Sets filter row value (Demo: [Filter Row](https://komarovalexander.github.io/ka-table/#/filter-row)) |
 | field | <code>string</code> | Specifies the property of data's object which value will be used in column, if null value from key option will be used |
 | headerFilterListItems | <code>(props: { data?: any[] }) => any[]</code> | Returns array of header filter items (Demo: [Header Filter - Logic](https://komarovalexander.github.io/ka-table/#/header-filter-logic)) |
-| headerFilterSearch | <code>(value: any, searchValue: any, rowData?: any) => boolean;</code> | used to customize header filter search logic |
-| headerFilterSearchValue | <code>string</code> | stores value for search by `headerFilterValues` |
+| headerFilterSearch | <code>(value: any, searchValue: any, rowData?: any) => boolean;</code> | used to customize header filter search logic (Demo: [Header Filter - Logic](https://komarovalexander.github.io/ka-table/#/header-filter-logic)) |
+| headerFilterSearchValue | <code>string</code> | stores value for search by `headerFilterValues` (Demo: [Header Filter - Logic](https://komarovalexander.github.io/ka-table/#/header-filter-logic))|
 | headerFilterValues | <code>any[]</code> | Array of selected values |
 | headerFilterPopupPosition | <code>{ x: number; y: number; }</code> | Header filter popup position |
 | isEditable | <code>boolean</code> | Specifies can a column be editable or not |
