@@ -34,6 +34,7 @@ id: props
 | height | <code>string | number</code> | height of the component |
 | loading | <code>{ <br/>enabled?: boolean, <br/>text?: string <br/>}</code>| Loading indicator options (Demo: [Loading](https://komarovalexander.github.io/ka-table/#/loading)) |
 | noData | <code>{ <br/>text?: string, <br/>hideHeader?: boolean <br/>}</code>| no data settings (for deeper UI customization childComponents.noDataRow also) (Demo: [Search](https://komarovalexander.github.io/ka-table/#/search)) |
+| oddEvenRows | <code>boolean</code>| enables rows alternation styles (Demo: [Demo](https://komarovalexander.github.io/ka-table/#/many-rows)) |
 | paging | <code>{<br/>enabled?: boolean;<br/>pageIndex?: number;<br/>pageSize?: number;<br/>pagesCount?: number;<br/>position: ('bottom'|'top'|'topAndBottom') <br/>}</code> | Paging settings (Demo: [Paging](https://komarovalexander.github.io/ka-table/#/paging)) |
 | rowKeyField | <code>string</code> | Data's field which is used to identify row |
 | rowReordering | <code>boolean</code> | Enables rows reordering using drag and drop |
