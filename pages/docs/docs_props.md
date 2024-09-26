@@ -60,7 +60,7 @@ id: props
 | colGroup | <code>React.ColHTMLAttributes<HTMLElement></code> | Sets attributes for col element in table colGroup |
 | dataType | 'boolean' <br /> 'date' <br /> 'number' <br /> 'object' <br /> 'string' | Specifies the type of column |
 | filter | <code>(value: any, filterValue: any, rowData?: any) => boolean;</code> | Returns filter function for particular column (Demo: [Filter Custom Logic](https://komarovalexander.github.io/ka-table/#/filter-row-custom-logic)) |
-| filterRowOperator | <code>string</code> | Sets filter row operator (Demo: [Filter Row Custom Editor](https://komarovalexander.github.io/ka-table/#/filter-row-custom-editor)). Predefined filter operators are:  '=', '>', '<', '>=', '<=', 'contains'  |
+| filterRowOperator | <code>string</code> | Sets filter row operator (Demo: [Filter Row Custom Editor](https://komarovalexander.github.io/ka-table/#/filter-row-custom-editor)). Predefined filter operators are:  '=', '!=', '>', '<', '>=', '<=', 'contains'  |
 | filterRowValue | <code>any</code> | Sets filter row value (Demo: [Filter Row](https://komarovalexander.github.io/ka-table/#/filter-row)) |
 | field | <code>string</code> | Specifies the property of data's object which value will be used in column, if null value from key option will be used |
 | headerFilterListItems | <code>(props: { data?: any[] }) => string[]</code> | Returns array of header filter items (Demo: [Header Filter - Logic](https://komarovalexander.github.io/ka-table/#/header-filter-logic)) |
