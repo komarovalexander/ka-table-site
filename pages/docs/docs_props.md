@@ -68,6 +68,7 @@ id: props
 | headerFilterSearchValue | <code>string</code> | stores value for search by `headerFilterValues` (Demo: [Header Filter - Logic](https://komarovalexander.github.io/ka-table/#/header-filter-logic))|
 | headerFilterValues | <code>any[]</code> | Array of selected values |
 | headerFilterPopupPosition | <code>{ x: number; y: number; }</code> | Header filter popup position |
+| isDraggable | <code>boolean</code> | Specifies can a column be dragged or not |
 | isEditable | <code>boolean</code> | Specifies can a column be editable or not |
 | isFilterable | <code>boolean</code> | If `false` then header filter cell content will not be shown for a column |
 | isHeaderFilterPopupShown | <code>boolean</code> | Shows/hides header filter popup for specific column |
