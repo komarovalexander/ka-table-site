@@ -8,25 +8,14 @@ layout: default
 </div>
 {% endif %}
 
-{% if page.simple_map == true %}
-
-
-{% include custom/{{page.map_name}}.html %}
-
-{% elsif page.complex_map == true %}
-
-
-{% include custom/{{page.map_name}}.html %}
-
-{% endif %}
-
-<div class="post-content">
+<div class="post-content page-{{ page.id }}">
 
    {% if page.summary %}
     <div class="summary">{{page.summary}}</div>
    {% endif %}
 
-   {{content}}
+   {% comment %}every table gets a box which scrolls it horizontally on a narrow screen (.table-scroll){% endcomment %}
+   {{ content | replace: '<table', '<div class="table-scroll"><table' | replace: '</table>', '</table></div>' }}
 
     <div class="tags">
         {% if page.tags != null %}

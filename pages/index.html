@@ -1,0 +1,250 @@
+---
+title: "ka-table - React table component"
+description: "Open source React table component: sorting, filtering, grouping, editing, paging and virtual scrolling out of the box, with full control over the state."
+keywords: ka-table, react table, react data grid, table component, sorting, filtering, grouping, editing, virtual scrolling
+hide_title: true
+toc: false
+search: include
+hide_sidebar: true
+permalink: index.html
+layout: index_layout
+# the cards of the features: an icon of images/icons, a demo (the part of the address after #/) and a page of the docs
+features:
+  - title: Sorting
+    icon: Sorting.svg
+    text: "Sort by a click on the header: one column or several, in three states, with your own comparator or on the server."
+    demo: sorting
+    docs: docs_props.html#sorting
+  - title: Filtering and search
+    icon: Filtering.svg
+    text: "A filter row with editors for every data type, header filters with a list of values, and search across all the columns."
+    demo: filter-row
+    docs: docs_props.html#filtering-and-search
+  - title: Editing and validation
+    icon: Editing.svg
+    text: "Edit a cell or a whole row, add new rows and validate the values before they are saved."
+    demo: editing
+    docs: docs_props.html#editing
+  - title: Grouping and tree
+    icon: Grouping.svg
+    text: "Group the rows by one or more columns with summaries, or show hierarchical data as a tree."
+    demo: grouping
+    docs: docs_props.html#grouping-and-tree
+  - title: Paging
+    icon: Paging.svg
+    text: "Built-in paging with a choice of page sizes, or remote paging for the data loaded from a server."
+    demo: paging
+    docs: docs_props.html#paging-and-virtual-scrolling
+  - title: Selection
+    icon: Selection.svg
+    text: "Select one row or many, all the rows or only the filtered ones, and read the selected data."
+    demo: selection
+    docs: docs_props.html#selection-details-rows-and-focus
+  - title: Virtual scrolling
+    icon: VirtualScrolling.svg
+    text: "Only the visible rows and columns are rendered: hundreds of thousands of rows scroll smoothly."
+    demo: many-rows
+    docs: docs_props.html#virtualscrolling
+  - title: Fixed columns
+    icon: FixedColumns.svg
+    text: "Keep the key columns in view: they stick to the left or the right edge while the table scrolls."
+    demo: fixed-column
+    docs: docs_ui.html#fixed-columns
+  - title: Keyboard and accessibility
+    icon: Keyboard.svg
+    text: "A WAI-ARIA grid: the arrows, Home, End and Page Up and Down move the focus, Enter opens the editor."
+    demo: keyboard-navigation
+    docs: docs_ui.html#keyboard-and-accessibility
+  - title: Themes
+    icon: Themes.svg
+    text: "Plain CSS with custom properties: change the colors, switch on the dark theme or use Bootstrap and Material UI."
+    demo: custom-theme
+    docs: docs_themes.html
+  - title: Customization
+    icon: Events.svg
+    text: "Replace any cell, row, editor or header cell with your own component and handle any event."
+    demo: custom-cell
+    docs: docs_ui.html#childcomponents
+  - title: TypeScript
+    icon: TypeScript.svg
+    text: "The type of the rows is inferred from your data, and every action of the table is typed."
+    docs: docs_get_started.html#typescript
+# what is new in ka-table 13
+news:
+  - "<strong>Fixed columns.</strong> <code>fixed: 'left'</code> or <code>'right'</code> keeps a column at the edge while the table scrolls."
+  - "<strong>Keyboard navigation.</strong> The table is a WAI-ARIA grid with a single Tab stop, on by default."
+  - "<strong>Virtual columns.</strong> <code>virtualScrolling.horizontal</code> renders only the visible columns."
+  - "<strong>Memoized rows.</strong> With <code>memoizedRows</code> only the changed rows are rendered again: 300K rows stay fast."
+  - "<strong>Themes in plain CSS.</strong> <code>--ka-*</code> custom properties and a dark theme, no Sass."
+  - "<strong>Typed actions.</strong> <code>TableAction</code> is narrowed by <code>action.type</code>, and <code>useTableSelector()</code> re-renders only on the selected value."
+  - "<strong>React 18 and 19.</strong> An ES2019 build with CommonJS and ES modules."
+---
+{% assign demos = "https://komarovalexander.github.io/ka-table/#/" %}
+{% assign repo = "https://github.com/komarovalexander/ka-table" %}
+<main class="home">
+
+  <section class="home-hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <p class="header-tag">Open source React component</p>
+          <h1>React Table</h1>
+          <p class="home-lead">A fast, accessible data table for React. Sorting, filtering, grouping, editing, paging and virtual scrolling work out of the box, and you take full control of the state when you need it.</p>
+          <div class="home-actions">
+            <a class="btn btn-primary" href="/docs_get_started.html">Get Started</a>
+            <a class="btn btn-outline-primary" href="{{ demos }}overview">View Demos</a>
+          </div>
+          <div class="home-badges">
+            <a href="https://www.npmjs.com/package/ka-table"><img src="https://img.shields.io/npm/v/ka-table?label=npm&amp;color=1D66FF" alt="The version on npm" height="20"></a>
+            <a href="{{ repo }}"><img src="https://img.shields.io/github/stars/komarovalexander/ka-table?style=flat&amp;label=stars&amp;color=1D66FF" alt="The stars on GitHub" height="20"></a>
+            <a href="https://www.npmjs.com/package/ka-table"><img src="https://img.shields.io/npm/dw/ka-table?color=1D66FF" alt="The downloads per week" height="20"></a>
+            <a href="{{ repo }}/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/ka-table?color=1D66FF" alt="The license: MIT" height="20"></a>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="home-demo">
+            <p class="home-demo-hint">A live ka-table: sort by the headers, filter, click a cell to edit it</p>
+            <!-- js/home-table.js renders ka-table here; until then the preview is shown -->
+            <div id="home-table" class="home-table">
+              <div class="home-table-preview" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              <p class="home-table-fallback">The live table could not be loaded. <a href="{{ demos }}overview">Open the demos</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section home-quickstart">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <p class="header-tag">Quick start</p>
+          <h2>Your first table in a minute</h2>
+          <p>Install the package, import the styles and pass the columns and the data. Sorting, filtering, editing and paging are one prop each.</p>
+          <div class="home-install">
+            <code id="home-install">npm install ka-table</code>
+            <button type="button" class="home-copy" data-copy="home-install">Copy</button>
+          </div>
+          <p class="home-links"><a href="/docs_get_started.html">Getting Started</a></p>
+        </div>
+        <div class="col-lg-7">
+          <div class="home-code">
+            <button type="button" class="home-copy" data-copy="home-code">Copy</button>
+            <div id="home-code">
+{% highlight jsx %}
+import 'ka-table/style.css';
+import { Table } from 'ka-table';
+import { DataType, SortingMode } from 'ka-table/enums';
+
+const columns = [
+  { key: 'name', title: 'Name', dataType: DataType.String },
+  { key: 'score', title: 'Score', dataType: DataType.Number },
+];
+
+const data = [
+  { id: 1, name: 'Ava Brooks', score: 92 },
+  { id: 2, name: 'Liam Carter', score: 78 },
+];
+
+export const App = () => (
+  <Table
+    columns={columns}
+    data={data}
+    rowKeyField="id"
+    sortingMode={SortingMode.Single}
+  />
+);
+{% endhighlight %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section home-section-light home-features">
+    <div class="container">
+      <div class="home-section-head">
+        <p class="header-tag">Features</p>
+        <h2>Everything a data table needs</h2>
+        <p>Every feature has a demo with the code and a page in the docs.</p>
+      </div>
+      <div class="row">
+        {% for feature in page.features %}
+        <div class="col-md-6 col-lg-4">
+          <div class="home-feature">
+            <div class="home-feature-head">
+              <img src="images/icons/{{ feature.icon }}" alt="" width="24" height="24">
+              <h3>{{ feature.title }}</h3>
+            </div>
+            <p>{{ feature.text }}</p>
+            <p class="home-links">{% if feature.demo %}<a href="{{ demos }}{{ feature.demo }}">Demo</a>{% endif %}<a href="/{{ feature.docs }}">Docs</a></p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section home-split home-control">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="images/shema.svg" alt="The cycle of ka-table: the props render the UI, the UI dispatches an action, the reducer returns the new props" width="616" height="516" loading="lazy" decoding="async">
+        </div>
+        <div class="col-lg-6">
+          <p class="header-tag">Full control</p>
+          <h2>Every change is an action</h2>
+          <p>A table keeps its own state by default. When the state has to live in your code, in Redux, in the URL or on the server, pass <code>dispatch</code>: every change of the UI becomes an action, and <code>kaReducer</code> turns the previous props and the action into the new props.</p>
+          <p class="home-links"><a href="/docs_controlled_mode.html">Controlled mode</a><a href="{{ demos }}remote-data">Remote data demo</a><a href="{{ demos }}state-storing">State storing demo</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section home-section-light home-split home-custom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <p class="header-tag">Your design</p>
+          <h2>Customize every part</h2>
+          <p>Render your own cells, rows, editors, header cells and pager with <code>childComponents</code>, and add any event handlers. The styles are plain CSS with <code>--ka-*</code> custom properties: change the colors, switch on the dark theme, or style the table with Bootstrap or Material UI.</p>
+          <p class="home-links"><a href="/docs_ui.html">Customization</a><a href="/docs_themes.html">Themes</a><a href="{{ demos }}custom-cell">Custom cell demo</a><a href="{{ demos }}bootstrap">Bootstrap demo</a></p>
+        </div>
+        <div class="col-lg-7">
+          <img src="images/customisation.svg" alt="A customized ka-table" width="1274" height="704" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section home-whatsnew">
+    <div class="container">
+      <div class="home-section-head">
+        <p class="header-tag">ka-table 13</p>
+        <h2>What's new</h2>
+      </div>
+      <ul class="home-news">
+        {% for item in page.news %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      <p class="home-links"><a href="{{ repo }}/blob/master/CHANGELOG.md">Changelog</a><a href="{{ repo }}/blob/master/MIGRATION.md">Migration guide</a></p>
+    </div>
+  </section>
+
+  <section class="home-section home-oss">
+    <div class="container">
+      <h2>Free and open source</h2>
+      <p>ka-table is MIT licensed: use it in any project, commercial ones included. Issues, ideas and pull requests are welcome.</p>
+      <div class="home-actions">
+        <a class="btn btn-primary" href="{{ repo }}">Star on GitHub</a>
+        <a class="btn btn-outline-primary" href="{{ repo }}/issues">Report an issue</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script src="js/home.js" defer></script>
+<script type="module" src="js/home-table.js"></script>

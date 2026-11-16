@@ -1,6 +1,7 @@
 ---
 title: Getting Started
-keywords: ka-table, react table, flux, redux
+keywords: ka-table, react table, install, getting started, useTable, typescript
+description: Install ka-table, render your first React table, turn on sorting, filtering, paging and editing, and read the state of the table with useTable.
 sidebar: mydoc_sidebar
 search: include
 permalink: docs_get_started.html
@@ -8,145 +9,182 @@ url: docs_get_started.html
 id: getstarted
 ---
 
+ka-table is a React table component with sorting, filtering, grouping, editing, paging and virtual scrolling. This page takes you from the installation to a working table, and then shows how to read and change its state.
+
 ## Installation
-npm
+
 ```sh
 npm install ka-table
-```
-yarn
-```sh
+# or
 yarn add ka-table
+# or
+pnpm add ka-table
 ```
 
-## License
-ka-table is a MIT component. It is fully free, and contribution and feedback are always welcome
-
-## Uncontrolled mode
+Import the styles once, for example in the root of the application:
 
 ```js
 import 'ka-table/style.css';
+```
+
+ka-table 13 works with React 18 and 19. The styles are plain CSS with custom properties, see [Themes](./docs_themes.html). The package has CommonJS and ES modules and is built for ES2019.
+
+## Your first table
+
+A table needs three props: `columns`, `data` and `rowKeyField` (the field which identifies a row).
+
+```jsx
+import 'ka-table/style.css';
 
 import React from 'react';
-
 import { Table } from 'ka-table';
-import { DataType, EditingMode, SortingMode } from 'ka-table/enums';
+import { DataType } from 'ka-table/enums';
 
-const dataArray = Array(10)
-  .fill(undefined)
-  .map((_, index) => ({
-    column1: `column:1 row:${index}`,
-    column2: `column:2 row:${index}`,
-    column3: `column:3 row:${index}`,
-    column4: `column:4 row:${index}`,
-    id: index,
-  }));
+const columns = [
+  { key: 'name', title: 'Name', dataType: DataType.String },
+  { key: 'country', title: 'Country', dataType: DataType.String },
+  { key: 'age', title: 'Age', dataType: DataType.Number },
+];
 
-const OverviewDemo = () => {
-  return (
-    <Table
-      columns={[
-        { key: 'column1', title: 'Column 1', dataType: DataType.String },
-        { key: 'column2', title: 'Column 2', dataType: DataType.String },
-        { key: 'column3', title: 'Column 3', dataType: DataType.String },
-        { key: 'column4', title: 'Column 4', dataType: DataType.String },
-      ]}
-      data={dataArray}
-      editingMode={EditingMode.Cell}
-      rowKeyField={'id'}
-      sortingMode={SortingMode.Single}
-    />
-  );
-};
+const data = [
+  { id: 1, name: 'Mike Wazowski', country: 'USA', age: 31 },
+  { id: 2, name: 'Billi Bob', country: 'Canada', age: 45 },
+  { id: 3, name: 'Tom Williams', country: 'UK', age: 28 },
+  { id: 4, name: 'Kurt Cobain', country: 'USA', age: 27 },
+];
 
-export default OverviewDemo;
-```
-
-[Example link](https://komarovalexander.github.io/ka-table/#/overview)
-
-## Controlled mode
-### Main idea
-ka-table is "props - UI - action - reducer". *(Thanks to Redux & Flux for the inspiration)*
-
- ka-table UI is rendered according to props -> all changes are performed by dispatching an action -> previous props and action are passed to the kaReducer -> kaReducer generates new props
-
-![Pattern](./images/schema-docs.svg)
-
- ka-table easily integrates with Redux but also can be used without it
-
- ka-table is controllable - props should be changed to perform changing UI - this approach gives full control of component and every change
-
- Props of ka-table can be obtained from every type of storage. Examples of storage: state of parent component, remote server, redux store, custom store, etc
-
-
-All changes of ka-table are performed by dispatching action
-
-    dispatch({
-      type: 'ACTION_TYPE',
-      ...payload
-    })
-
-### Basic example
-
-```js
-import "ka-table/style.css";
-// or import "ka-table/style.scss";
-
-import React, { useState } from 'react';
-
-import { ITableProps, kaReducer, Table } from 'ka-table';
-import { DataType, EditingMode, SortingMode } from 'ka-table/enums';
-import { DispatchFunc } from 'ka-table/types';
-
-// data for ka-table
-const dataArray = Array(10).fill(undefined).map(
-  (_, index) => ({
-    column1: `column:1 row:${index}`,
-    column2: `column:2 row:${index}`,
-    column3: `column:3 row:${index}`,
-    column4: `column:4 row:${index}`,
-    id: index,
-  }),
+const UsersTable = () => (
+  <Table columns={columns} data={data} rowKeyField="id" />
 );
 
-// initial value of the *props
-const tablePropsInit: ITableProps = {
-  columns: [
-    { key: 'column1', title: 'Column 1', dataType: DataType.String },
-    { key: 'column2', title: 'Column 2', dataType: DataType.String },
-    { key: 'column3', title: 'Column 3', dataType: DataType.String },
-    { key: 'column4', title: 'Column 4', dataType: DataType.String },
-  ],
-  data: dataArray,
-  editingMode: EditingMode.Cell,
-  rowKeyField: 'id',
-  sortingMode: SortingMode.Single,
-};
+export default UsersTable;
+```
 
-const OverviewDemo: React.FC = () => {
-  // in this case *props are stored in the state of parent component
-  const [tableProps, changeTableProps] = useState(tablePropsInit);
+[Open the live demo](https://komarovalexander.github.io/ka-table/#/overview)
 
-  const dispatch: DispatchFunc = (action) => { // dispatch has an *action as an argument
-    // *kaReducer returns new *props according to previous state and *action, and saves new props to the state
-    changeTableProps((prevState: ITableProps) => kaReducer(prevState, action));
-  };
+## Turn on features
+
+Every feature is a prop. The table below sorts by a click on the header, edits a cell by a click on it, filters by the row under the header and shows five rows per page:
+
+```jsx
+import { Table } from 'ka-table';
+import { EditingMode, FilteringMode, SortingMode } from 'ka-table/enums';
+
+const paging = { enabled: true, pageSize: 5 };
+
+const UsersTable = () => (
+  <Table
+    columns={columns}
+    data={data}
+    rowKeyField="id"
+    sortingMode={SortingMode.Single}
+    editingMode={EditingMode.Cell}
+    filteringMode={FilteringMode.FilterRow}
+    paging={paging}
+  />
+);
+```
+
+The table keeps its own state here: the sorting, the page, the filter values and the edited data. You don't write any handlers.
+
+| Feature | Prop | Demo |
+| --- | --- | --- |
+| Sorting | `sortingMode` | [Sorting](https://komarovalexander.github.io/ka-table/#/sorting) |
+| Editing | `editingMode` | [Editing](https://komarovalexander.github.io/ka-table/#/editing) |
+| Filtering | `filteringMode` | [Filter Row](https://komarovalexander.github.io/ka-table/#/filter-row) |
+| Paging | `paging` | [Paging](https://komarovalexander.github.io/ka-table/#/paging) |
+| Search | `searchText` | [Search](https://komarovalexander.github.io/ka-table/#/search) |
+| Grouping | `groups` | [Grouping](https://komarovalexander.github.io/ka-table/#/grouping) |
+| Selection | `selectedRows` | [Selection](https://komarovalexander.github.io/ka-table/#/selection) |
+| Virtual scrolling | `virtualScrolling` | [Many Rows](https://komarovalexander.github.io/ka-table/#/many-rows) |
+
+All the props are in [Props](./docs_props.html).
+
+## Read and change the state
+
+Use `useTable()` when your code has to know what happens in the table or to change it: `table.props` is the current state, the methods of `table` are the [actions](./docs_action.html#predefined-actions), and `onDispatch` gets every action of the table.
+
+```jsx
+import { Table, useTable } from 'ka-table';
+import { ActionType, EditingMode } from 'ka-table/enums';
+
+const paging = { enabled: true, pageSize: 5 };
+
+const UsersTable = () => {
+  const table = useTable({
+    onDispatch: (action, tableProps) => {
+      if (action.type === ActionType.UpdateCellValue) {
+        // a cell was edited: e.g. send the new value to your server here
+        console.log(action.rowKeyValue, action.columnKey, action.value);
+      }
+    },
+  });
 
   return (
-    <Table
-      {...tableProps} // ka-table UI is rendered according to props
-      dispatch={dispatch} // dispatch is required for obtain new actions from the UI
-    />
+    <>
+      <button onClick={() => table.updatePageIndex(0)}>First page</button>
+      <span>Page: {(table.props.paging?.pageIndex ?? 0) + 1}</span>
+      <Table
+        table={table}
+        columns={columns}
+        data={data}
+        rowKeyField="id"
+        editingMode={EditingMode.Cell}
+        paging={paging}
+      />
+    </>
   );
 };
-
-export default OverviewDemo;
 ```
-*: [props](./docs_props.html) |
-[UI](./docs_ui.html) |
-[action](./docs_action.html) |
-[kaReducer](./docs_reducer.html)
 
-[Example link](https://komarovalexander.github.io/ka-table/#/sorting)
+See [Hooks and Utils](./docs_hooks_utils.html) for all the options of `useTable()`, and for `useTableInstance()` and `useTableSelector()`, which give the table to the nested components.
 
-## Examples
-kaTable has [big set of Examples](https://komarovalexander.github.io/ka-table/#/overview) where all features are covered by separate cases for easier and faster start.
+## TypeScript
+
+The type of the rows is inferred from `data`, so `rowData` in `format`, `search`, `validation` and `childComponents` is typed. The values of the cells and the keys of the rows are `unknown`: check their type before using them.
+
+```tsx
+type User = { id: number; name: string; birthday: Date };
+
+const table = useTable<User>(); // table.props.data is User[]
+
+<Table
+  table={table}
+  columns={[
+    { key: 'name', title: 'Name', dataType: DataType.String },
+    { key: 'birthday', title: 'Birthday', dataType: DataType.Date },
+  ]}
+  data={users}
+  rowKeyField="id"
+  format={({ column, value }) =>
+    column.dataType === DataType.Date && value instanceof Date && value.toLocaleDateString()
+  }
+/>
+```
+
+Use `ITableProps<User>` for the props of a [controlled](./docs_controlled_mode.html) table and `ChildComponents<User>` (`ka-table/models`) for the customization:
+
+```tsx
+import { ChildComponents } from 'ka-table/models';
+
+const childComponents: ChildComponents<User> = {
+  cellText: {
+    // rowData is User
+    content: ({ column, rowData }) => (column.key === 'name' ? <b>{rowData.name}</b> : undefined),
+  },
+};
+```
+
+## Next steps
+
+- [Demos](https://komarovalexander.github.io/ka-table/#/overview): every feature has a separate example with the code.
+- [Props](./docs_props.html): the options of the table and the columns, grouped by feature.
+- [Hooks and Utils](./docs_hooks_utils.html): `useTable()` and the utils which read the data of the table.
+- [Customization](./docs_ui.html): `childComponents`, custom cells and editors, the keyboard navigation.
+- [Themes](./docs_themes.html): CSS custom properties, the dark theme, Bootstrap and Material UI.
+- [Controlled mode](./docs_controlled_mode.html): the "props - UI - action - reducer" idea and the table whose state is stored in your code.
+- [Actions](./docs_action.html): the predefined actions and your own ones.
+- [Reducer](./docs_reducer.html): `kaReducer` and custom reducers.
+- Upgrading from 12.x: the [migration guide](https://github.com/komarovalexander/ka-table/blob/master/MIGRATION.md) and the [changelog](https://github.com/komarovalexander/ka-table/blob/master/CHANGELOG.md).
+
+ka-table is free and open-source under the MIT license. Contribution and feedback are always welcome on [GitHub](https://github.com/komarovalexander/ka-table).

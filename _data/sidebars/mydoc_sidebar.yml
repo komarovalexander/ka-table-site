@@ -1,4 +1,5 @@
 # This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+# show_title: true renders the title of the folder as a group heading in the sidebar.
 
 entries:
 - title: sidebar
@@ -16,11 +17,28 @@ entries:
       url: /docs_props.html
       output: web
 
-    - title: UI
+    - title: Hooks and Utils
+      url: /docs_hooks_utils.html
+      output: web
+
+    - title: Customization
       url: /docs_ui.html
       output: web
 
-    - title: Action
+    - title: Themes
+      url: /docs_themes.html
+      output: web
+
+  - title: Advanced
+    output: web
+    show_title: true
+    folderitems:
+
+    - title: Controlled mode
+      url: /docs_controlled_mode.html
+      output: web
+
+    - title: Actions
       url: /docs_action.html
       output: web
 

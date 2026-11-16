@@ -1,13 +1,30 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{% if page.summary %}{{ page.summary | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
+{% capture page_description %}{% if page.summary %}{{ page.summary | strip_html | strip_newlines | truncate: 160 }}{% elsif page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}{% endcapture %}
+{% if page.layout == 'index_layout' %}{% assign page_title = page.title %}{% else %}{% capture page_title %}{{ page.title }} | {{ site.site_title }}{% endcapture %}{% endif %}
+{% assign page_url = page.url | replace: 'index.html', '' | prepend: site.url %}
+<meta name="description" content="{{ page_description | escape }}">
 <meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}">
-<title>{{ page.title }} | {{ site.site_title }}</title>
+<title>{{ page_title }}</title>
+<link rel="canonical" href="{{ page_url }}">
+<!-- the preview of a link in messengers and social networks -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.site_title }}">
+<meta property="og:title" content="{{ page_title | escape }}">
+<meta property="og:description" content="{{ page_description | escape }}">
+<meta property="og:url" content="{{ page_url }}">
+<meta property="og:image" content="{{ site.url }}/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ka-table: React table component">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="{{ "css/syntax.css" }}">
 
+{% unless page.layout == 'index_layout' %}
+<!-- the icons of the notes and the warnings of the docs -->
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+{% endunless %}
 <link rel="stylesheet" href="css/modern-business.css">
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -16,23 +33,18 @@
 <!-- most color styles are extracted out to here -->
 <link rel="stylesheet" href="css/theme-blue.css">
 
-
-<!-- Anchor.js -->
+{% if page.layout == 'index_layout' %}
+<!-- the live table of the main page is loaded from esm.sh (js/home-table.js), its styles from jsDelivr -->
+<link rel="preconnect" href="https://esm.sh" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+{% else %}
+<!-- Anchor.js: the links of the headings of the docs -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
 <script>
-  window.onload = () => {
+  window.addEventListener('load', function () {
     anchors.add('h2,h3,h4,h5');
-    document.body.className += " loaded";
-  };
+  });
 </script>
+{% endif %}
 
 <link rel="shortcut icon" href="{{ "images/favicon.ico"  }}">
-
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.url }}">

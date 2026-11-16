@@ -7,6 +7,7 @@
   {% for folder in entry.folders %}
   {% if folder.output contains "web" %}
   <li>
+      {% if folder.show_title %}<div class="sidebar-group-title">{{folder.title}}</div>{% endif %}
       <ul>
           {% for folderitem in folder.folderitems %}
           {% if folderitem.output contains "web" %}
@@ -14,7 +15,7 @@
           <li><a title="{{folderitem.title}}" href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
           {% elsif page.url == folderitem.url %}
           <li class="active">
-          <a title="{{folderitem.title}}" href="{{folderitem.url | remove: "/"}}#{{folderitem.title}}">
+          <a title="{{folderitem.title}}" href="{{folderitem.url | remove: "/"}}">
             <div class="triangle"></div>
             <div class="11"></div>
             {{folderitem.title}}
@@ -22,11 +23,11 @@
             {% include toc.html %}
           </li>
           {% elsif folderitem.type == "empty" %}
-          <li><a title="{{folderitem.title}}" href="{{folderitem.url | remove: "/"}}#{{folderitem.title}}">
+          <li><a title="{{folderitem.title}}" href="{{folderitem.url | remove: "/"}}">
           <div class="triangle"></div><div class="{{ folderitem.id }}"></div>{{folderitem.title}}</a></li>
 
           {% else %}
-          <li><a title="{{folderitem.title}}" href="{{folderitem.url | remove: "/"}}#{{folderitem.title}}">
+          <li><a title="{{folderitem.title}}" href="{{folderitem.url | remove: "/"}}">
           <div class="triangle"></div><div class="{{ folderitem.id }}"></div>{{folderitem.title}}</a></li>
           {% endif %}
           {% for subfolders in folderitem.subfolders %}

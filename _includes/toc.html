@@ -1,27 +1,22 @@
 <script>
-  function htmlTableOfContents (documentRef) {
-      var documentRef = documentRef || document;
-      var toc = documentRef.getElementById('toc');
-      var headings = [].slice.call(documentRef.body.querySelectorAll('h2, h3'));
-      headings.forEach(function (heading, index) {
-          var anchor = documentRef.createElement('a');
-          anchor.setAttribute('name', 'toc' + index);
-          anchor.setAttribute('id', 'toc' + index);
-
-          var link = documentRef.createElement('a');
-          link.setAttribute('href', '#toc' + index);
+  // the table of contents of the page: links to the ids of its h2 and h3 headings
+  function htmlTableOfContents () {
+      var toc = document.getElementById('toc');
+      if (!toc) { return; }
+      var headings = [].slice.call(document.querySelectorAll('.post-content h2, .post-content h3'));
+      headings.forEach(function (heading) {
+          if (!heading.id) { return; }
+          var link = document.createElement('a');
+          link.setAttribute('href', '#' + heading.id);
           link.textContent = heading.textContent;
 
-          var div = documentRef.createElement('div');
-
+          var div = document.createElement('div');
+          if (heading.tagName === 'H3') { div.className = 'toc-h3'; }
           div.appendChild(link);
           toc.appendChild(div);
-          heading.parentNode.insertBefore(anchor, heading);
       });
   }
-  window.addEventListener('load', ()=>{
-    htmlTableOfContents();
-  })
+  window.addEventListener('load', htmlTableOfContents);
 </script>
 
 <div id='toc'></div>

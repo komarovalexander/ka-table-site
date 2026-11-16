@@ -1,0 +1,9 @@
+<!-- the search of the docs: js/docs-search.js builds the index of the pages of data-pages in the browser -->
+{% assign search_pages = site.pages | where: "search", "include" | where_exp: "item", "item.layout != 'index_layout'" | map: "url" | join: "," %}
+<div id="search-demo-container" data-pages="{{ search_pages }}">
+    <input type="search" id="search-input" placeholder="Search the docs" autocomplete="off" spellcheck="false"
+        role="combobox" aria-label="Search the documentation" aria-autocomplete="list" aria-expanded="false" aria-controls="results-container">
+    <span class="search-key" aria-hidden="true">/</span>
+    <ul id="results-container" role="listbox" aria-label="Search results"></ul>
+</div>
+<script src="js/docs-search.js" defer></script>

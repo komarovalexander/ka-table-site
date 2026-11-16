@@ -1,5 +1,8 @@
 repository: komarovalexander/ka-table
 
+url: "https://ka-table.com"
+# the address of the site: the links of the sitemap and of the previews of the pages (og:url, og:image)
+
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 

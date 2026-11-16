@@ -4,7 +4,7 @@ topnav:
 - title: Topnav
   items:
     - title: Docs
-      url: docs_props.html
+      url: docs_get_started.html
       folder: docs
     - title: Demos
       external_url: https://komarovalexander.github.io/ka-table/#/overview

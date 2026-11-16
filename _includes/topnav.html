@@ -1,31 +1,18 @@
-<!-- Navigation -->
-<nav class="navbar">
+<!-- Navigation. With docs=true it is the compact sticky header of the docs: the search and the button of the menu of a phone are added -->
+<nav class="navbar{% if include.docs %} docs-navbar{% endif %}">
     <div class="container topnavlinks">
         <div class="navbar-header">
             <a href="/"><img alt="ka-table" src="{{"images/logo.svg"}}"></a>
         </div>
-        <div>
-            <ul class="nav navbar-right">
-                <!-- entries without drop-downs appear here -->
-
-{% assign topnav = site.data[page.topnav] %}
-
-                {% for entry in topnav.topnav %}
-                {% for item in entry.items %}
-                {% if item.external_url %}
-                <li><a href="{{item.external_url}}"
-                {% if item.target %}target="_blank" rel="noopener"{% endif %}>{{item.title}}</a></li>
-                {% elsif page.url contains item.url %}
-                <li class="active"><a href="{{item.url | remove: "/"}}">{{item.title}}</a></li>
-                {% else %}
-                <li><a href="{{item.url | remove: "/"}}">{{item.title}}</a></li>
-                {% endif %}
-                {% endfor %}
-                {% endfor %}
-                <!--comment out this block if you want to hide search-->
-
-            </ul>
+        {% if include.docs %}
+        {% include search.html %}
+        {% endif %}
+        <div class="topnav-links">
+            {% include topnav_links.html %}
         </div>
-        </div>
-        <!-- /.container -->
+        {% if include.docs %}
+        <button type="button" class="docs-menu-button" aria-label="Menu" aria-controls="tg-sb-sidebar" aria-expanded="false"><span></span></button>
+        {% endif %}
+    </div>
+    <!-- /.container -->
 </nav>
