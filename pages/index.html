@@ -126,7 +126,7 @@ news:
             <code id="home-install">npm install ka-table</code>
             <button type="button" class="home-copy" data-copy="home-install">Copy</button>
           </div>
-          <p class="home-links"><a href="/docs_get_started.html">Getting Started</a></p>
+          <p class="home-links"><a href="/docs_get_started.html">Getting Started</a><a href="/docs_controlled_mode.html">Controlled mode</a></p>
         </div>
         <div class="col-lg-7">
           <div class="home-code">
@@ -183,22 +183,6 @@ export const App = () => (
           </div>
         </div>
         {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <section class="home-section home-split home-control">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <img src="images/shema.svg" alt="The cycle of ka-table: the props render the UI, the UI dispatches an action, the reducer returns the new props" width="616" height="516" loading="lazy" decoding="async">
-        </div>
-        <div class="col-lg-6">
-          <p class="header-tag">Full control</p>
-          <h2>Every change is an action</h2>
-          <p>A table keeps its own state by default. When the state has to live in your code, in Redux, in the URL or on the server, pass <code>dispatch</code>: every change of the UI becomes an action, and <code>kaReducer</code> turns the previous props and the action into the new props.</p>
-          <p class="home-links"><a href="/docs_controlled_mode.html">Controlled mode</a><a href="{{ demos }}remote-data">Remote data demo</a><a href="{{ demos }}state-storing">State storing demo</a></p>
-        </div>
       </div>
     </div>
   </section>

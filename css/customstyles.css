@@ -1935,9 +1935,9 @@ body > .docs-navbar {
     width: 100%;
     height: auto;
 }
-.home-control img {
-    max-width: 520px;
-    margin: 0 auto;
+/* the features and the customization are both light: one area with the gap of one section between them */
+.home-features + .home-custom {
+    padding-top: 0;
 }
 
 /* what's new */
